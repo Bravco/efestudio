@@ -24,7 +24,7 @@
                             <NuxtLink @click="toggleMenu" to="/#about" class="nav-link">O NÁS</NuxtLink>
                         </li>
                         <li>
-                            <NuxtLink @click="toggleMenu" to="/" class="nav-link">SLUŽBY</NuxtLink> <!-- TODO: link -->
+                            <NuxtLink @click="toggleMenu" to="/#services" class="nav-link">SLUŽBY</NuxtLink>
                         </li>
                         <li>
                             <NuxtLink @click="toggleMenu" to="/" class="nav-link">KONTAKT</NuxtLink> <!-- TODO: link -->
@@ -48,7 +48,7 @@
                         <NuxtLink to="/#about" class="nav-link">O NÁS</NuxtLink>
                     </li>
                     <li class="bg-(--color-black) py-2 px-6 rounded-full">
-                        <NuxtLink to="/" class="nav-link">SLUŽBY</NuxtLink> <!-- TODO: link -->
+                        <NuxtLink to="/#services" class="nav-link">SLUŽBY</NuxtLink>
                     </li>
                     <li class="bg-(--color-black) py-2 px-6 rounded-full">
                         <NuxtLink to="/" class="nav-link">KONTAKT</NuxtLink> <!-- TODO: link -->
