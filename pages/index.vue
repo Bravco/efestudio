@@ -1,5 +1,5 @@
 <template>
-    <section id="hero" class="flex flex-col justify-between">
+    <section class="flex flex-col justify-between">
         <p class="text-4xl mb-60">
             Sme marketingové štúdio
             <br>
@@ -11,10 +11,10 @@
             <span>2025/</span>
             <span>(SCROLL)</span>
         </div>
-        <h1 class="2xl:text-[352px] xl:text-[300px] lg:text-[224px] md:text-[172px] sm:text-[96px] text-[64px] font-medium">efestudio</h1>
+        <h1 class="2xl:text-[352px] xl:text-[300px] lg:text-[224px] md:text-[172px] text-[20vw] font-medium">efestudio</h1>
     </section>
 
-    <section id="about" class="flex md:flex-row flex-col md:gap-12 gap-4">
+    <section class="flex md:flex-row flex-col md:gap-12 gap-4">
         <h2 class="text-nowrap">(ABOUT US)</h2>
         <p class="font-medium md:text-6xl text-4xl">
             <span class="hidden md:inline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
@@ -22,20 +22,18 @@
         </p>
     </section>
 
-    <section id="works" class="flex flex-col gap-4 pt-26">
+    <section class="flex flex-col gap-4 pt-26">
         <div class="grid grid-cols-2 gap-6">
-            <NuxtLink class="flex items-center gap-1" to="/">
+            <NuxtLink class="flex items-center gap-2" to="/">
                 Viac projektov
-                <NuxtImg src="/images/arrow.svg" height="16" width="16" alt="viac projektov"/>
+                <NuxtImg src="/images/arrow.svg" height="16" width="16" alt="more projects"/>
             </NuxtLink>
             <h2 class="text-nowrap">(VYBRANÉ PROJEKTY)</h2>
         </div>
         <div class="grid md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-12">
             <div v-for="project in projects" class="flex flex-col gap-4">
-                <div
-                    class="max-h-[56rem] aspect-3/4 bg-(--color-gray) bg-cover bg-center"
-                    :style="project.imageUrl ? { backgroundImage: 'url(' + project.imageUrl + ')' } : {}"
-                ></div>
+                <NuxtImg v-if="project.imageUrl" class="max-h-[56rem] aspect-3/4 object-cover object-center" :src="project.imageUrl" :alt="project.title"/>
+                <div v-else class="max-h-[56rem] aspect-3/4 bg-(--color-gray)"></div>
                 <div class="flex justify-between">
                     <span>{{ project.title }}</span>
                     <span>({{ project.year }})</span>
@@ -44,7 +42,7 @@
         </div>
     </section>
 
-    <section id="services" class="flex flex-col gap-12">
+    <section class="flex flex-col gap-12">
         <div class="flex md:flex-row flex-col md:gap-12 gap-4 py-26">
             <h2 class="text-nowrap">(NÁŠ PROCES)</h2>
             <p class="font-medium md:text-6xl text-4xl">
@@ -83,7 +81,7 @@
                     <p class="md:ml-22">Po jasne stanovených cieľoch prichádza na rad kreatíva. Nie však hocijaká – u nás sa veci robia inak. Našu kreatívu staviame na tvrdých faktoch, nie na domnienkach ani na „pekných trendoch“. V tejto fáze zvolíme konkrétne taktiky, ktoré čo najlepšie naplnia ciele, prinesú vysokú návratnosť a budú v súlade so stanovenou stratégiou a rozpočtom.</p>
                 </div>
             </div>
-            <NuxtLink to="/" class="w-fit py-3 px-6 flex items-center gap-2 border rounded-full md:ml-[300px]">
+            <NuxtLink to="/about" class="w-fit py-3 px-6 flex items-center gap-2 border rounded-full md:ml-[300px]">
                 NIEČO VIAC O NÁS
                 <NuxtImg src="images/arrow.svg" height="16" width="16" alt="more about us"/>
             </NuxtLink>
@@ -96,16 +94,21 @@
             <p>Lorem ipsum dolor sit amet consectetur. Potenti quis eget neque amet tincidunt. Scelerisque eu amet massa in purus.</p>
         </div>
         <div class="flex md:flex-row flex-col border">
-            <div class="border-b md:border-b-0 md:border-r w-full aspect-1/1 grid place-items-center
-                bg-[url('/images/nario-logo.webp')] bg-no-repeat bg-center"></div>
-            <div class="border-b md:border-b-0 md:border-r w-full aspect-1/1 grid place-items-center
-                bg-[url('/images/lavarch-logo.webp')] bg-no-repeat bg-center"></div>
-            <div class="border-b md:border-b-0 md:border-r w-full aspect-1/1 grid place-items-center
-                bg-[url('/images/bagrespis-logo.webp')] bg-no-repeat bg-center"></div>
-            <div class="border-b md:border-b-0 md:border-r w-full aspect-1/1 grid place-items-center
-                bg-[url('/images/galikin-logo.webp')] bg-no-repeat bg-center"></div>
-            <div class="w-full aspect-1/1 grid place-items-center
-                bg-[url('/images/marmat-logo.webp')] bg-no-repeat bg-center"></div>
+            <div class="border-b md:border-b-0 md:border-r w-full aspect-1/1 grid place-items-center">
+                <NuxtImg height="48" src="/images/nario-logo.webp" alt="nario"/>
+            </div>
+            <div class="border-b md:border-b-0 md:border-r w-full aspect-1/1 grid place-items-center">
+                <NuxtImg height="48" src="/images/lavarch-logo.webp" alt="lavarch"/>
+            </div>
+            <div class="border-b md:border-b-0 md:border-r w-full aspect-1/1 grid place-items-center">
+                <NuxtImg height="48" src="/images/bagrespis-logo.webp" alt="bagrespis"/>
+            </div>
+            <div class="border-b md:border-b-0 md:border-r w-full aspect-1/1 grid place-items-center">
+                <NuxtImg height="48" src="/images/galikin-logo.webp" alt="galikin"/>
+            </div>
+            <div class="border-b md:border-b-0 md:border-r w-full aspect-1/1 grid place-items-center">
+                <NuxtImg width="96" src="/images/marmat-logo.webp" alt="marmat"/>
+            </div>
         </div>
     </section>
 </template>

@@ -19,16 +19,16 @@
                     </NuxtLink>
                     <ul class="flex flex-col gap-6 text-4xl font-medium">
                         <li>
-                            <NuxtLink @click="toggleMenu" to="/#works" class="nav-link">WORKS</NuxtLink>
+                            <NuxtLink @click="toggleMenu" to="/" class="nav-link">WORKS</NuxtLink>
                         </li>
                         <li>
-                            <NuxtLink @click="toggleMenu" to="/#about" class="nav-link">O NÁS</NuxtLink>
+                            <NuxtLink @click="toggleMenu" to="/about" class="nav-link">O NÁS</NuxtLink>
                         </li>
                         <li>
-                            <NuxtLink @click="toggleMenu" to="/#services" class="nav-link">SLUŽBY</NuxtLink>
+                            <NuxtLink @click="toggleMenu" to="/services" class="nav-link">SLUŽBY</NuxtLink>
                         </li>
                         <li>
-                            <NuxtLink @click="toggleMenu" to="/#contact" class="nav-link">KONTAKT</NuxtLink>
+                            <NuxtLink @click="toggleMenu" :to="{ hash: '#contact' }" class="nav-link">KONTAKT</NuxtLink>
                         </li>
                     </ul>
                     <ul class="flex flex-col gap-2 underline text-lg">
@@ -36,7 +36,7 @@
                             <NuxtLink @click="toggleMenu" to="/">Instagram</NuxtLink>
                         </li>
                         <li>
-                            <NuxtLink @click="toggleMenu" to="/#contact">Contact us</NuxtLink>
+                            <NuxtLink @click="toggleMenu" :to="{ hash: '#contact' }">Contact us</NuxtLink>
                         </li>
                     </ul>
                 </div>
@@ -45,19 +45,19 @@
                     <li
                         :class="[ navInvert ? 'bg-(--color-white) text-(--color-black)' : 'bg-(--color-black) text-(--color-white)' ]"
                         class="py-2 px-6 rounded-full transition-all"
-                    ><NuxtLink to="/#works" class="nav-link">WORKS</NuxtLink></li>
+                    ><NuxtLink to="/" class="nav-link">WORKS</NuxtLink></li>
                     <li
                         :class="[ navInvert ? 'bg-(--color-white) text-(--color-black)' : 'bg-(--color-black) text-(--color-white)' ]"
                         class="py-2 px-6 rounded-full transition-all"
-                    ><NuxtLink to="/#about" class="nav-link">O NÁS</NuxtLink></li>
+                    ><NuxtLink to="/about" class="nav-link">O NÁS</NuxtLink></li>
                     <li
                         :class="[ navInvert ? 'bg-(--color-white) text-(--color-black)' : 'bg-(--color-black) text-(--color-white)' ]"
                         class="py-2 px-6 rounded-full transition-all"
-                    ><NuxtLink to="/#services" class="nav-link">SLUŽBY</NuxtLink></li>
+                    ><NuxtLink to="/services" class="nav-link">SLUŽBY</NuxtLink></li>
                     <li
                         :class="[ navInvert ? 'bg-(--color-white) text-(--color-black)' : 'bg-(--color-black) text-(--color-white)' ]"
                         class="py-2 px-6 rounded-full transition-all"
-                    ><NuxtLink to="/#contact" class="nav-link">KONTAKT</NuxtLink></li>
+                    ><NuxtLink :to="{ hash: '#contact' }" class="nav-link">KONTAKT</NuxtLink></li>
                 </ul>
             </nav>
         </header>
@@ -85,14 +85,14 @@
             </ul>
             <ul class="md:order-0 order-[-1] underline">
                 <li class="flex items-center md:justify-start justify-between gap-8">
-                    <NuxtLink to="/" class="">Instagram</NuxtLink>
-                    <NuxtLink to="/">Vop & GDPR</NuxtLink>
+                    <NuxtLink to="" class="">Instagram</NuxtLink>
+                    <NuxtLink to="">Vop & GDPR</NuxtLink>
                 </li>
                 <li>
-                    <NuxtLink to="/">Facebook</NuxtLink>
+                    <NuxtLink to="">Facebook</NuxtLink>
                 </li>
                 <li>
-                    <NuxtLink to="/">Béhance</NuxtLink>
+                    <NuxtLink to="">Béhance</NuxtLink>
                 </li>
                 <li class="mt-8">
                     <NuxtLink to="mailto:hello@efestudio.sk">hello@efestudio.sk</NuxtLink>
