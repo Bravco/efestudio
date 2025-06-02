@@ -24,9 +24,9 @@
 
     <section id="works" class="flex flex-col gap-4 pt-26">
         <div class="grid grid-cols-2 gap-6">
-            <NuxtLink class="flex items-center gap-1" to="/"> <!-- TODO: link -->
+            <NuxtLink class="flex items-center gap-1" to="/">
                 Viac projektov
-                <NuxtImg src="images/arrow.svg" height="16" width="16" alt="viac projektov"/>
+                <NuxtImg src="/images/arrow.svg" height="16" width="16" alt="viac projektov"/>
             </NuxtLink>
             <h2 class="text-nowrap">(VYBRANÉ PROJEKTY)</h2>
         </div>
@@ -54,7 +54,7 @@
         </div>
         <div class="flex flex-col gap-12">
             <div class="flex md:flex-row flex-col justify-between md:gap-16 gap-12 pt-8 pb-16 border-t">
-                <NuxtImg class="mr-16" src="images/circle1.svg" width="80" height="80" alt="explore"/>
+                <NuxtImg class="mr-16" src="/images/circle1.svg" width="80" height="80" alt="explore"/>
                 <div class="flex flex-col gap-2">
                     <div class="flex gap-16">
                         <span class="text-lg">(01)</span>
@@ -64,7 +64,7 @@
                 </div>
             </div>
             <div class="flex md:flex-row flex-col justify-between md:gap-16 gap-12 pt-8 pb-16 border-t">
-                <NuxtImg class="mr-16" src="images/circle2.svg" width="80" height="80" alt="form"/>
+                <NuxtImg class="mr-16" src="/images/circle2.svg" width="80" height="80" alt="form"/>
                 <div class="flex flex-col gap-2">
                     <div class="flex gap-16">
                         <span class="text-lg">(02)</span>
@@ -74,7 +74,7 @@
                 </div>
             </div>
             <div class="flex md:flex-row flex-col justify-between md:gap-16 gap-12 pt-8 pb-16 border-t">
-                <NuxtImg class="mr-16" src="images/circle3.svg" width="80" height="80" alt="experience"/>
+                <NuxtImg class="mr-16" src="/images/circle3.svg" width="80" height="80" alt="experience"/>
                 <div class="flex flex-col gap-2">
                     <div class="flex gap-16">
                         <span class="text-lg">(03)</span>
@@ -83,15 +83,30 @@
                     <p class="md:ml-22">Po jasne stanovených cieľoch prichádza na rad kreatíva. Nie však hocijaká – u nás sa veci robia inak. Našu kreatívu staviame na tvrdých faktoch, nie na domnienkach ani na „pekných trendoch“. V tejto fáze zvolíme konkrétne taktiky, ktoré čo najlepšie naplnia ciele, prinesú vysokú návratnosť a budú v súlade so stanovenou stratégiou a rozpočtom.</p>
                 </div>
             </div>
-            <NuxtLink to="/" class="w-fit py-3 px-6 flex items-center gap-2 border rounded-full md:ml-[300px]"> <!-- TODO: link -->
+            <NuxtLink to="/" class="w-fit py-3 px-6 flex items-center gap-2 border rounded-full md:ml-[300px]">
                 NIEČO VIAC O NÁS
                 <NuxtImg src="images/arrow.svg" height="16" width="16" alt="more about us"/>
             </NuxtLink>
         </div>
     </section>
 
-    <section>
-
+    <section class="flex flex-col gap-16">
+        <div class="xl:ml-[60%] flex md:flex-row flex-col md:gap-16 gap-4">
+            <h2 class="text-nowrap">(NAŠI KLIENTI)</h2>
+            <p>Lorem ipsum dolor sit amet consectetur. Potenti quis eget neque amet tincidunt. Scelerisque eu amet massa in purus.</p>
+        </div>
+        <div class="flex md:flex-row flex-col border">
+            <div class="border-b md:border-b-0 md:border-r w-full aspect-1/1 grid place-items-center
+                bg-[url('/images/nario-logo.webp')] bg-no-repeat bg-center"></div>
+            <div class="border-b md:border-b-0 md:border-r w-full aspect-1/1 grid place-items-center
+                bg-[url('/images/lavarch-logo.webp')] bg-no-repeat bg-center"></div>
+            <div class="border-b md:border-b-0 md:border-r w-full aspect-1/1 grid place-items-center
+                bg-[url('/images/bagrespis-logo.webp')] bg-no-repeat bg-center"></div>
+            <div class="border-b md:border-b-0 md:border-r w-full aspect-1/1 grid place-items-center
+                bg-[url('/images/galikin-logo.webp')] bg-no-repeat bg-center"></div>
+            <div class="w-full aspect-1/1 grid place-items-center
+                bg-[url('/images/marmat-logo.webp')] bg-no-repeat bg-center"></div>
+        </div>
     </section>
 </template>
 
