@@ -81,7 +81,7 @@
                     <p class="md:ml-22">Po jasne stanovených cieľoch prichádza na rad kreatíva. Nie však hocijaká – u nás sa veci robia inak. Našu kreatívu staviame na tvrdých faktoch, nie na domnienkach ani na „pekných trendoch“. V tejto fáze zvolíme konkrétne taktiky, ktoré čo najlepšie naplnia ciele, prinesú vysokú návratnosť a budú v súlade so stanovenou stratégiou a rozpočtom.</p>
                 </div>
             </div>
-            <NuxtLink to="/about" class="w-fit py-3 px-6 flex items-center gap-2 border rounded-full md:ml-[300px]">
+            <NuxtLink to="/about" class="w-fit py-3 px-6 flex items-center gap-2 border rounded-full text-nowrap md:ml-[300px]">
                 NIEČO VIAC O NÁS
                 <NuxtImg src="images/arrow.svg" height="16" width="16" alt="more about us"/>
             </NuxtLink>
@@ -93,23 +93,7 @@
             <h2 class="text-nowrap">(NAŠI KLIENTI)</h2>
             <p>Lorem ipsum dolor sit amet consectetur. Potenti quis eget neque amet tincidunt. Scelerisque eu amet massa in purus.</p>
         </div>
-        <div class="flex md:flex-row flex-col border">
-            <div class="border-b md:border-b-0 md:border-r w-full aspect-1/1 grid place-items-center">
-                <NuxtImg height="48" src="/images/nario-logo.webp" alt="nario"/>
-            </div>
-            <div class="border-b md:border-b-0 md:border-r w-full aspect-1/1 grid place-items-center">
-                <NuxtImg height="48" src="/images/lavarch-logo.webp" alt="lavarch"/>
-            </div>
-            <div class="border-b md:border-b-0 md:border-r w-full aspect-1/1 grid place-items-center">
-                <NuxtImg height="48" src="/images/bagrespis-logo.webp" alt="bagrespis"/>
-            </div>
-            <div class="border-b md:border-b-0 md:border-r w-full aspect-1/1 grid place-items-center">
-                <NuxtImg height="48" src="/images/galikin-logo.webp" alt="galikin"/>
-            </div>
-            <div class="border-b md:border-b-0 md:border-r w-full aspect-1/1 grid place-items-center">
-                <NuxtImg width="96" src="/images/marmat-logo.webp" alt="marmat"/>
-            </div>
-        </div>
+        <Partners/>
     </section>
 </template>
 
