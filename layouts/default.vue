@@ -2,7 +2,7 @@
     <div>
         <header>
             <nav class="fixed w-full p-8 flex justify-between z-50 backdrop-blur-xs">
-                <NuxtLink to="/#hero">
+                <NuxtLink to="/">
                     <NuxtImg src="images/logo.svg" height="32" alt="logo"/>
                 </NuxtLink>
 
@@ -13,7 +13,7 @@
                 </button>
 
                 <div v-if="isMenuOpen" class="flex md:hidden absolute inset-0 h-dvh bg-(--color-black) text-(--color-white) flex flex-col items-start justify-between p-8">
-                    <NuxtLink class="invert" to="/#hero">
+                    <NuxtLink class="invert" to="/">
                         <NuxtImg src="images/logo.svg" height="32" alt="logo"/>
                     </NuxtLink>
                     <ul class="flex flex-col gap-6 text-4xl font-medium">
@@ -58,7 +58,7 @@
         </header>
 
         <main>
-            <div class="mx-8 mb-8">
+            <div class="mx-8 mb-8 flex flex-col gap-26 pt-26">
                 <slot/>
             </div>
         </main>
