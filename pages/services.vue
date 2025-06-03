@@ -47,7 +47,7 @@
             </div>
         </section>
 
-        <section>
+        <section class="-mx-8">
             <NuxtImg class="w-full" src="/images/services.webp" alt="services"/>
         </section>
 
