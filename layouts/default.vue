@@ -14,7 +14,7 @@
                 </button>
 
                 <div v-if="isMenuOpen" class="flex md:hidden absolute inset-0 h-dvh bg-(--color-black) text-(--color-white) flex flex-col items-start justify-between p-8">
-                    <NuxtLink class="invert" to="/">
+                    <NuxtLink @click="toggleMenu" to="/" class="invert">
                         <NuxtImg src="images/logo.svg" height="32" alt="logo"/>
                     </NuxtLink>
                     <ul class="flex flex-col gap-6 text-4xl font-medium">

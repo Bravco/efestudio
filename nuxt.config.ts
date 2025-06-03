@@ -5,10 +5,5 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxt/image"
   ],
-  css: [ "~/assets/css/main.css" ],
-  router: {
-    options: {
-      scrollBehaviorType: "smooth"
-    }
-  }
+  css: [ "~/assets/css/main.css" ]
 })

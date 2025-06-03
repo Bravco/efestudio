@@ -1,61 +1,63 @@
 <template>
-    <section class="flex flex-col gap-12">
-        <div class="w-fit ml-auto flex flex-col gap-4">
-            <NuxtImg height="240" src="/images/lavarch.webp" alt="lavarch"/>
-            <div class="flex justify-between">
-                <span>(01)</span>
-                <NuxtLink to="" class="flex items-center gap-2">
-                    Vybraný projekt
-                    <NuxtImg src="/images/arrow.svg" height="16" width="16" alt="selected project"/>
-                </NuxtLink>
-            </div>
-        </div>
-        <div class="flex">
-            <h1 class="xl:text-[300px] lg:text-[224px] md:text-[172px] text-[20vw] font-medium">SLUŽBY</h1>
-            <span class="text-xl font-medium">(04)</span>
-        </div>
-        <div class="flex md:flex-row flex-col gap-4 justify-between items-start">
-            <span>(ZRUČNOSTI)</span>
-            <p class="md:max-w-[30%] text-xl">Naším klientom pomáhame vybudovať zrozumiteľnú značku s jasne definovanou pozíciou na trhu. S akým zadaním sa na nás môžete obrátiť?</p>
-        </div>
-    </section>
-
-    <section>
-        <div v-for="(service, index) in services" :key="index" class="border-t" :class="[index == services.length-1 ? 'border-b' : '']">
-            <div class="flex flex-col md:gap-8 gap-4 pt-8 pb-64">
-                <h2 class="w-full md:grid md:grid-cols-2 flex justify-between gap-4 md:text-6xl text-5xl font-medium">
-                    <span>(0{{ index + 1 }})</span>
-                    <span class="text-nowrap">{{ service.title }}</span>
-                </h2>
-                <p class="md:ml-auto md:w-1/2 md:pr-[10%] pr-0">{{ service.description }}</p>
-                <div class="md:ml-auto md:w-1/2 md:flex md:flex-col grid grid-cols-2 md:gap-4 gap-8 md:pr-[10%] pr-0">
-                    <span class="md:hidden inline">(01)</span>
-                    <ul class="flex md:flex-row flex-col md:justify-between gap-2">
-                        <li>{{ service.items[0] }}</li>
-                        <li>{{ service.items[1] }}</li>
-                        <li>{{ service.items[2] }}</li>
-                    </ul>
-                    <span class="md:hidden inline">(02)</span>
-                    <ul class="flex md:flex-row flex-col md:justify-between gap-2">
-                        <li>{{ service.items[3] }}</li>
-                        <li>{{ service.items[4] }}</li>
-                        <li>{{ service.items[5] }}</li>
-                    </ul>
+    <div>
+        <section class="flex flex-col gap-12">
+            <div class="w-fit ml-auto flex flex-col gap-4">
+                <NuxtImg height="240" src="/images/lavarch.webp" alt="lavarch"/>
+                <div class="flex justify-between">
+                    <span>(01)</span>
+                    <NuxtLink to="" class="flex items-center gap-2">
+                        Vybraný projekt
+                        <NuxtImg src="/images/arrow.svg" height="16" width="16" alt="selected project"/>
+                    </NuxtLink>
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="flex">
+                <h1 class="xl:text-[300px] lg:text-[224px] md:text-[172px] text-[20vw] font-medium">SLUŽBY</h1>
+                <span class="text-xl font-medium">(04)</span>
+            </div>
+            <div class="flex md:flex-row flex-col gap-4 justify-between items-start">
+                <span>(ZRUČNOSTI)</span>
+                <p class="md:max-w-[30%] text-xl">Naším klientom pomáhame vybudovať zrozumiteľnú značku s jasne definovanou pozíciou na trhu. S akým zadaním sa na nás môžete obrátiť?</p>
+            </div>
+        </section>
 
-    <NuxtImg src="/images/services.webp" alt="services"/>
+        <section>
+            <div v-for="(service, index) in services" :key="index" class="border-t" :class="[index == services.length-1 ? 'border-b' : '']">
+                <div class="flex flex-col md:gap-8 gap-4 pt-8 pb-64">
+                    <h2 class="w-full md:grid md:grid-cols-2 flex justify-between gap-4 md:text-6xl text-5xl font-medium">
+                        <span>(0{{ index + 1 }})</span>
+                        <span class="text-nowrap">{{ service.title }}</span>
+                    </h2>
+                    <p class="md:ml-auto md:w-1/2 md:pr-[10%] pr-0">{{ service.description }}</p>
+                    <div class="md:ml-auto md:w-1/2 md:flex md:flex-col grid grid-cols-2 md:gap-4 gap-8 md:pr-[10%] pr-0">
+                        <span class="md:hidden inline">(01)</span>
+                        <ul class="flex md:flex-row flex-col md:justify-between gap-2">
+                            <li>{{ service.items[0] }}</li>
+                            <li>{{ service.items[1] }}</li>
+                            <li>{{ service.items[2] }}</li>
+                        </ul>
+                        <span class="md:hidden inline">(02)</span>
+                        <ul class="flex md:flex-row flex-col md:justify-between gap-2">
+                            <li>{{ service.items[3] }}</li>
+                            <li>{{ service.items[4] }}</li>
+                            <li>{{ service.items[5] }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section class="flex flex-col gap-8">
-        <span>S hrdosťou spolupracujeme</span>
-        <Partners/>
-        <NuxtLink to="" class="w-fit py-3 px-6 flex items-center gap-2 border rounded-full text-nowrap ml-auto md:mr-[30%] mt-8">
-            PRIDAŤ SA K NIM
-            <NuxtImg src="images/arrow.svg" height="16" width="16" alt="more about us"/>
-        </NuxtLink>
-    </section>
+        <NuxtImg src="/images/services.webp" alt="services"/>
+
+        <section class="flex flex-col gap-8">
+            <span>S hrdosťou spolupracujeme</span>
+            <Partners/>
+            <NuxtLink to="" class="w-fit py-3 px-6 flex items-center gap-2 border rounded-full text-nowrap ml-auto md:mr-[30%] mt-8">
+                PRIDAŤ SA K NIM
+                <NuxtImg src="images/arrow.svg" height="16" width="16" alt="more about us"/>
+            </NuxtLink>
+        </section>
+    </div>
 </template>
 
 <script lang="ts" setup>
