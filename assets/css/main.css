@@ -22,3 +22,7 @@ body {
     background-color: var(--color-light-gray);
     color: var(--color-black);
 }
+
+section {
+    padding-block: 104px;
+}

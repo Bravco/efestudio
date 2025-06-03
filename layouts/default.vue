@@ -61,7 +61,7 @@
         </header>
 
         <main>
-            <div class="mx-8 mb-8 flex flex-col gap-26 py-26">
+            <div class="mx-8 mb-8 py-26">
                 <slot/>
             </div>
             <section id="contact" class="flex flex-col gap-32 bg-(--color-black) text-(--color-white) p-8 md:pb-8 pb-26">

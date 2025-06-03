@@ -47,7 +47,9 @@
             </div>
         </section>
 
-        <NuxtImg src="/images/services.webp" alt="services"/>
+        <section>
+            <NuxtImg class="w-full" src="/images/services.webp" alt="services"/>
+        </section>
 
         <section class="flex flex-col gap-8">
             <span>S hrdosťou spolupracujeme</span>
