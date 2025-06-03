@@ -70,7 +70,7 @@
                     <span class="text-nowrap">(5 VOĽNÝCH MIEST V 2025)</span>
                 </div>
                 <NuxtLink to="/" class="text-5xl font-medium underline">⮡ Zabookuj si call</NuxtLink>
-                <h1 class="md:inline hidden 2xl:text-[352px] xl:text-[300px] lg:text-[224px] text-[172px] font-medium">efestudio</h1>
+                <h1 class="md:inline hidden text-[20vw] leading-none font-medium">efestudio</h1>
             </section>
         </main>
         
@@ -105,6 +105,7 @@
 </template>
 
 <script lang="ts" setup>
+    const route = useRoute();
     const isMenuOpen = ref<boolean>(false);
     const navInvert = ref<boolean>(false);
     const clipPath = ref<boolean>(false);
@@ -136,16 +137,34 @@
     }
 
     const handleSroll = () => {
-        const contactSection = document.querySelector("#contact");
-        if (!contactSection) return;
+        let invert = false;
 
-        const contactTop = contactSection.getBoundingClientRect().top;
-
-        if (contactTop <= 56) {
-            navInvert.value = true;
-        } else {
-            navInvert.value = false;
+        const heroSection = document.querySelector("#hero");
+        if (heroSection) {
+            const heroRect = heroSection.getBoundingClientRect();
+            if (heroRect.bottom >= 0) {
+                invert = true;
+            }
         }
+
+        const splashSection = document.querySelector("#splash");
+        if (splashSection) {
+            const splashRect = splashSection.getBoundingClientRect();
+            console.log(splashRect.top, splashRect.bottom, window.innerHeight);
+            if (splashRect.top <= 0 && splashRect.bottom >= 0) {
+                invert = true;
+            }
+        }
+
+        const contactSection = document.querySelector("#contact");
+        if (contactSection) {
+            const contactRect = contactSection.getBoundingClientRect();
+            if (contactRect.top <= 0) {
+                invert = true;
+            }
+        }
+
+        navInvert.value = invert;
     };
 
     const updateTime = () => {
@@ -170,5 +189,9 @@
         if (timer) {
             clearInterval(timer);
         }
+    });
+
+    watch(route, (to, from) => {
+        handleSroll();
     });
 </script>

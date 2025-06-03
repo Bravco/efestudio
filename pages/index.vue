@@ -1,18 +1,22 @@
 <template>
     <div>
-        <section class="flex flex-col justify-between">
-            <p class="text-4xl mb-60">
+        <section 
+            id="hero" 
+            class="min-h-dvh flex flex-col md:justify-between justify-end text-[var(--color-white)] md:pt-52 md:gap-0 gap-26 !pb-0 px-8 -mt-26 -mx-8 mb-26"
+            style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/images/lavarch.webp') center/cover no-repeat;"
+        >
+            <p class="text-4xl">
                 Sme marketingové štúdio
                 <br>
                 Budujeme — realizujeme pre klientov marketingové
                 <br class="hidden md:inline">
                 stratégie poctivo, meratelne a bez zbytočných omáčok
             </p>
-            <div class="flex justify-between">
+            <div class="md:order-0 -order-1 flex justify-between">
                 <span>2025/</span>
                 <span>(SCROLL)</span>
             </div>
-            <h1 class="2xl:text-[352px] xl:text-[300px] lg:text-[224px] md:text-[172px] text-[20vw] font-medium">efestudio</h1>
+            <h1 class="text-[20vw] leading-none font-medium">efestudio</h1>
         </section>
 
         <section class="flex md:flex-row flex-col md:gap-12 gap-4">
@@ -23,7 +27,7 @@
             </p>
         </section>
 
-        <section class="flex flex-col gap-4 pt-26">
+        <section class="flex flex-col gap-4">
             <div class="grid grid-cols-2 gap-6">
                 <NuxtLink class="flex items-center gap-2" to="/">
                     Viac projektov
