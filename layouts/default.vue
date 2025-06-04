@@ -1,9 +1,13 @@
 <template>
     <div>
         <header>
-            <nav class="fixed w-full p-8 flex justify-between z-50 backdrop-blur-xs">
-                <NuxtLink :class="{ invert: navInvert }" class="transition-all" to="/">
-                    <NuxtImg src="images/logo.svg" height="32" alt="logo"/>
+            <nav class="fixed w-full p-8 flex justify-between items-center z-50 backdrop-blur-xs">
+                <NuxtLink 
+                    @click="closeMenu" :class="{ invert: (navInvert && !isMenuOpen) || isMenuOpen }" 
+                    class="min-w-18 transition-all z-10" 
+                    to="/"
+                >
+                    <NuxtImg height="32" width="64" src="images/logo.svg" alt="logo"/>
                 </NuxtLink>
 
                 <button 
@@ -22,20 +26,17 @@
                         clipPath: clipPath ? 'circle(150% at 100% 0%)' : 'circle(0% at 100% 0%)',
                         transition: 'clip-path 500ms ease-in-out'
                     }"
-                    class="md:hidden absolute inset-0 h-dvh bg-(--color-black) text-(--color-white) flex flex-col items-start justify-between p-8"
+                    class="md:hidden absolute inset-0 h-dvh bg-(--color-black) text-(--color-white) flex flex-col items-start justify-end p-8"
                 >
-                    <NuxtLink @click="toggleMenu" to="/">
-                        <NuxtImg class="invert" src="images/logo.svg" height="32" alt="logo"/>
-                    </NuxtLink>
-                    <ul class="flex flex-col gap-6 text-4xl font-medium">
-                        <li><NuxtLink @click="toggleMenu" to="/" class="nav-link">WORKS</NuxtLink></li>
-                        <li> <NuxtLink @click="toggleMenu" to="/about" class="nav-link">O NÁS</NuxtLink></li>
-                        <li><NuxtLink @click="toggleMenu" to="/services" class="nav-link">SLUŽBY</NuxtLink></li>
-                        <li><NuxtLink @click="toggleMenu" :to="{ hash: '#contact' }" class="nav-link">KONTAKT</NuxtLink></li>
+                    <ul class="flex flex-col gap-6 text-4xl font-medium my-auto">
+                        <li><NuxtLink @click="closeMenu" to="/" class="nav-link">WORKS</NuxtLink></li>
+                        <li> <NuxtLink @click="closeMenu" to="/about" class="nav-link">O NÁS</NuxtLink></li>
+                        <li><NuxtLink @click="closeMenu" to="/services" class="nav-link">SLUŽBY</NuxtLink></li>
+                        <li><NuxtLink @click="closeMenu" :to="{ hash: '#contact' }" class="nav-link">KONTAKT</NuxtLink></li>
                     </ul>
                     <ul class="flex flex-col gap-2 underline text-lg">
-                        <li><NuxtLink @click="toggleMenu" to="/">Instagram</NuxtLink></li>
-                        <li><NuxtLink @click="toggleMenu" :to="{ hash: '#contact' }">Contact us</NuxtLink></li>
+                        <li><NuxtLink @click="closeMenu" to="/">Instagram</NuxtLink></li>
+                        <li><NuxtLink @click="closeMenu" :to="{ hash: '#contact' }">Contact us</NuxtLink></li>
                     </ul>
                 </div>
 
@@ -112,29 +113,33 @@
     const time = ref<string>("");
     let timer: ReturnType<typeof setInterval> | null = null;
 
-    function openMenu() {
+    const openMenu = () => {
+        if (isMenuOpen.value) return;
+
         isMenuOpen.value = true;
         nextTick(() => {
             requestAnimationFrame(() => {
             clipPath.value = true;
             });
         });
-    }
+    };
 
-    function closeMenu() {
+    const closeMenu = () => {
+        if (!isMenuOpen.value) return;
+
         clipPath.value = false;
         setTimeout(() => {
             isMenuOpen.value = false;
         }, 500);
-    }
+    };
 
-    function toggleMenu() {
+    const toggleMenu = () => {
         if (isMenuOpen.value) {
             closeMenu();
         } else {
             openMenu();
         }
-    }
+    };
 
     const handleSroll = () => {
         let invert = false;
