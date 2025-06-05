@@ -1,6 +1,6 @@
 <template>
     <div>
-        <section class="flex flex-col gap-12">
+        <section class="min-h-dvh flex flex-col gap-12">
             <div class="w-fit ml-auto flex flex-col gap-4">
                 <NuxtImg height="240" src="/images/lavarch.webp" alt="lavarch"/>
                 <div class="flex justify-between">
@@ -12,7 +12,7 @@
                 </div>
             </div>
             <div class="flex">
-                <h1 class="xl:text-[300px] lg:text-[224px] md:text-[172px] text-[20vw]">SLUŽBY</h1>
+                <h1 class="text-[15vw] leading-none text-nowrap">SLUŽBY</h1>
                 <span class="text-xl">(04)</span>
             </div>
             <div class="flex md:flex-row flex-col gap-4 justify-between items-start">

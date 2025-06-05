@@ -32,11 +32,11 @@
                         <li><NuxtLink @click="closeMenu" to="/" class="nav-link">WORKS</NuxtLink></li>
                         <li> <NuxtLink @click="closeMenu" to="/about" class="nav-link">O NÁS</NuxtLink></li>
                         <li><NuxtLink @click="closeMenu" to="/services" class="nav-link">SLUŽBY</NuxtLink></li>
-                        <li><NuxtLink @click="closeMenu" :to="{ hash: '#contact' }" class="nav-link">KONTAKT</NuxtLink></li>
+                        <li><NuxtLink @click="closeMenu" :to="{ name: router.hasRoute(route.name) ? '' : 'index', hash: '#contact' }" class="nav-link">KONTAKT</NuxtLink></li>
                     </ul>
                     <ul class="flex flex-col gap-2 underline text-lg">
                         <li><NuxtLink @click="closeMenu" to="/">Instagram</NuxtLink></li>
-                        <li><NuxtLink @click="closeMenu" :to="{ hash: '#contact' }">Contact us</NuxtLink></li>
+                        <li><NuxtLink @click="closeMenu" :to="{ name: router.hasRoute(route.name) ? '' : 'index', hash: '#contact' }">Contact us</NuxtLink></li>
                     </ul>
                 </div>
 
@@ -56,7 +56,7 @@
                     <li
                         :class="[ navInvert ? 'bg-(--color-white) text-(--color-black)' : 'bg-(--color-black) text-(--color-white)' ]"
                         class="py-2 px-6 rounded-full transition-all"
-                    ><NuxtLink :to="{ hash: '#contact' }" class="nav-link">KONTAKT</NuxtLink></li>
+                    ><NuxtLink :to="{ name: router.hasRoute(route.name) ? '' : 'index', hash: '#contact' }" class="nav-link">KONTAKT</NuxtLink></li>
                 </ul>
             </nav>
         </header>
@@ -107,6 +107,7 @@
 
 <script lang="ts" setup>
     const route = useRoute();
+    const router = useRouter();
     const isMenuOpen = ref<boolean>(false);
     const navInvert = ref<boolean>(false);
     const clipPath = ref<boolean>(false);
@@ -155,7 +156,6 @@
         const splashSection = document.querySelector("#splash");
         if (splashSection) {
             const splashRect = splashSection.getBoundingClientRect();
-            console.log(splashRect.top, splashRect.bottom, window.innerHeight);
             if (splashRect.top <= 0 && splashRect.bottom >= 0) {
                 invert = true;
             }
