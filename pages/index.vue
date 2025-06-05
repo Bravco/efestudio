@@ -3,9 +3,9 @@
         <section 
             id="hero" 
             class="min-h-dvh flex flex-col md:justify-between justify-end text-[var(--color-white)] md:pt-52 md:gap-0 gap-26 !pb-0 px-8 -mt-26 -mx-8 mb-26"
-            style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/images/lavarch.webp') center/cover no-repeat;"
+            style="background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.1)), url('/images/hero.webp') center/cover no-repeat;"
         >
-            <p class="text-4xl">
+            <p class="text-4xl text-shadow-sm">
                 Sme marketingové štúdio
                 <br>
                 Budujeme — realizujeme pre klientov marketingové
@@ -16,12 +16,12 @@
                 <span>2025/</span>
                 <span>(SCROLL)</span>
             </div>
-            <h1 class="text-[20vw] leading-none font-medium">efestudio</h1>
+            <h1 class="text-[20vw] leading-none text-shadow-sm">efestudio</h1>
         </section>
 
         <section class="flex md:flex-row flex-col md:gap-12 gap-4">
             <h2 class="text-nowrap">(ABOUT US)</h2>
-            <p class="font-medium md:text-6xl text-4xl">
+            <p class="md:text-6xl text-4xl">
                 <span class="hidden md:inline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 Sme digitálne marketingové štúdio. Klientom prinášame komplexné riešenia v oblasti značky, obsahu a webov. Každý projekt staviame na jasnej stratégii a merateľných cieľoch.
             </p>
@@ -55,7 +55,7 @@
         <section class="flex flex-col gap-12">
             <div class="flex md:flex-row flex-col md:gap-12 gap-4 py-26">
                 <h2 class="text-nowrap">(NÁŠ PROCES)</h2>
-                <p class="font-medium md:text-6xl text-4xl">
+                <p class="md:text-6xl text-4xl">
                     <span class="hidden md:inline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                     Ako dokážeme doručiť výsledky, na ktorých sme sa dohodli?
                 </p>
@@ -66,7 +66,7 @@
                     <div class="flex flex-col gap-2">
                         <div class="flex gap-16">
                             <span class="text-lg">(01)</span>
-                            <h3 class="text-xl font-medium">Explore</h3>
+                            <h3 class="text-xl">Explore</h3>
                         </div>
                         <p class="md:ml-22">Kto ste, čo robíte a prečo na tom záleží? V tomto prvom kroku je dôležité identifikovať piliere, na ktorých bude naša spolupráca stáť. Preto detailne zanalyzujeme minulosť, súčasný stav a príležitosti, ktoré nám ležia pri nohách. Po identifikovaní kľúčových elementov vám objektívne vykreslíme realitu a nastavíme jasný obraz spolupráce ako takej.</p>
                     </div>
@@ -76,7 +76,7 @@
                     <div class="flex flex-col gap-2">
                         <div class="flex gap-16">
                             <span class="text-lg">(02)</span>
-                            <h3 class="text-xl font-medium">Form</h3>
+                            <h3 class="text-xl">Form</h3>
                         </div>
                         <p class="md:ml-22">Po hĺbkovej analýze dát a vašich konkurentov prichádza čas na strategické plánovanie. Ako každý úspešný veliteľ pripravíme plán ešte pred samotnou „vojnou“. Odpovieme si na dôležité otázky ako: – Čo od nás klient skutočne chce?  Proti komu súťažíme?  Čo jedinečné vieme doručiť? Tým zasadíme víťaznú vlajku do zeme a na jej základe si stanovíme objektívne, merateľné ciele, ktoré sa stanú našou svätyňou.</p>
                     </div>
@@ -86,7 +86,7 @@
                     <div class="flex flex-col gap-2">
                         <div class="flex gap-16">
                             <span class="text-lg">(03)</span>
-                            <h3 class="text-xl font-medium">Experience</h3>
+                            <h3 class="text-xl">Experience</h3>
                         </div>
                         <p class="md:ml-22">Po jasne stanovených cieľoch prichádza na rad kreatíva. Nie však hocijaká – u nás sa veci robia inak. Našu kreatívu staviame na tvrdých faktoch, nie na domnienkach ani na „pekných trendoch“. V tejto fáze zvolíme konkrétne taktiky, ktoré čo najlepšie naplnia ciele, prinesú vysokú návratnosť a budú v súlade so stanovenou stratégiou a rozpočtom.</p>
                     </div>

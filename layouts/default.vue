@@ -28,7 +28,7 @@
                     }"
                     class="md:hidden absolute inset-0 h-dvh bg-(--color-black) text-(--color-white) flex flex-col items-start justify-end p-8"
                 >
-                    <ul class="flex flex-col gap-6 text-4xl font-medium my-auto">
+                    <ul class="flex flex-col gap-6 text-4xl my-auto">
                         <li><NuxtLink @click="closeMenu" to="/" class="nav-link">WORKS</NuxtLink></li>
                         <li> <NuxtLink @click="closeMenu" to="/about" class="nav-link">O NÁS</NuxtLink></li>
                         <li><NuxtLink @click="closeMenu" to="/services" class="nav-link">SLUŽBY</NuxtLink></li>
@@ -67,11 +67,11 @@
             </div>
             <section id="contact" class="flex flex-col gap-32 bg-(--color-black) text-(--color-white) p-8 md:pb-8 pb-26">
                 <div class="flex md:flex-row flex-col-reverse justify-between md:gap-[20%] gap-4">
-                    <p class="text-5xl font-medium">Visual narratives  meant to evoke feeling. our work spans disciplines, unified by the spans disciplines,</p>
+                    <p class="text-5xl">Visual narratives  meant to evoke feeling. our work spans disciplines, unified by the spans disciplines,</p>
                     <span class="text-nowrap">(5 VOĽNÝCH MIEST V 2025)</span>
                 </div>
-                <NuxtLink to="/" class="text-5xl font-medium underline">⮡ Zabookuj si call</NuxtLink>
-                <h1 class="md:inline hidden text-[20vw] leading-none font-medium">efestudio</h1>
+                <NuxtLink to="/" class="text-5xl underline">⮡ Zabookuj si call</NuxtLink>
+                <h1 class="md:inline hidden text-[20vw] leading-none">efestudio</h1>
             </section>
         </main>
         

@@ -12,8 +12,8 @@
                 </div>
             </div>
             <div class="flex">
-                <h1 class="xl:text-[300px] lg:text-[224px] md:text-[172px] text-[20vw] font-medium">SLUŽBY</h1>
-                <span class="text-xl font-medium">(04)</span>
+                <h1 class="xl:text-[300px] lg:text-[224px] md:text-[172px] text-[20vw]">SLUŽBY</h1>
+                <span class="text-xl">(04)</span>
             </div>
             <div class="flex md:flex-row flex-col gap-4 justify-between items-start">
                 <span>(ZRUČNOSTI)</span>
@@ -24,7 +24,7 @@
         <section>
             <div v-for="(service, index) in services" :key="index" class="border-t" :class="[index == services.length-1 ? 'border-b' : '']">
                 <div class="flex flex-col md:gap-8 gap-4 pt-8 pb-64">
-                    <h2 class="w-full md:grid md:grid-cols-2 flex justify-between gap-4 md:text-6xl text-5xl font-medium">
+                    <h2 class="w-full md:grid md:grid-cols-2 flex justify-between gap-4 md:text-6xl text-5xl">
                         <span>(0{{ index + 1 }})</span>
                         <span class="text-nowrap">{{ service.title }}</span>
                     </h2>
