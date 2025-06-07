@@ -19,7 +19,7 @@
             <h1 class="text-[20vw] leading-none text-shadow-sm">efestudio</h1>
         </section>
 
-        <section class="flex flex-col gap-12">
+        <section class="flex flex-col gap-26">
             <div class="relative flex md:flex-row flex-col md:gap-12 gap-4">
                 <h2 class="md:absolute inline text-nowrap">(ABOUT US)</h2>
                 <p class="md:text-6xl text-4xl">
@@ -27,7 +27,7 @@
                     Sme digitálne marketingové štúdio. Klientom prinášame komplexné riešenia v oblasti značky, obsahu a webov. Každý projekt staviame na jasnej stratégii a merateľných cieľoch.
                 </p>
             </div>
-            <div class="ml-auto md:w-1/2 w-full flex flex-col gap-8">
+            <div class="ml-auto md:w-2/5 w-full flex flex-col gap-8">
                 <p>Sme iniciatívni, každý projekt má jasný cieľ, na ktorom spoločne pryacujeme ako tím. Marketing realizujeme rozvažne ss dôrazom na výsledky, rozpočet a očakávanú návratnosť.</p>
                 <Button to="/about" text="ZOBRAZIŤ VIAC O NÁS" arrow/>
             </div>
@@ -69,7 +69,7 @@
             <div class="flex flex-col gap-12">
                 <div class="flex md:flex-row flex-col justify-between items-start md:gap-16 gap-12 pt-8 pb-16 border-t">
                     <NuxtImg class="mr-16" src="/images/circle1.svg" width="80" height="80" alt="explore"/>
-                    <div class="grid grid-cols-[auto_1fr] gap-4 gap-x-24">
+                    <div class="grid grid-cols-[auto_1fr] gap-4 gap-x-26">
                         <span class="md:row-span-full text-2xl">(01)</span>
                         <h3 class="text-2xl">Explore</h3>
                         <div class="md:inline hidden"></div>
@@ -78,7 +78,7 @@
                 </div>
                 <div class="flex md:flex-row flex-col justify-between items-start md:gap-16 gap-12 pt-8 pb-16 border-t">
                     <NuxtImg class="mr-16" src="/images/circle2.svg" width="80" height="80" alt="form"/>
-                    <div class="grid grid-cols-[auto_1fr] gap-4 gap-x-24">
+                    <div class="grid grid-cols-[auto_1fr] gap-4 gap-x-26">
                         <span class="md:row-span-full text-2xl">(02)</span>
                         <h3 class="text-2xl">Form</h3>
                         <div class="md:inline hidden"></div>
@@ -87,11 +87,11 @@
                 </div>
                 <div class="flex md:flex-row flex-col justify-between items-start md:gap-16 gap-12 pt-8 pb-16 border-t">
                     <NuxtImg class="mr-16" src="/images/circle3.svg" width="80" height="80" alt="experience"/>
-                    <div class="grid grid-cols-[auto_1fr] gap-4 gap-x-24">
+                    <div class="grid grid-cols-[auto_1fr] gap-4 gap-x-26">
                         <span class="md:row-span-full text-2xl">(03)</span>
                         <h3 class="text-2xl">Experience</h3>
                         <div class="md:inline hidden"></div>
-                        <div class="flex flex-col gap-24 md:col-span-1 col-span-full">
+                        <div class="flex flex-col gap-26 md:col-span-1 col-span-full">
                             <p class="">Po jasne stanovených cieľoch prichádza na rad kreatíva. Nie však hocijaká – u nás sa veci robia inak. Našu kreatívu staviame na tvrdých faktoch, nie na domnienkach ani na „pekných trendoch“. V tejto fáze zvolíme konkrétne taktiky, ktoré čo najlepšie naplnia ciele, prinesú vysokú návratnosť a budú v súlade so stanovenou stratégiou a rozpočtom.</p>
                             <Button to="/services" text="ZOBRAZIŤ SLUŽBY" arrow/>
                         </div>
@@ -115,7 +115,7 @@
         {
             title: "LAVARCH",
             imageUrl: "/images/lavarch.webp",
-            year: 2024
+            year: 2026
         },
         {
             title: "Marmat - SK",
