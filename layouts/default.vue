@@ -29,7 +29,7 @@
                     class="md:hidden absolute inset-0 h-dvh bg-(--color-black) text-(--color-white) flex flex-col items-start justify-end p-8"
                 >
                     <ul class="flex flex-col gap-6 text-4xl my-auto">
-                        <li><NuxtLink @click="closeMenu" to="/" class="nav-link">WORKS</NuxtLink></li>
+                        <li><NuxtLink @click="closeMenu" to="/works" class="nav-link">WORKS</NuxtLink></li>
                         <li> <NuxtLink @click="closeMenu" to="/about" class="nav-link">O NÁS</NuxtLink></li>
                         <li><NuxtLink @click="closeMenu" to="/services" class="nav-link">SLUŽBY</NuxtLink></li>
                         <li><NuxtLink @click="closeMenu" :to="{ name: router.hasRoute(route.name) ? '' : 'index', hash: '#contact' }" class="nav-link">KONTAKT</NuxtLink></li>
@@ -44,7 +44,7 @@
                     <li
                         :class="[ navInvert ? 'bg-(--color-white) text-(--color-black)' : 'bg-(--color-black) text-(--color-white)' ]"
                         class="py-2 px-6 rounded-full transition-all"
-                    ><NuxtLink to="/" class="nav-link">WORKS</NuxtLink></li>
+                    ><NuxtLink to="/works" class="nav-link">WORKS</NuxtLink></li>
                     <li
                         :class="[ navInvert ? 'bg-(--color-white) text-(--color-black)' : 'bg-(--color-black) text-(--color-white)' ]"
                         class="py-2 px-6 rounded-full transition-all"
@@ -71,7 +71,7 @@
                     <span class="text-nowrap">(5 VOĽNÝCH MIEST V 2025)</span>
                 </div>
                 <NuxtLink to="/" class="mx-auto text-5xl underline">⮡ Zabookuj si call</NuxtLink>
-                <h1 class="md:inline hidden text-[20vw] leading-none">efestudio</h1>
+                <NuxtImg class="w-full mx-auto invert" src="/images/efestudio.svg" alt="efestudio"/>
             </section>
         </main>
         
@@ -84,14 +84,14 @@
             </ul>
             <ul class="md:order-0 order-[-1] underline">
                 <li class="flex items-center md:justify-start justify-between gap-8">
-                    <NuxtLink to="" class="">Instagram</NuxtLink>
+                    <NuxtLink to="" target="_blank">Instagram</NuxtLink>
                     <NuxtLink to="">Vop & GDPR</NuxtLink>
                 </li>
                 <li>
-                    <NuxtLink to="">Facebook</NuxtLink>
+                    <NuxtLink to="" target="_blank">Facebook</NuxtLink>
                 </li>
                 <li>
-                    <NuxtLink to="">Béhance</NuxtLink>
+                    <NuxtLink to="" target="_blank">Béhance</NuxtLink>
                 </li>
                 <li class="mt-8">
                     <NuxtLink to="mailto:hello@efestudio.sk">hello@efestudio.sk</NuxtLink>

@@ -48,11 +48,14 @@
         </section>
 
         <section id="splash" class="-mx-8">
-            <NuxtImg class="w-full" src="/images/services.webp" alt="services"/>
+            <NuxtImg class="h-dvh w-full object-cover object-center" src="/images/services.webp" alt="services"/>
         </section>
 
-        <section class="flex flex-col gap-8">
-            <span>S hrdosťou spolupracujeme</span>
+        <section class="flex flex-col gap-16">
+            <div class="xl:ml-[60%] flex md:flex-row flex-col md:gap-16 gap-4">
+                <h2 class="text-nowrap">(NAŠI KLIENTI)</h2>
+                <p>Lorem ipsum dolor sit amet consectetur. Potenti quis eget neque amet tincidunt. Scelerisque eu amet massa in purus.</p>
+            </div>
             <Partners/>
             <NuxtLink to="" class="w-fit py-3 px-6 flex items-center gap-2 border rounded-full text-nowrap ml-auto md:mr-[30%] mt-8">
                 PRIDAŤ SA K NIM

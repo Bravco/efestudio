@@ -2,7 +2,7 @@
     <div>
         <section 
             id="hero" 
-            class="min-h-dvh flex flex-col md:justify-between justify-end text-[var(--color-white)] md:pt-52 md:gap-0 gap-26 !pb-0 px-8 -mt-26 -mx-8 mb-26"
+            class="min-h-dvh flex flex-col md:justify-between justify-end text-[var(--color-white)] md:pt-52 md:gap-0 gap-26 !pb-8 px-8 -mt-26 -mx-8 mb-26"
             style="background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.1)), url('/images/hero.webp') center/cover no-repeat;"
         >
             <p class="text-4xl text-shadow-sm">
@@ -16,7 +16,7 @@
                 <span>2025/</span>
                 <span>(SCROLL)</span>
             </div>
-            <h1 class="text-[20vw] leading-none text-shadow-sm">efestudio</h1>
+            <NuxtImg class="w-full mx-auto invert" src="/images/efestudio.svg" alt="efestudio"/>
         </section>
 
         <section class="flex flex-col gap-26">
@@ -35,7 +35,7 @@
 
         <section class="flex flex-col gap-4">
             <div class="grid grid-cols-2 gap-6">
-                <NuxtLink class="flex items-center gap-2" to="/">
+                <NuxtLink class="flex items-center gap-2" to="/works">
                     Viac projektov
                     <NuxtImg src="/images/arrow.svg" height="16" width="16" alt="more projects"/>
                 </NuxtLink>
@@ -56,6 +56,7 @@
                     </div>
                 </div>
             </div>
+            <Button class="md:hidden flex mx-auto mt-12" to="/works" text="VIAC PROJEKTOV" arrow/>
         </section>
 
         <section class="flex flex-col gap-12">
