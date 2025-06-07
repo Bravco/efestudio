@@ -52,7 +52,7 @@
                     <div v-else class="max-h-[56rem] aspect-3/4 bg-(--color-gray)"></div>
                     <div class="flex justify-between">
                         <span>{{ project.title }}</span>
-                        <span>({{ project.year }})</span>
+                        <span>({{ project.label }})</span>
                     </div>
                 </div>
             </div>
@@ -115,22 +115,22 @@
         {
             title: "LAVARCH",
             imageUrl: "/images/lavarch.webp",
-            year: 2026
+            label: "ARCHITEKTONICKÉ ŠTÚDIO"
         },
         {
             title: "Marmat - SK",
             imageUrl: "/images/marmat.webp",
-            year: 2025
+            label: "ČISTENIE POVRCHOV"
         },
         {
             title: "Nario",
             imageUrl: "/images/nario.webp",
-            year: 2023
+            label: "INTERIÉROVÉ ŠTÚDIO"
         },
         {
             title: "Bagrespiš",
             imageUrl: "/images/bagrespis.webp",
-            year: 2025
+            label: "BAGRE"
         }
     ]);
 </script>
