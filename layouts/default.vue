@@ -70,7 +70,7 @@
                     <p class="text-5xl">Visual narratives  meant to evoke feeling. our work spans disciplines, unified by the spans disciplines,</p>
                     <span class="text-nowrap">(5 VOĽNÝCH MIEST V 2025)</span>
                 </div>
-                <NuxtLink to="/" class="text-5xl underline">⮡ Zabookuj si call</NuxtLink>
+                <NuxtLink to="/" class="mx-auto text-5xl underline">⮡ Zabookuj si call</NuxtLink>
                 <h1 class="md:inline hidden text-[20vw] leading-none">efestudio</h1>
             </section>
         </main>
