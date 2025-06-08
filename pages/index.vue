@@ -2,17 +2,17 @@
     <div>
         <section 
             id="hero" 
-            class="min-h-dvh flex flex-col md:justify-between justify-end text-[var(--color-white)] md:pt-52 md:gap-0 gap-26 !pb-8 px-8 -mt-26 -mx-8 mb-26"
+            class="min-h-dvh flex flex-col justify-between text-[var(--color-white)] !pt-34"
             style="background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.1)), url('/images/hero.webp') center/cover no-repeat;"
         >
-            <p class="text-4xl text-shadow-sm">
+            <p class="text-4xl">
                 Sme marketingové štúdio
                 <br>
                 Budujeme pre klientov marketingové stratégie
                 <br class="hidden md:inline">
                 poctivo — meratelne a bez zbytočných omáčok
             </p>
-            <div class="md:order-0 -order-1 flex justify-between">
+            <div class="flex justify-between">
                 <span>2025/</span>
                 <span>(SCROLL)</span>
             </div>
@@ -60,7 +60,7 @@
         </section>
 
         <section class="flex flex-col gap-12">
-            <div class="relative flex md:flex-row flex-col md:gap-12 gap-4 py-26">
+            <div class="relative flex md:flex-row flex-col md:gap-12 gap-4">
                 <h2 class="md:absolute inline text-nowrap">(NÁŠ PROCES)</h2>
                 <p class="md:text-6xl text-4xl">
                     <span class="hidden md:inline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>

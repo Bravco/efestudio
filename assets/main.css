@@ -24,6 +24,12 @@ body {
     color: var(--color-black);
 }
 
-section {
-    padding-bottom: 104px;
+main > :first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 104px;
+}
+
+section, footer {
+    padding: 32px;
 }
