@@ -42,12 +42,12 @@
                 <h2 class="text-nowrap">(VYBRANÉ PROJEKTY)</h2>
             </div>
             <div class="grid md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-12">
-                <div v-for="project in projects" class="interactable flex flex-col gap-4">
+                <div v-for="project in projects" class="flex flex-col gap-4">
                     <NuxtImg 
                         v-if="project.imageUrl"
                         :src="project.imageUrl"
                         :alt="project.title"
-                        class="w-full max-h-[56rem] aspect-3/4 object-cover object-center"
+                        class="interactable w-full max-h-[56rem] aspect-3/4 object-cover object-center"
                     />
                     <div v-else class="max-h-[56rem] aspect-3/4 bg-(--color-gray)"></div>
                     <div class="flex justify-between">
