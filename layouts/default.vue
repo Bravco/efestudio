@@ -1,7 +1,7 @@
 <template>
     <div>
         <header>
-            <nav class="fixed w-full p-8 flex justify-between items-center z-50 backdrop-blur-xs">
+            <nav class="fixed w-full p-8 flex justify-between items-center z-50">
                 <NuxtLink 
                     @click="closeMenu" :class="{ invert: (navInvert && !isMenuOpen) || isMenuOpen }" 
                     class="min-w-18 transition-all z-10" 
