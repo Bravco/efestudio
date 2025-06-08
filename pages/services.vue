@@ -57,10 +57,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur. Potenti quis eget neque amet tincidunt. Scelerisque eu amet massa in purus.</p>
             </div>
             <Partners/>
-            <NuxtLink to="" class="w-fit py-3 px-6 flex items-center gap-2 border rounded-full text-nowrap ml-auto md:mr-[30%] mt-8">
-                PRIDAŤ SA K NIM
-                <NuxtImg src="images/arrow.svg" height="16" width="16" alt="more about us"/>
-            </NuxtLink>
+            <Button class="ml-auto md:mr-[30%] mt-8" to="/" text="PRIDAŤ SA K NIM" arrow outlined/>
         </section>
     </div>
 </template>

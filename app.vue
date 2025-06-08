@@ -5,7 +5,9 @@
             <NuxtPage/>
         </NuxtLayout>
         <div ref="overlay" class="transition-overlay"></div>
-        <div id="trailer" class="fixed inset-0 z-10000 w-20 h-20 rounded-full pointer-events-none opacity-0 transition-all duration-200 ease-out"></div>
+        <div id="trailer" class="fixed inset-0 z-10000 flex w-20 h-20 bg-[var(--color-black)] rounded-full pointer-events-none opacity-0 transition-all duration-200 ease-out">
+            <NuxtImg class="m-auto invert rotate-45" width="32" src="/images/arrow.svg" alt="arrow"/>
+        </div>
     </div>
 </template>
 
@@ -87,9 +89,5 @@
 
     .overlay-slide-up {
         bottom: 0;
-    }
-
-    #trailer {
-        backdrop-filter: grayscale(1) invert(1);
     }
 </style>
