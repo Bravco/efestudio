@@ -63,12 +63,12 @@
 
         <main>
             <slot/>
-            <section id="contact" class="min-h-dvh flex flex-col justify-between bg-(--color-black) text-(--color-white)">
+            <section id="contact" class="md:min-h-dvh flex flex-col justify-between gap-26 bg-(--color-black) text-(--color-white)">
                 <div class="flex md:flex-row flex-col-reverse justify-between md:gap-[20%] gap-4">
-                    <p class="text-5xl">Visual narratives meant to evoke feeling. our work spans disciplines, unified by the spans disciplines,</p>
-                    <span class="text-nowrap">(5 VOĽNÝCH MIEST V 2025)</span>
+                    <p class="md:text-6xl text-3xl">Visual narratives meant to evoke feeling. our work spans disciplines, unified by the spans disciplines,</p>
+                    <span class="text-sm text-nowrap">(5 VOĽNÝCH MIEST V 2025)</span>
                 </div>
-                <NuxtLink to="/" class="text-5xl underline">⮡ Zabookuj si call</NuxtLink>
+                <NuxtLink to="/" class="md:text-6xl text-3xl underline">⮡ Zabookuj si call</NuxtLink>
                 <NuxtImg class="md:inline hidden w-full mx-auto invert" src="/images/efestudio.svg" alt="efestudio"/>
             </section>
         </main>
@@ -98,7 +98,7 @@
             </ul>
             <div class="flex flex-col gap-4">
                 <p class="mt-auto">Sme marketingové štúdio<br>Budujeme pre klientov marketingové stratégie poctivo — meratelne a bez zbytočných omáčok</p>
-                <span class="md:hidden inline">efestudio 2025&copy;</span>
+                <span class="md:hidden inline">efestudio 2025 &copy;</span>
             </div>
         </footer>
     </div>

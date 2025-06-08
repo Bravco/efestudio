@@ -1,6 +1,6 @@
 <template>
     <div>
-        <section class="min-h-dvh flex flex-col gap-12">
+        <section class="min-h-dvh flex flex-col gap-26">
             <div class="w-fit ml-auto flex flex-col gap-4">
                 <NuxtImg height="240" src="/images/lavarch.webp" alt="lavarch"/>
                 <div class="flex justify-between">
@@ -12,24 +12,24 @@
                 </div>
             </div>
             <div class="flex">
-                <h1 class="text-[15vw] leading-none text-nowrap">SLUŽBY</h1>
-                <span class="text-xl">(04)</span>
+                <h1 class="text-[20vw] leading-none text-nowrap">SLUŽBY</h1>
+                <span class="md:text-xl">(04)</span>
             </div>
             <div class="flex md:flex-row flex-col gap-4 justify-between items-start">
-                <span>(ZRUČNOSTI)</span>
-                <p class="md:max-w-[30%] text-xl">Naším klientom pomáhame vybudovať zrozumiteľnú značku s jasne definovanou pozíciou na trhu. S akým zadaním sa na nás môžete obrátiť?</p>
+                <span class="text-sm">(ZRUČNOSTI)</span>
+                <p class="md:max-w-[30%] md:text-xl">Naším klientom pomáhame vybudovať zrozumiteľnú značku s jasne definovanou pozíciou na trhu. S akým zadaním sa na nás môžete obrátiť?</p>
             </div>
         </section>
 
         <section>
             <div v-for="(service, index) in services" :key="index" class="border-t" :class="[index == services.length-1 ? 'border-b' : '']">
-                <div class="flex flex-col md:gap-8 gap-4 pt-8 pb-64">
-                    <h2 class="w-full md:grid md:grid-cols-2 flex justify-between gap-4 md:text-6xl text-5xl">
+                <div class="flex flex-col gap-12 pt-8 pb-64">
+                    <h2 class="w-full md:grid md:grid-cols-2 flex justify-between gap-4 md:text-6xl text-3xl">
                         <span>(0{{ index + 1 }})</span>
-                        <span class="text-nowrap">{{ service.title }}</span>
+                        <span class="-ml-2 text-nowrap">{{ service.title }}</span>
                     </h2>
-                    <p class="md:ml-auto md:w-1/2 md:pr-[10%] pr-0">{{ service.description }}</p>
-                    <div class="md:ml-auto md:w-1/2 md:flex md:flex-col grid grid-cols-2 md:gap-4 gap-8 md:pr-[10%] pr-0">
+                    <p class="md:ml-auto md:w-1/2 md:pr-[10%] pr-0 md:text-xl">{{ service.description }}</p>
+                    <div class="md:ml-auto md:w-1/2 md:flex md:flex-col grid grid-cols-2 md:gap-4 gap-8 md:pr-[10%] pr-0 md:text-xl">
                         <span class="md:hidden inline">(01)</span>
                         <ul class="flex md:flex-row flex-col md:justify-between gap-2">
                             <li>{{ service.items[0] }}</li>
@@ -51,13 +51,9 @@
             <NuxtImg class="h-dvh w-full object-cover object-center" src="/images/services.webp" alt="services"/>
         </section>
 
-        <section class="flex flex-col gap-16">
-            <div class="xl:ml-[60%] flex md:flex-row flex-col md:gap-16 gap-4">
-                <h2 class="text-nowrap">(NAŠI KLIENTI)</h2>
-                <p>Lorem ipsum dolor sit amet consectetur. Potenti quis eget neque amet tincidunt. Scelerisque eu amet massa in purus.</p>
-            </div>
+        <section class="flex flex-col gap-8">
+            <h2 class="xl:ml-[60%] text-sm text-nowrap">(NAŠI KLIENTI)</h2>
             <Partners/>
-            <Button class="ml-auto md:mr-[30%] mt-8" to="/" text="PRIDAŤ SA K NIM" arrow outlined/>
         </section>
     </div>
 </template>

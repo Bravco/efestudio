@@ -2,7 +2,7 @@
     <NuxtLink 
         :to="to" 
         :class="[
-            'group relative overflow-clip w-fit py-3 px-6 rounded-full text-nowrap',
+            'group relative overflow-clip w-fit py-3 px-6 rounded-full text-base text-nowrap',
             outlined ? 'border text-[var(--color-black)]' : 'bg-[var(--color-black)] text-[var(--color-white)]'
         ]"
     >

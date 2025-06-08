@@ -33,3 +33,7 @@ main > :first-child {
 section, footer {
     padding: 32px;
 }
+
+section:first-child {
+    padding-top: 136px;
+}
