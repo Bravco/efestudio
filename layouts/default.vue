@@ -99,7 +99,7 @@
                 </li>
             </ul>
             <div class="flex flex-col gap-4">
-                <p class="mt-auto">Sme marketingové štúdio<br>Budujeme — realizujeme pre klientov marketingové stratégie poctivo, meratelne a bez zbytočných omáčok</p>
+                <p class="mt-auto">Sme marketingové štúdio<br>Budujeme pre klientov marketingové stratégie poctivo — meratelne a bez zbytočných omáčok</p>
                 <span class="md:hidden inline">efestudio 2025&copy;</span>
             </div>
         </footer>
