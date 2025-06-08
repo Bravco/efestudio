@@ -8,9 +8,9 @@
             <p class="text-4xl text-shadow-sm">
                 Sme marketingové štúdio
                 <br>
-                Budujeme — realizujeme pre klientov marketingové
+                Budujeme pre klientov marketingové stratégie
                 <br class="hidden md:inline">
-                stratégie poctivo, meratelne a bez zbytočných omáčok
+                poctivo — meratelne a bez zbytočných omáčok
             </p>
             <div class="md:order-0 -order-1 flex justify-between">
                 <span>2025/</span>
@@ -24,7 +24,7 @@
                 <h2 class="md:absolute inline text-nowrap">(ABOUT US)</h2>
                 <p class="md:text-6xl text-4xl">
                     <span class="hidden md:inline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                    Sme digitálne marketingové štúdio. Klientom prinášame komplexné riešenia v oblasti značky, obsahu a webov. Každý projekt staviame na jasnej stratégii a merateľných cieľoch.
+                    Sme digitálne marketingové štúdio. Klientom prinášame komplexné riešenia v oblasti značky obsahu a webov. Každý projekt staviame na jasnej stratégii a cieľoch.
                 </p>
             </div>
             <div class="ml-auto md:w-2/5 w-full flex flex-col gap-8">
@@ -60,10 +60,10 @@
         </section>
 
         <section class="flex flex-col gap-12">
-            <div class="flex md:flex-row flex-col md:gap-12 gap-4 py-26">
-                <h2 class="text-nowrap">(NÁŠ PROCES)</h2>
+            <div class="relative flex md:flex-row flex-col md:gap-12 gap-4 py-26">
+                <h2 class="md:absolute inline text-nowrap">(NÁŠ PROCES)</h2>
                 <p class="md:text-6xl text-4xl">
-                    <span class="hidden md:inline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span class="hidden md:inline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                     Ako dokážeme doručiť výsledky, na ktorých sme sa dohodli?
                 </p>
             </div>

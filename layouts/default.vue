@@ -65,13 +65,13 @@
             <div class="mx-8 mb-8 py-26">
                 <slot/>
             </div>
-            <section id="contact" class="flex flex-col gap-32 bg-(--color-black) text-(--color-white) p-8 md:pb-8 pb-26">
+            <section id="contact" class="flex flex-col gap-52 bg-(--color-black) text-(--color-white) p-8 md:pb-8 pb-26">
                 <div class="flex md:flex-row flex-col-reverse justify-between md:gap-[20%] gap-4">
-                    <p class="text-5xl">Visual narratives  meant to evoke feeling. our work spans disciplines, unified by the spans disciplines,</p>
+                    <p class="text-5xl">Visual narratives meant to evoke feeling. our work spans disciplines, unified by the spans disciplines,</p>
                     <span class="text-nowrap">(5 VOĽNÝCH MIEST V 2025)</span>
                 </div>
-                <NuxtLink to="/" class="mx-auto text-5xl underline">⮡ Zabookuj si call</NuxtLink>
-                <NuxtImg class="w-full mx-auto invert" src="/images/efestudio.svg" alt="efestudio"/>
+                <NuxtLink to="/" class="text-5xl underline">⮡ Zabookuj si call</NuxtLink>
+                <NuxtImg class="md:inline hidden w-full mx-auto invert" src="/images/efestudio.svg" alt="efestudio"/>
             </section>
         </main>
         
@@ -83,7 +83,7 @@
                 <li class="md:inline hidden mt-auto">efestudio 2025&copy;</li>
             </ul>
             <ul class="md:order-0 order-[-1] underline">
-                <li class="flex items-center md:justify-start justify-between gap-8">
+                <li class="flex flex-wrap items-center md:justify-start justify-between md:gap-8 gap-0">
                     <NuxtLink to="" target="_blank">Instagram</NuxtLink>
                     <NuxtLink to="">Vop & GDPR</NuxtLink>
                 </li>
@@ -93,8 +93,9 @@
                 <li>
                     <NuxtLink to="" target="_blank">Béhance</NuxtLink>
                 </li>
-                <li class="mt-8">
+                <li class="mt-8 flex md:flex-row flex-col md:justify-around justify-start">
                     <NuxtLink to="mailto:hello@efestudio.sk">hello@efestudio.sk</NuxtLink>
+                    <NuxtLink class="md:mx-auto mx-0" to="tel:+421918502487">+421 918 502 487</NuxtLink>
                 </li>
             </ul>
             <div class="flex flex-col gap-4">
