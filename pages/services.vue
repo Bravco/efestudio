@@ -12,7 +12,7 @@
                 </div>
             </div>
             <div class="flex">
-                <h1 class="text-[20vw] leading-none text-nowrap">SLUŽBY</h1>
+                <h1>SLUŽBY</h1>
                 <span class="md:text-xl">(04)</span>
             </div>
             <div class="flex md:flex-row flex-col gap-4 justify-between items-start">
@@ -24,7 +24,7 @@
         <section>
             <div v-for="(service, index) in services" :key="index" class="border-t" :class="[index == services.length-1 ? 'border-b' : '']">
                 <div class="flex flex-col gap-12 pt-8 pb-64">
-                    <h2 class="w-full md:grid md:grid-cols-2 flex justify-between gap-4 md:text-6xl text-3xl">
+                    <h2 class="w-full md:grid md:grid-cols-2 flex justify-between gap-4 md:text-6xl text-3xl tracking-tight">
                         <span>(0{{ index + 1 }})</span>
                         <span class="-ml-2 text-nowrap">{{ service.title }}</span>
                     </h2>
@@ -47,8 +47,8 @@
             </div>
         </section>
 
-        <section id="splash" class="-mx-8">
-            <NuxtImg class="h-dvh w-full object-cover object-center" src="/images/services.webp" alt="services"/>
+        <section id="splash" class="h-dvh relative">
+            <NuxtImg class="h-dvh w-full absolute inset-0 object-cover object-center" src="/images/services.webp" alt="services"/>
         </section>
 
         <section class="flex flex-col gap-8">

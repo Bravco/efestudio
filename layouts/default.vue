@@ -34,7 +34,7 @@
                         <li><NuxtLink @click="closeMenu" to="/services" class="nav-link">SLUŽBY</NuxtLink></li>
                         <li><NuxtLink @click="closeMenu" :to="{ name: router.hasRoute(route.name) ? '' : 'index', hash: '#contact' }" class="nav-link">KONTAKT</NuxtLink></li>
                     </ul>
-                    <ul class="flex flex-col gap-2 underline text-lg">
+                    <ul class="flex flex-col gap-2 underline text-xl">
                         <li><NuxtLink @click="closeMenu" to="/">Instagram</NuxtLink></li>
                         <li><NuxtLink @click="closeMenu" :to="{ name: router.hasRoute(route.name) ? '' : 'index', hash: '#contact' }">Contact us</NuxtLink></li>
                     </ul>
