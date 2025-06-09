@@ -12,6 +12,7 @@
 </template>
 
 <script lang="ts" setup>
+    const lenis = useLenis();
     const router = useRouter();
     const overlay = ref<HTMLDivElement | null>(null);
     

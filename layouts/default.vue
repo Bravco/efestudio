@@ -142,20 +142,13 @@
     };
 
     const handleSroll = () => {
+        const navHeight = 104;
         let invert = false;
 
         const heroSection = document.querySelector("#hero");
         if (heroSection) {
             const heroRect = heroSection.getBoundingClientRect();
-            if (heroRect.bottom >= 0) {
-                invert = true;
-            }
-        }
-
-        const splashSection = document.querySelector("#splash");
-        if (splashSection) {
-            const splashRect = splashSection.getBoundingClientRect();
-            if (splashRect.top <= 0 && splashRect.bottom >= 0) {
+            if (heroRect.bottom - navHeight/2 >= 0) {
                 invert = true;
             }
         }
@@ -163,7 +156,16 @@
         const contactSection = document.querySelector("#contact");
         if (contactSection) {
             const contactRect = contactSection.getBoundingClientRect();
-            if (contactRect.top <= 0) {
+            if (contactRect.top - navHeight/2 <= 0) {
+                invert = true;
+            }
+        }
+
+        const splashSection = document.querySelector("#splash");
+        if (splashSection) {
+            const splashRect = splashSection.getBoundingClientRect();
+            if (splashRect.top - navHeight/2 <= 0 &&
+                splashRect.bottom - navHeight/2 >= 0) {
                 invert = true;
             }
         }
