@@ -20,10 +20,9 @@
         </section>
 
         <section class="bg-[var(--color-white)] -mb-26 !pb-34 flex flex-col gap-26">
-            <div class="relative flex md:flex-row flex-col md:gap-12 gap-4">
-                <h2 class="md:absolute inline text-sm text-nowrap">(ABOUT US)</h2>
-                <p class="tracking-tight leading-none" style="font-size: clamp(32px, 5vw, 62px);">
-                    <span class="hidden md:inline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <div class="split-animate">
+                <h2 class="md:w-[15vw] w-auto h-8 md:float-left text-sm text-nowrap">(ABOUT US)</h2>
+                <p class="split-animate tracking-tight leading-none" style="font-size: clamp(32px, 5vw, 62px);">
                     Sme digitálne marketingové štúdio. Klientom prinášame komplexné riešenia v oblasti značky obsahu a webov. Každý projekt staviame na jasnej stratégii a cieľoch.
                 </p>
             </div>
@@ -60,10 +59,9 @@
         </section>
 
         <section class="flex flex-col gap-26">
-            <div class="relative flex md:flex-row flex-col md:gap-12 gap-4">
-                <h2 class="md:absolute inline text-sm text-nowrap">(NÁŠ PROCES)</h2>
+            <div class="split-animate">
+                <h2 class="md:w-[15vw] w-auto h-8 md:float-left text-sm text-nowrap">(NÁŠ PROCES)</h2>
                 <p class="tracking-tight leading-none" style="font-size: clamp(32px, 5vw, 62px);">
-                    <span class="hidden md:inline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                     Ako dokážeme doručiť výsledky, na ktorých sme sa dohodli?
                 </p>
             </div>
@@ -91,6 +89,7 @@
 <script lang="ts" setup>
     import gsap from "gsap";
     import ScrollTrigger from "gsap/ScrollTrigger";
+    import SplitText from "gsap/SplitText";
 
     const projects = ref([
         {
@@ -133,13 +132,37 @@
     ]);
 
     onMounted(() => {
-        gsap.registerPlugin(ScrollTrigger);
+        gsap.registerPlugin(ScrollTrigger, SplitText);
 
         ScrollTrigger.create({
             trigger: "#hero",
             start: "top top",
             pin: true,
-            pinSpacing: false
+            pinSpacing: false,
+            opacity: 0
+        });
+
+        document.fonts.ready.then(() => {
+            const splitElements = document.querySelectorAll(".split-animate");
+
+            splitElements.forEach(element => {
+                let split = SplitText.create(element, {
+                    type: "words",
+                    autoSplit: true,
+                    mask: "words"
+                });
+
+                gsap.from(split.words, {
+                    yPercent: 100,
+                    opacity: 0,
+                    stagger: 0.05,
+                    scrollTrigger: {
+                        trigger: element,
+                        start: "top 80%"
+                    },
+                    onComplete: () => split.revert()
+                });
+            });
         });
     });
 </script>

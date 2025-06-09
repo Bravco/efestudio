@@ -14,7 +14,6 @@
 <script lang="ts" setup>
     import gsap from "gsap";
     import ScrollTrigger from "gsap/ScrollTrigger";
-    import SplitText from "gsap/SplitText";
 
     const lenis = useLenis();
     const router = useRouter();
@@ -91,9 +90,6 @@
         };
 
         window.addEventListener("mousemove", handleMouseMove);
-
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.registerPlugin(SplitText);
 
         onUnmounted(() => {
             window.removeEventListener("mousemove", handleMouseMove);
