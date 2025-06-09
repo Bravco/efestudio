@@ -5,7 +5,7 @@
             class="min-h-dvh flex flex-col justify-between text-[var(--color-white)]"
             style="background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url('/images/hero.webp') center/cover no-repeat;"
         >
-            <p class="md:text-4xl text-2xl">
+            <p class="md:text-[40px] md:leading-none text-xl">
                 Sme marketingové štúdio
                 <br>
                 Budujeme pre klientov marketingové stratégie
@@ -22,7 +22,7 @@
         <section class="flex flex-col gap-26">
             <div class="relative flex md:flex-row flex-col md:gap-12 gap-4">
                 <h2 class="md:absolute inline text-sm text-nowrap">(ABOUT US)</h2>
-                <p class="md:text-6xl text-3xl tracking-tight">
+                <p class="tracking-tight leading-none" style="font-size: clamp(32px, 5vw, 62px);">
                     <span class="hidden md:inline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                     Sme digitálne marketingové štúdio. Klientom prinášame komplexné riešenia v oblasti značky obsahu a webov. Každý projekt staviame na jasnej stratégii a cieľoch.
                 </p>
@@ -62,7 +62,7 @@
         <section class="flex flex-col gap-26">
             <div class="relative flex md:flex-row flex-col md:gap-12 gap-4">
                 <h2 class="md:absolute inline text-sm text-nowrap">(NÁŠ PROCES)</h2>
-                <p class="md:text-6xl text-3xl tracking-tight">
+                <p class="tracking-tight leading-none" style="font-size: clamp(32px, 5vw, 62px);">
                     <span class="hidden md:inline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                     Ako dokážeme doručiť výsledky, na ktorých sme sa dohodli?
                 </p>

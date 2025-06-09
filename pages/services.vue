@@ -24,7 +24,7 @@
         <section>
             <div v-for="(service, index) in services" :key="index" class="border-t" :class="[index == services.length-1 ? 'border-b' : '']">
                 <div class="flex flex-col gap-12 pt-8 pb-64">
-                    <h2 class="w-full md:grid md:grid-cols-2 flex justify-between gap-4 md:text-6xl text-3xl tracking-tight">
+                    <h2 class="w-full md:grid md:grid-cols-2 flex justify-between gap-4 md:text-[62px] text-[32px] leading-none tracking-tight">
                         <span>(0{{ index + 1 }})</span>
                         <span class="-ml-2 text-nowrap">{{ service.title }}</span>
                     </h2>
