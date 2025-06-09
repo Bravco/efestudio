@@ -148,19 +148,17 @@
             splitElements.forEach(element => {
                 let split = SplitText.create(element, {
                     type: "words",
-                    autoSplit: true,
-                    mask: "words"
+                    autoSplit: true
                 });
 
                 gsap.from(split.words, {
-                    yPercent: 100,
+                    yPercent: 50,
                     opacity: 0,
                     stagger: 0.05,
                     scrollTrigger: {
                         trigger: element,
                         start: "top 80%"
-                    },
-                    onComplete: () => split.revert()
+                    }
                 });
             });
         });
