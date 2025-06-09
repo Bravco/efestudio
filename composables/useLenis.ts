@@ -1,6 +1,7 @@
 import Lenis from "lenis";
 
 export function useLenis() {
+    const router = useRouter();
     const lenis = ref<Lenis | null>(null);
 
     onMounted(() => {
@@ -13,7 +14,7 @@ export function useLenis() {
             _lenis.raf(time);
             requestAnimationFrame(raf);
         };
-
+        
         requestAnimationFrame(raf);
     });
 

@@ -2,7 +2,7 @@
     <div>
         <section 
             id="hero" 
-            class="min-h-dvh flex flex-col justify-between text-[var(--color-white)]"
+            class="min-h-dvh flex flex-col justify-between text-[var(--color-white)] -z-1"
             style="background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url('/images/hero.webp') center/cover no-repeat;"
         >
             <p class="md:text-[40px] md:leading-none text-xl">
@@ -19,7 +19,7 @@
             <NuxtImg class="w-full mx-auto invert" src="/images/efestudio.svg" alt="efestudio"/>
         </section>
 
-        <section class="flex flex-col gap-26">
+        <section class="bg-[var(--color-white)] -mb-26 !pb-34 flex flex-col gap-26">
             <div class="relative flex md:flex-row flex-col md:gap-12 gap-4">
                 <h2 class="md:absolute inline text-sm text-nowrap">(ABOUT US)</h2>
                 <p class="tracking-tight leading-none" style="font-size: clamp(32px, 5vw, 62px);">
@@ -33,7 +33,7 @@
             </div>
         </section>
 
-        <section class="flex flex-col gap-4">
+        <section class="bg-[var(--color-white)] flex flex-col gap-4">
             <div class="grid grid-cols-2 gap-6">
                 <NuxtLink class="flex items-center gap-2" to="/works">
                     Viac projektov
@@ -89,6 +89,9 @@
 </template>
 
 <script lang="ts" setup>
+    import gsap from "gsap";
+    import ScrollTrigger from "gsap/ScrollTrigger";
+
     const projects = ref([
         {
             title: "LAVARCH",
@@ -111,7 +114,6 @@
             label: "BAGRE"
         }
     ]);
-
     const process = ref([
         {
             title: "Explore",
@@ -129,4 +131,15 @@
             imageUrl: "/images/circle3.svg"
         }
     ]);
+
+    onMounted(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        ScrollTrigger.create({
+            trigger: "#hero",
+            start: "top top",
+            pin: true,
+            pinSpacing: false
+        });
+    });
 </script>

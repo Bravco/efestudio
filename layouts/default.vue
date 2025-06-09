@@ -148,7 +148,7 @@
         const heroSection = document.querySelector("#hero");
         if (heroSection) {
             const heroRect = heroSection.getBoundingClientRect();
-            if (heroRect.bottom - navHeight/2 >= 0) {
+            if (heroRect.top + navHeight/2 >= 0) {
                 invert = true;
             }
         }
