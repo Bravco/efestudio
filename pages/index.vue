@@ -138,8 +138,7 @@
             trigger: "#hero",
             start: "top top",
             pin: true,
-            pinSpacing: false,
-            opacity: 0
+            pinSpacing: false
         });
 
         document.fonts.ready.then(() => {
@@ -147,18 +146,21 @@
 
             splitElements.forEach(element => {
                 let split = SplitText.create(element, {
-                    type: "words",
+                    type: "lines",
+                    mask: "lines",
                     autoSplit: true
                 });
 
-                gsap.from(split.words, {
-                    yPercent: 50,
-                    opacity: 0,
-                    stagger: 0.05,
+                gsap.from(split.lines, {
+                    duration: 1,
+                    yPercent: 100,
+                    stagger: 0.1,
+                    ease: "expo.inOut",
                     scrollTrigger: {
                         trigger: element,
                         start: "top 80%"
-                    }
+                    },
+                    onComplete: () => split.revert()
                 });
             });
         });
