@@ -17,6 +17,30 @@
 
     const lenis = useLenis();
     const router = useRouter();
+    
+    const projects = useState<Project[]>("projects", () => [
+        {
+            title: "LAVARCH",
+            imageUrl: "/images/lavarch.webp",
+            label: "ARCHITEKTONICKÉ ŠTÚDIO"
+        },
+        {
+            title: "Marmat - SK",
+            imageUrl: "/images/marmat.webp",
+            label: "ČISTENIE POVRCHOV"
+        },
+        {
+            title: "Nario",
+            imageUrl: "/images/nario.webp",
+            label: "INTERIÉROVÉ ŠTÚDIO"
+        },
+        {
+            title: "Bagrespiš",
+            imageUrl: "/images/bagrespis.webp",
+            label: "BAGRE"
+        }
+    ]);
+
     const overlay = ref<HTMLDivElement | null>(null);
     
     watchEffect((onInvalidate) => {

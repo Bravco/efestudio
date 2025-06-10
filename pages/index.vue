@@ -41,19 +41,7 @@
                 <h2 class="text-sm text-nowrap">(VYBRANÉ PROJEKTY)</h2>
             </div>
             <div class="grid md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-12">
-                <div v-for="project in projects" class="flex flex-col gap-4">
-                    <NuxtImg 
-                        v-if="project.imageUrl"
-                        :src="project.imageUrl"
-                        :alt="project.title"
-                        class="interactable w-full max-h-[56rem] aspect-3/4 object-cover object-center"
-                    />
-                    <div v-else class="max-h-[56rem] aspect-3/4 bg-(--color-gray)"></div>
-                    <div class="flex justify-between md:text-lg">
-                        <span>{{ project.title }}</span>
-                        <span>({{ project.label }})</span>
-                    </div>
-                </div>
+                <ProjectCard v-for="project in projects" :key="project.title" :project="project"/>
             </div>
             <Button class="md:hidden flex mx-auto mt-12" to="/works" text="VIAC PROJEKTOV" arrow/>
         </section>
@@ -91,29 +79,9 @@
     import ScrollTrigger from "gsap/ScrollTrigger";
     import SplitText from "gsap/SplitText";
 
-    const projects = ref([
-        {
-            title: "LAVARCH",
-            imageUrl: "/images/lavarch.webp",
-            label: "ARCHITEKTONICKÉ ŠTÚDIO"
-        },
-        {
-            title: "Marmat - SK",
-            imageUrl: "/images/marmat.webp",
-            label: "ČISTENIE POVRCHOV"
-        },
-        {
-            title: "Nario",
-            imageUrl: "/images/nario.webp",
-            label: "INTERIÉROVÉ ŠTÚDIO"
-        },
-        {
-            title: "Bagrespiš",
-            imageUrl: "/images/bagrespis.webp",
-            label: "BAGRE"
-        }
-    ]);
-    const process = ref([
+    const projects = useState<Project[]>("projects");
+
+    const process = [
         {
             title: "Explore",
             description: "Kto ste, čo robíte a prečo na tom záleží? V tomto prvom kroku je dôležité identifikovať piliere, na ktorých bude naša spolupráca stáť. Preto detailne zanalyzujeme minulosť, súčasný stav a príležitosti, ktoré nám ležia pri nohách. Po identifikovaní kľúčových elementov vám objektívne vykreslíme realitu a nastavíme jasný obraz spolupráce ako takej.",
@@ -129,7 +97,7 @@
             description: "Po jasne stanovených cieľoch prichádza na rad kreatíva. Nie však hocijaká – u nás sa veci robia inak. Našu kreatívu staviame na tvrdých faktoch, nie na domnienkach ani na „pekných trendoch“. V tejto fáze zvolíme konkrétne taktiky, ktoré čo najlepšie naplnia ciele, prinesú vysokú návratnosť a budú v súlade so stanovenou stratégiou a rozpočtom.",
             imageUrl: "/images/circle3.svg"
         }
-    ]);
+    ];
 
     onMounted(() => {
         gsap.registerPlugin(ScrollTrigger, SplitText);
