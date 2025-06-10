@@ -75,9 +75,7 @@
 </template>
 
 <script lang="ts" setup>
-    import gsap from "gsap";
-    import ScrollTrigger from "gsap/ScrollTrigger";
-    import SplitText from "gsap/SplitText";
+    const { gsap, ScrollTrigger, SplitText } = useGsap();
 
     const projects = useState<Project[]>("projects");
 
@@ -100,8 +98,6 @@
     ];
 
     onMounted(() => {
-        gsap.registerPlugin(ScrollTrigger, SplitText);
-
         ScrollTrigger.create({
             trigger: "#hero",
             start: "top top",

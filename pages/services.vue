@@ -11,7 +11,7 @@
                     </NuxtLink>
                 </div>
             </div>
-            <div class="flex">
+            <div class="flex gap-2">
                 <h1>SLUŽBY</h1>
                 <span class="md:text-xl">(04)</span>
             </div>

@@ -52,6 +52,7 @@
             if (!lenis.value) return;
             lenis.value.raf(time * 1000);
         }
+        
         gsap.ticker.add(update);
 
         gsap.ticker.lagSmoothing(0);

@@ -1,7 +1,6 @@
 import Lenis from "lenis";
 
 export function useLenis() {
-    const router = useRouter();
     const lenis = ref<Lenis | null>(null);
 
     onMounted(() => {

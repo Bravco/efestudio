@@ -1,7 +1,7 @@
 <template>
     <div>
         <section class="min-h-dvh flex items-end">
-            <div class="flex">
+            <div class="flex gap-2">
                 <h1>WORK</h1>
                 <span class="md:text-xl">(0{{ projects.length }})</span>
             </div>
