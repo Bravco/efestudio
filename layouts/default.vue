@@ -207,9 +207,9 @@
                 });
 
                 gsap.from(split.lines, {
-                    duration: 0.6,
+                    duration: 1,
                     yPercent: 100,
-                    stagger: 0.1,
+                    stagger: 0.2,
                     ease: "expo.inOut",
                     scrollTrigger: {
                         trigger: element,
