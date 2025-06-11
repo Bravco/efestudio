@@ -12,11 +12,9 @@
 </template>
 
 <script lang="ts" setup>
-    import gsap from "gsap";
-    import ScrollTrigger from "gsap/ScrollTrigger";
-
-    const lenis = useLenis();
     const router = useRouter();
+    const lenis = useLenis();
+    const { gsap, ScrollTrigger } = useGsap();
     
     const projects = useState<Project[]>("projects", () => [
         {
