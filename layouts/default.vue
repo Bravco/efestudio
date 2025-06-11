@@ -181,6 +181,10 @@
         });
     };
 
+    watch(route, (to, from) => {
+        handleSroll();
+    });
+
     onMounted(() => {
         window.addEventListener("scroll", handleSroll);
         handleSroll();
@@ -195,9 +199,5 @@
         if (timer) {
             clearInterval(timer);
         }
-    });
-
-    watch(route, (to, from) => {
-        handleSroll();
     });
 </script>

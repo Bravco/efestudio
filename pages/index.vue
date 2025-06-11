@@ -116,7 +116,7 @@
                 });
 
                 gsap.from(split.lines, {
-                    duration: 1,
+                    duration: 0.6,
                     yPercent: 100,
                     stagger: 0.1,
                     ease: "expo.inOut",
