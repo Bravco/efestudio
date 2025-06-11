@@ -19,10 +19,10 @@
             <NuxtImg class="w-full mx-auto invert" src="/images/efestudio.svg" alt="efestudio"/>
         </section>
 
-        <section class="bg-[var(--color-white)] -mb-26 !pb-34 flex flex-col gap-26">
+        <section class="bg-[var(--color-white)] -mb-[var(--section-gap)] flex flex-col gap-[var(--section-gap)]">
             <div class="split-animate">
                 <h2 class="md:w-[15vw] w-auto h-8 md:float-left text-sm text-nowrap">(ABOUT US)</h2>
-                <p class="split-animate tracking-tight leading-none" style="font-size: clamp(32px, 5vw, 62px);">
+                <p class="tracking-tight leading-none" style="font-size: clamp(32px, 5vw, 62px);">
                     Sme digitálne marketingové štúdio. Klientom prinášame komplexné riešenia v oblasti značky obsahu a webov. Každý projekt staviame na jasnej stratégii a cieľoch.
                 </p>
             </div>
@@ -46,16 +46,16 @@
             <Button class="md:hidden flex mx-auto mt-12" to="/works" text="VIAC PROJEKTOV" arrow/>
         </section>
 
-        <section class="flex flex-col gap-26">
+        <section class="flex flex-col gap-[var(--section-gap)]">
             <div class="split-animate">
                 <h2 class="md:w-[15vw] w-auto h-8 md:float-left text-sm text-nowrap">(NÁŠ PROCES)</h2>
                 <p class="tracking-tight leading-none" style="font-size: clamp(32px, 5vw, 62px);">
                     Ako dokážeme doručiť výsledky, na ktorých sme sa dohodli?
                 </p>
             </div>
-            <div class="flex flex-col gap-12">
+            <div class="flex flex-col gap-[var(--section-gap)]">
                 <div v-for="(item, index) in process" :key="index" class="relative md:text-xl">
-                    <div class="lg:max-w-200 lg:w-1/2 mx-auto flex flex-col gap-12 md:pb-26 pb-12 border-b">
+                    <div class="lg:max-w-200 lg:w-1/2 mx-auto flex flex-col gap-6 pb-[var(--section-gap)] border-b">
                         <div class="lg:grid lg:grid-cols-[32px_1fr] flex gap-20 lg:-ml-28">
                             <span>(0{{ index+1 }})</span>
                             <h3>{{ item.title }}</h3>

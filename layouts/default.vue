@@ -63,7 +63,7 @@
 
         <main>
             <slot/>
-            <section id="contact" class="md:min-h-dvh flex flex-col justify-between gap-26 bg-(--color-black) text-(--color-white)">
+            <section id="contact" class="mt-[calc(var(--section-gap)+32px)] md:min-h-dvh flex flex-col justify-between gap-[var(--section-gap)] bg-(--color-black) text-(--color-white)">
                 <div class="flex md:flex-row flex-col-reverse justify-between md:gap-[20%] gap-4">
                     <p class="md:text-5xl text-3xl">Visual narratives meant to evoke feeling. our work spans disciplines, unified by the spans disciplines,</p>
                     <span class="text-sm text-nowrap">(5 VOĽNÝCH MIEST V 2025)</span>
@@ -73,7 +73,7 @@
             </section>
         </main>
         
-        <footer class="grid md:grid-cols-3 grid-cols-1 gap-12 bg-(--color-black) text-(--color-white) !pt-26">
+        <footer class="grid md:grid-cols-3 grid-cols-1 gap-12 bg-(--color-black) text-(--color-white) !pt-[var(--section-gap)]">
             <NuxtImg class="md:hidden inline w-full invert" src="/images/logo.svg" alt="logo"/>
             <ul class="flex flex-col">
                 <li>{{ time }} SNV</li>

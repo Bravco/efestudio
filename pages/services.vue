@@ -1,7 +1,7 @@
 <template>
     <div>
-        <section class="min-h-dvh flex flex-col gap-26">
-            <div class="w-fit ml-auto flex flex-col gap-4">
+        <section class="min-h-dvh flex flex-col justify-end gap-[var(--section-gap)]">
+            <div class="w-fit ml-auto flex flex-col gap-4 mb-auto">
                 <NuxtImg height="240" src="/images/lavarch.webp" alt="lavarch"/>
                 <div class="flex justify-between">
                     <span>(01)</span>
@@ -22,13 +22,13 @@
         </section>
 
         <section>
-            <div v-for="(service, index) in services" :key="index" class="border-t" :class="[index == services.length-1 ? 'border-b' : '']">
-                <div class="flex flex-col gap-12 pt-8 pb-64">
+            <div v-for="(service, index) in services" :key="index" class="border-t">
+                <div class="flex flex-col gap-8 pt-8 md:pb-[240px] pb-[104px]">
                     <h2 class="w-full md:grid md:grid-cols-2 flex justify-between gap-4 md:text-[62px] text-[32px] leading-none tracking-tight">
                         <span>(0{{ index + 1 }})</span>
                         <span class="-ml-2 text-nowrap">{{ service.title }}</span>
                     </h2>
-                    <p class="md:ml-auto md:w-1/2 md:pr-[10%] pr-0 md:text-xl">{{ service.description }}</p>
+                    <p class="md:ml-auto md:w-1/2 md:pr-[10%] pr-0 md:pb-8 pb-4 md:text-xl">{{ service.description }}</p>
                     <div class="md:ml-auto md:w-1/2 md:flex md:flex-col grid grid-cols-2 md:gap-4 gap-8 md:pr-[10%] pr-0 md:text-xl">
                         <span class="md:hidden inline">(01)</span>
                         <ul class="flex md:flex-row flex-col md:justify-between gap-2">
@@ -47,11 +47,11 @@
             </div>
         </section>
 
-        <section id="splash" class="h-dvh relative">
-            <NuxtImg class="h-dvh w-full absolute inset-0 object-cover object-center" src="/images/services.webp" alt="services"/>
+        <section id="splash" class="min-h-dvh relative my-8">
+            <NuxtImg class="h-full w-full absolute inset-0 object-cover object-center" src="/images/services.webp" alt="services"/>
         </section>
 
-        <section class="flex flex-col gap-8">
+        <section class="flex flex-col gap-4">
             <h2 class="xl:ml-[60%] text-sm text-nowrap">(NAŠI KLIENTI)</h2>
             <Partners/>
         </section>
@@ -59,7 +59,7 @@
 </template>
 
 <script lang="ts" setup>
-    const services = ref([
+    const services = [
         {
             title: "Web design",
             description: "Pred tvorbou vizuálnej identity musíme v prvom rade obrátiť na vás. Prečo podnikáte? Čo vás odlišuje oproti konkurencii? Definujeme zrozumiteľnosť vašej značky s jasne nastavenou pozíciou na trhu oproti vašej konkurencii. Tento postup nám zaručí konkurenčnú výhodu a udržateľný rast.",
@@ -108,5 +108,5 @@
                 "Správa webu"
             ]
         }
-    ]);
+    ];
 </script>
