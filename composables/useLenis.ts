@@ -4,17 +4,10 @@ export function useLenis() {
     const lenis = ref<Lenis | null>(null);
 
     onMounted(() => {
-        const _lenis = new Lenis({
+        lenis.value = new Lenis({
+            autoRaf: true,
             smoothWheel: true
         });
-        lenis.value = _lenis;
-
-        const raf = (time: number) => {
-            _lenis.raf(time);
-            requestAnimationFrame(raf);
-        };
-        
-        requestAnimationFrame(raf);
     });
 
     onUnmounted(() => {

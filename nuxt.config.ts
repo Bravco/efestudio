@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxt/image",
-    "lenis/nuxt"
+    "v-gsap-nuxt"
   ],
   css: [ "~/assets/main.css" ]
 })

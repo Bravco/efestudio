@@ -65,11 +65,11 @@
             <slot/>
             <section id="contact" class="mt-[calc(var(--section-gap)+32px)] md:min-h-dvh flex flex-col justify-between gap-[var(--section-gap)] bg-(--color-black) text-(--color-white)">
                 <div class="flex md:flex-row flex-col-reverse justify-between md:gap-[20%] gap-4">
-                    <p class="md:text-5xl text-3xl">Visual narratives meant to evoke feeling. our work spans disciplines, unified by the spans disciplines,</p>
-                    <span class="text-sm text-nowrap">(5 VOĽNÝCH MIEST V 2025)</span>
+                    <p class="text-animate md:text-5xl text-3xl">Visual narratives meant to evoke feeling. our work spans disciplines, unified by the spans disciplines,</p>
+                    <span class="text-animate text-sm text-nowrap">(5 VOĽNÝCH MIEST V 2025)</span>
                 </div>
-                <NuxtLink to="/" class="md:text-[62px] text-[32px] leading-none underline">⮡ Zabookuj si call</NuxtLink>
-                <NuxtImg class="md:inline hidden w-full mx-auto invert" src="/images/efestudio.svg" alt="efestudio"/>
+                <NuxtLink to="/" class="text-animate md:text-[62px] text-[32px] leading-none underline">⮡ Zabookuj si call</NuxtLink>
+                <NuxtImg v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }" class="md:inline hidden w-full mx-auto invert" src="/images/efestudio.svg" alt="efestudio"/>
             </section>
         </main>
         
@@ -105,8 +105,12 @@
 </template>
 
 <script lang="ts" setup>
+    import SplitText from "gsap/SplitText";
+
     const route = useRoute();
     const router = useRouter();
+    const gsap = useGSAP();
+
     const isMenuOpen = ref<boolean>(false);
     const navInvert = ref<boolean>(false);
     const clipPath = ref<boolean>(false);
@@ -191,6 +195,30 @@
 
         updateTime();
         timer = setInterval(updateTime, 1000);
+
+        document.fonts.ready.then(() => {
+            const splitElements = document.querySelectorAll(".text-animate");
+
+            splitElements.forEach(element => {
+                let split = SplitText.create(element, {
+                    type: "lines",
+                    mask: "lines",
+                    autoSplit: true
+                });
+
+                gsap.from(split.lines, {
+                    duration: 0.6,
+                    yPercent: 100,
+                    stagger: 0.1,
+                    ease: "expo.inOut",
+                    scrollTrigger: {
+                        trigger: element,
+                        start: "top 80%"
+                    },
+                    onComplete: () => split.revert()
+                });
+            });
+        });
     });
 
     onUnmounted(() => {

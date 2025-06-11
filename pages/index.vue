@@ -5,49 +5,49 @@
             class="min-h-dvh flex flex-col justify-between text-[var(--color-white)] -z-1"
             style="background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url('/images/hero.webp') center/cover no-repeat;"
         >
-            <p class="md:text-[40px] md:leading-none text-xl">
+            <p class="text-animate md:text-[40px] md:leading-none text-xl">
                 Sme marketingové štúdio
                 <br>
                 Budujeme pre klientov marketingové stratégie
                 <br class="hidden md:inline">
                 poctivo — meratelne a bez zbytočných omáčok
             </p>
-            <div class="flex justify-between text-sm">
+            <div v-gsap.entrance.once.from="{ opacity: 0, y: 100 }" class="flex justify-between text-sm">
                 <span>2025/</span>
                 <span>(SCROLL)</span>
             </div>
-            <NuxtImg class="w-full mx-auto invert" src="/images/efestudio.svg" alt="efestudio"/>
+            <NuxtImg v-gsap.entrance.once.from="{ opacity: 0, y: 100 }" class="w-full mx-auto invert" src="/images/efestudio.svg" alt="efestudio"/>
         </section>
 
         <section class="bg-[var(--color-white)] -mb-[var(--section-gap)] flex flex-col gap-[var(--section-gap)]">
-            <div class="split-animate">
+            <div class="text-animate">
                 <h2 class="md:w-[15vw] w-auto h-8 md:float-left text-sm text-nowrap">(ABOUT US)</h2>
                 <p class="tracking-tight leading-none" style="font-size: clamp(32px, 5vw, 62px);">
                     Sme digitálne marketingové štúdio. Klientom prinášame komplexné riešenia v oblasti značky obsahu a webov. Každý projekt staviame na jasnej stratégii a cieľoch.
                 </p>
             </div>
             <div class="ml-auto md:w-2/5 w-full flex flex-col gap-8">
-                <p class="md:text-xl">Sme iniciatívni, každý projekt má jasný cieľ, na ktorom spoločne pryacujeme ako tím. Marketing realizujeme rozvažne ss dôrazom na výsledky, rozpočet a očakávanú návratnosť.</p>
-                <Button to="/about" text="ZOBRAZIŤ VIAC O NÁS" arrow/>
+                <p class="text-animate md:text-xl">Sme iniciatívni, každý projekt má jasný cieľ, na ktorom spoločne pryacujeme ako tím. Marketing realizujeme rozvažne ss dôrazom na výsledky, rozpočet a očakávanú návratnosť.</p>
+                <Button  v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }" to="/about" text="ZOBRAZIŤ VIAC O NÁS" arrow/>
             </div>
         </section>
 
         <section class="bg-[var(--color-white)] flex flex-col gap-4">
             <div class="grid grid-cols-2 gap-6">
-                <NuxtLink class="flex items-center gap-2" to="/works">
+                <NuxtLink v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }" class="flex items-center gap-2" to="/works">
                     Viac projektov
                     <NuxtImg src="/images/arrow.svg" height="16" width="16" alt="more projects"/>
                 </NuxtLink>
-                <h2 class="text-sm text-nowrap">(VYBRANÉ PROJEKTY)</h2>
+                <h2 v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }" class="text-sm text-nowrap">(VYBRANÉ PROJEKTY)</h2>
             </div>
             <div class="grid md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-12">
-                <ProjectCard v-for="project in projects" :key="project.title" :project="project"/>
+                <ProjectCard v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }" v-for="project in projects" :key="project.title" :project="project"/>
             </div>
             <Button class="md:hidden flex mx-auto mt-12" to="/works" text="VIAC PROJEKTOV" arrow/>
         </section>
 
         <section class="flex flex-col gap-[var(--section-gap)]">
-            <div class="split-animate">
+            <div class="text-animate">
                 <h2 class="md:w-[15vw] w-auto h-8 md:float-left text-sm text-nowrap">(NÁŠ PROCES)</h2>
                 <p class="tracking-tight leading-none" style="font-size: clamp(32px, 5vw, 62px);">
                     Ako dokážeme doručiť výsledky, na ktorých sme sa dohodli?
@@ -57,25 +57,27 @@
                 <div v-for="(item, index) in process" :key="index" class="relative md:text-xl">
                     <div class="lg:max-w-200 lg:w-1/2 mx-auto flex flex-col gap-6 pb-[var(--section-gap)] border-b">
                         <div class="lg:grid lg:grid-cols-[32px_1fr] flex gap-20 lg:-ml-28">
-                            <span>(0{{ index+1 }})</span>
-                            <h3>{{ item.title }}</h3>
+                            <span class="text-animate">(0{{ index+1 }})</span>
+                            <h3 class="text-animate"v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }">{{ item.title }}</h3>
                         </div>
-                        <p>{{ item.description }}</p>
+                        <p class="text-animate">{{ item.description }}</p>
                     </div>
-                    <NuxtImg class="absolute right-0 top-0 lg:w-20 w-10 lg:h-20 h-10" :src="item.imageUrl" width="80" height="80" :alt="item.title"/>
+                    <NuxtImg v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }" class="absolute right-0 top-0 lg:w-20 w-10 lg:h-20 h-10" :src="item.imageUrl" width="80" height="80" :alt="item.title"/>
                 </div>
             </div>
         </section>
 
         <section class="flex flex-col gap-8">
-            <h2 class="xl:ml-[60%] text-sm text-nowrap">(NAŠI KLIENTI)</h2>
-            <Partners/>
+            <h2 class="text-animate xl:ml-[60%] text-sm text-nowrap">(NAŠI KLIENTI)</h2>
+            <Partners v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }"/>
         </section>
     </div>
 </template>
 
 <script lang="ts" setup>
-    const { gsap, ScrollTrigger, SplitText } = useGsap();
+    import ScrollTrigger from "gsap/ScrollTrigger";
+    
+    const gsap = useGSAP();
 
     const projects = useState<Project[]>("projects");
 
@@ -103,30 +105,6 @@
             start: "top top",
             pin: true,
             pinSpacing: false
-        });
-
-        document.fonts.ready.then(() => {
-            const splitElements = document.querySelectorAll(".split-animate");
-
-            splitElements.forEach(element => {
-                let split = SplitText.create(element, {
-                    type: "lines",
-                    mask: "lines",
-                    autoSplit: true
-                });
-
-                gsap.from(split.lines, {
-                    duration: 0.6,
-                    yPercent: 100,
-                    stagger: 0.1,
-                    ease: "expo.inOut",
-                    scrollTrigger: {
-                        trigger: element,
-                        start: "top 80%"
-                    },
-                    onComplete: () => split.revert()
-                });
-            });
         });
     });
 </script>
