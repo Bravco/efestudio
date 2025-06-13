@@ -21,9 +21,9 @@
             </div>
         </section>
 
-        <section>
-            <div v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }" v-for="(service, index) in services" :key="index" class="border-t">
-                <div class="flex flex-col gap-8 pt-8 md:pb-[240px] pb-[104px]">
+        <section :class="`h-[${(services.length+1)*100}dvh]`" class="service-list relative">
+            <div v-for="(service, index) in services" :key="index" class="service-item h-dvh absolute inset-0 mx-8 border-t bg-[var(--color-white)]">
+                <div class="flex flex-col gap-8 pt-8">
                     <h2 class="w-full md:grid md:grid-cols-2 flex justify-between gap-4 md:text-[62px] text-[32px] leading-none tracking-tight">
                         <span>(0{{ index + 1 }})</span>
                         <span class="-ml-2 text-nowrap">{{ service.title }}</span>
@@ -59,6 +59,10 @@
 </template>
 
 <script lang="ts" setup>
+    const gsap = useGSAP();
+
+    const serviceItems = ref(null);
+
     const services = [
         {
             title: "Web design",
@@ -109,4 +113,50 @@
             ]
         }
     ];
+
+    function setItemsPositions() {
+        if (!serviceItems.value) return;
+    
+        const isMobile = window.innerWidth <= 768;
+        const titleHeight = isMobile ? 96 : 126;
+
+        serviceItems.value.forEach((item, index) => {
+            if (index !== 0) {
+                gsap.set(item, { yPercent: 100, top: `${titleHeight*index}px` });
+            }
+        });
+    }
+
+    onMounted(() => {
+        const wrapper = document.querySelector(".service-list");
+        serviceItems.value = document.querySelectorAll(".service-item");
+
+        setItemsPositions();
+
+        const timeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: wrapper,
+                pin: true,
+                start: "top 104px",
+                end: () => `+=${serviceItems.value.length * 100}%`,
+                scrub: true,
+                invalidateOnRefresh: true
+            },
+            defaults: { ease: "none" }
+        });
+
+        serviceItems.value.forEach((item, index) => {
+            if (index !== 0) {
+                timeline.to(item, {
+                    yPercent: 0
+                }, ">");
+            }
+        });
+
+        window.addEventListener("resize", setItemsPositions);
+    });
+
+    onUnmounted(() => {
+        window.removeEventListener("resize", setItemsPositions);
+    });
 </script>
