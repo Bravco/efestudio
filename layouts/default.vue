@@ -200,7 +200,7 @@
             const splitElements = document.querySelectorAll(".text-animate");
 
             splitElements.forEach(element => {
-                let split = SplitText.create(element, {
+                const split = SplitText.create(element, {
                     type: "lines",
                     mask: "lines",
                     autoSplit: true
@@ -215,7 +215,9 @@
                         trigger: element,
                         start: "top 80%"
                     },
-                    onComplete: () => split.revert()
+                    onComplete: () => {
+                        split.revert();
+                    }
                 });
             });
         });

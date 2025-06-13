@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col gap-4">
+    <NuxtLink class="flex flex-col gap-4" :to="`/projects/${project.slug}`">
         <NuxtImg 
             v-if="project.imageUrl"
             :src="project.imageUrl"
@@ -11,7 +11,7 @@
             <span>{{ project.title }}</span>
             <span>({{ project.label }})</span>
         </div>
-    </div>
+    </NuxtLink>
 </template>
 
 <script lang="ts" setup>

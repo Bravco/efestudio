@@ -4,7 +4,7 @@
             <h1 v-gsap.entrance.once.from="{ opacity: 0, y: 100 }">O NÁS</h1>
         </section>
 
-        <section id="splash" class="h-200 relative my-8">
+        <section id="splash" class="max-h-dvh h-200 relative my-8">
             <NuxtImg class="h-full w-full absolute inset-0 object-cover object-center" src="/images/about.webp" alt="about"/>
         </section>
 
