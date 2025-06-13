@@ -21,7 +21,7 @@
             </div>
         </section>
 
-        <section :class="`h-[${(services.length+1)*100}dvh]`" class="service-list relative">
+        <section class="service-list h-[500dvh] relative">
             <div v-for="(service, index) in services" :key="index" class="service-item h-dvh absolute inset-0 mx-8 border-t bg-[var(--color-white)]">
                 <div class="flex flex-col gap-8 pt-8">
                     <h2 class="w-full md:grid md:grid-cols-2 flex justify-between gap-4 md:text-[62px] text-[32px] leading-none tracking-tight">
