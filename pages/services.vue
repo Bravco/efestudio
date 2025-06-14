@@ -21,8 +21,8 @@
             </div>
         </section>
 
-        <section class="service-list h-[500dvh] relative">
-            <div v-for="(service, index) in services" :key="index" class="service-item h-dvh absolute inset-0 mx-8 border-t bg-[var(--color-white)]">
+        <section class="service-list h-dvh relative">
+            <div v-for="(service, index) in services" :key="index" class="service-item absolute inset-0 mx-8 border-t bg-[var(--color-white)]">
                 <div class="flex flex-col gap-8 pt-8">
                     <h2 class="w-full md:grid md:grid-cols-2 flex justify-between gap-4 md:text-[62px] text-[32px] leading-none tracking-tight">
                         <span>(0{{ index + 1 }})</span>
@@ -117,30 +117,26 @@
     onMounted(() => {
         serviceItems.value = document.querySelectorAll(".service-item");
 
+        setItemsPositions();
+
         if (serviceItems.value) {
             const timeline = gsap.timeline({
                 scrollTrigger: {
                     trigger: ".service-list",
-                    pin: true,
                     start: "top 104px",
-                    end: () => `+=${serviceItems.value.length * 100}%`,
-                    scrub: true,
-                    invalidateOnRefresh: true
-                },
-                defaults: { ease: "none" }
+                    pin: true,
+                    pinSpacing: true,
+                    scrub: true
+                }
             });
 
             serviceItems.value.forEach((item, index) => {
                 if (index !== 0) {
-                    timeline.to(item, {
-                        yPercent: 0
-                    }, ">");
+                    timeline.to(item, { yPercent: 0 }, ">");
                 }
             });
-
-            setItemsPositions();
         }
-        
+
         window.addEventListener("resize", setItemsPositions);
     });
 
