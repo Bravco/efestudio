@@ -1,6 +1,6 @@
 <template>
     <div>
-        <section class="min-h-dvh flex flex-col justify-end gap-[var(--section-gap)]">
+        <section class="min-h-dvh flex flex-col justify-end">
             <div v-gsap.entrance.once.from="{ opacity: 0, y: 100 }" class="w-fit ml-auto flex flex-col gap-4 mb-auto">
                 <NuxtImg height="240" src="/images/lavarch.webp" alt="lavarch"/>
                 <div class="flex justify-between">
@@ -15,10 +15,11 @@
                 <h1>SLUŽBY</h1>
                 <span class="md:text-xl">(04)</span>
             </div>
-            <div v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }" class="flex md:flex-row flex-col gap-4 justify-between items-start">
-                <span class="text-sm">(ZRUČNOSTI)</span>
+        </section>
+
+        <section v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }" class="flex md:flex-row flex-col gap-4 justify-between items-start">
+            <span class="text-sm">(ZRUČNOSTI)</span>
                 <p class="md:max-w-[30%] md:text-xl">Naším klientom pomáhame vybudovať zrozumiteľnú značku s jasne definovanou pozíciou na trhu. S akým zadaním sa na nás môžete obrátiť?</p>
-            </div>
         </section>
 
         <section class="service-list h-dvh relative">
