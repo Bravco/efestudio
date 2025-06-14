@@ -114,25 +114,12 @@
         }
     ];
 
-    function setItemsPositions() {
-        if (!serviceItems.value) return;
-    
-        const isMobile = window.innerWidth <= 768;
-        const titleHeight = isMobile ? 96 : 126;
-
-        serviceItems.value.forEach((item, index) => {
-            if (index !== 0) {
-                gsap.set(item, { yPercent: 100, top: `${titleHeight*index}px` });
-            }
-        });
-    }
-
     onMounted(() => {
         serviceItems.value = document.querySelectorAll(".service-item");
 
-        setItemsPositions();
-
         if (serviceItems.value) {
+            setItemsPositions();
+
             const timeline = gsap.timeline({
                 scrollTrigger: {
                     trigger: ".service-list",
@@ -153,11 +140,24 @@
                 }
             });
         }
-
+        
         window.addEventListener("resize", setItemsPositions);
     });
 
     onUnmounted(() => {
         window.removeEventListener("resize", setItemsPositions);
     });
+
+    function setItemsPositions() {
+        if (!serviceItems.value) return;
+    
+        const isMobile = window.innerWidth <= 768;
+        const titleHeight = isMobile ? 96 : 126;
+
+        serviceItems.value.forEach((item, index) => {
+            if (index !== 0) {
+                gsap.set(item, { yPercent: 100, top: `${titleHeight*index}px` });
+            }
+        });
+    }
 </script>
