@@ -128,30 +128,31 @@
     }
 
     onMounted(() => {
-        const wrapper = document.querySelector(".service-list");
         serviceItems.value = document.querySelectorAll(".service-item");
 
         setItemsPositions();
 
-        const timeline = gsap.timeline({
-            scrollTrigger: {
-                trigger: wrapper,
-                pin: true,
-                start: "top 104px",
-                end: () => `+=${serviceItems.value.length * 100}%`,
-                scrub: true,
-                invalidateOnRefresh: true
-            },
-            defaults: { ease: "none" }
-        });
+        if (serviceItems.value) {
+            const timeline = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".service-list",
+                    pin: true,
+                    start: "top 104px",
+                    end: () => `+=${serviceItems.value.length * 100}%`,
+                    scrub: true,
+                    invalidateOnRefresh: true
+                },
+                defaults: { ease: "none" }
+            });
 
-        serviceItems.value.forEach((item, index) => {
-            if (index !== 0) {
-                timeline.to(item, {
-                    yPercent: 0
-                }, ">");
-            }
-        });
+            serviceItems.value.forEach((item, index) => {
+                if (index !== 0) {
+                    timeline.to(item, {
+                        yPercent: 0
+                    }, ">");
+                }
+            });
+        }
 
         window.addEventListener("resize", setItemsPositions);
     });
