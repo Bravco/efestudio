@@ -118,8 +118,6 @@
         serviceItems.value = document.querySelectorAll(".service-item");
 
         if (serviceItems.value) {
-            setItemsPositions();
-
             const timeline = gsap.timeline({
                 scrollTrigger: {
                     trigger: ".service-list",
@@ -139,6 +137,8 @@
                     }, ">");
                 }
             });
+
+            setItemsPositions();
         }
         
         window.addEventListener("resize", setItemsPositions);
