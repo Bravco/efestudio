@@ -100,11 +100,13 @@
     ];
 
     onMounted(() => {
-        ScrollTrigger.create({
-            trigger: "#hero",
-            start: "top top",
-            pin: true,
-            pinSpacing: false
-        });
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: "#hero",
+                start: "top top",
+                pin: true,
+                pinSpacing: false
+            }
+        })
     });
 </script>

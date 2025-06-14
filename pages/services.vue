@@ -59,6 +59,8 @@
 </template>
 
 <script lang="ts" setup>
+    import ScrollTrigger from "gsap/ScrollTrigger";
+
     const gsap = useGSAP();
 
     const serviceItems = ref(null);
@@ -117,34 +119,45 @@
     onMounted(() => {
         serviceItems.value = document.querySelectorAll(".service-item");
 
-        setItemsPositions();
+        setTitleOffset();
 
-        if (serviceItems.value) {
-            const timeline = gsap.timeline({
-                scrollTrigger: {
-                    trigger: ".service-list",
-                    start: "top 104px",
-                    pin: true,
-                    pinSpacing: true,
-                    scrub: true
-                }
-            });
-
+        if (serviceItems.value) {     
             serviceItems.value.forEach((item, index) => {
                 if (index !== 0) {
-                    timeline.to(item, { yPercent: 0 }, ">");
+                    gsap.set(item, { yPercent: 100 });
                 }
             });
+
+            if (serviceItems.value) {
+                const timeline = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".service-list",
+                        start: "top 104px",
+                        //end: () => `+=${serviceItems.value.length*100}%`,
+                        pin: true,
+                        pinSpacing: true,
+                        scrub: true
+                    }
+                });
+
+                serviceItems.value.forEach((item, index) => {
+                    if (index !== 0) {
+                        timeline.to(item, { yPercent: 0, }, ">");
+                    }
+                });
+            }
         }
+        
+        window.addEventListener("resize", setTitleOffset);
 
-        window.addEventListener("resize", setItemsPositions);
+        onUnmounted(() => {
+            window.removeEventListener("resize", setTitleOffset);
+        });
     });
 
-    onUnmounted(() => {
-        window.removeEventListener("resize", setItemsPositions);
-    });
+    
 
-    function setItemsPositions() {
+    function setTitleOffset() {
         if (!serviceItems.value) return;
     
         const isMobile = window.innerWidth <= 768;
@@ -152,7 +165,7 @@
 
         serviceItems.value.forEach((item, index) => {
             if (index !== 0) {
-                gsap.set(item, { yPercent: 100, top: `${titleHeight*index}px` });
+                gsap.set(item, { top: `${titleHeight*index}px` });
             }
         });
     }
