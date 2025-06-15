@@ -17,7 +17,7 @@
                             ? 'bg-(--color-white) text-(--color-black)'
                             : 'bg-(--color-black) text-(--color-white)'
                     ]"
-                    class="md:hidden block py-2 px-6 rounded-full z-10 pointer transition-all"
+                    class="md:hidden block py-2 px-6 rounded-full z-10 pointer transition-all text-sm"
                 >{{ isMenuOpen ? 'CLOSE' : 'MENU' }}</button>
 
                 <div
@@ -43,19 +43,19 @@
                 <ul class="md:flex hidden gap-2 text-(--color-white)">
                     <li
                         :class="[ navInvert ? 'bg-(--color-white) text-(--color-black)' : 'bg-(--color-black) text-(--color-white)' ]"
-                        class="py-2 px-6 rounded-full transition-all"
+                        class="py-2 px-6 rounded-full transition-all text-sm"
                     ><NuxtLink to="/works" class="nav-link">WORKS</NuxtLink></li>
                     <li
                         :class="[ navInvert ? 'bg-(--color-white) text-(--color-black)' : 'bg-(--color-black) text-(--color-white)' ]"
-                        class="py-2 px-6 rounded-full transition-all"
+                        class="py-2 px-6 rounded-full transition-all text-sm"
                     ><NuxtLink to="/about" class="nav-link">O NÁS</NuxtLink></li>
                     <li
                         :class="[ navInvert ? 'bg-(--color-white) text-(--color-black)' : 'bg-(--color-black) text-(--color-white)' ]"
-                        class="py-2 px-6 rounded-full transition-all"
+                        class="py-2 px-6 rounded-full transition-all text-sm"
                     ><NuxtLink to="/services" class="nav-link">SLUŽBY</NuxtLink></li>
                     <li
                         :class="[ navInvert ? 'bg-(--color-white) text-(--color-black)' : 'bg-(--color-black) text-(--color-white)' ]"
-                        class="py-2 px-6 rounded-full transition-all"
+                        class="py-2 px-6 rounded-full transition-all text-sm"
                     ><NuxtLink :to="{ name: router.hasRoute(route.name) ? '' : 'index', hash: '#contact' }" class="nav-link">KONTAKT</NuxtLink></li>
                 </ul>
             </nav>
