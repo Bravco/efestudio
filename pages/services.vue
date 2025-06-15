@@ -62,6 +62,8 @@
 <script lang="ts" setup>
     import ScrollTrigger from "gsap/ScrollTrigger";
 
+    useHead({ title: "efestudio - služby" });
+
     const gsap = useGSAP();
 
     const serviceItems = ref(null);

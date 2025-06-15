@@ -92,6 +92,8 @@
 </template>
 
 <script lang="ts" setup>
+    useHead({ title: "efestudio - o nás" });
+
     const approaches = [
         {
             title: "Interný tím",

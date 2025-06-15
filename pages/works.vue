@@ -14,5 +14,7 @@
 </template>
 
 <script lang="ts" setup>
+    useHead({ title: "efestudio - works" });
+
     const projects = useState<Project[]>("projects");
 </script>
