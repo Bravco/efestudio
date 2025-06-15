@@ -1,6 +1,6 @@
 <template>
     <div>
-        <section class="min-h-dvh flex items-end">
+        <section class="min-h-[90dvh] flex items-end -mb-[calc(var(--section-gap)+64px)]">
             <h1 v-gsap.entrance.once.from="{ opacity: 0, y: 100 }">O NÁS</h1>
         </section>
 
