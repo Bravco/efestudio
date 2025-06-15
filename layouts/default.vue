@@ -91,7 +91,7 @@
                 <li>
                     <NuxtLink class="underlined" to="" target="_blank">Béhance</NuxtLink>
                 </li>
-                <li class="mt-8 flex md:flex-row flex-col md:justify-around justify-start">
+                <li class="mt-8 flex md:flex-row flex-col md:justify-around justify-start gap-2">
                     <NuxtLink class="underlined" to="mailto:hello@efestudio.sk">hello@efestudio.sk</NuxtLink>
                     <NuxtLink class="underlined md:mx-auto mx-0" to="tel:+421918502487">+421 918 502 487</NuxtLink>
                 </li>
@@ -234,7 +234,9 @@
 
 <style scoped>
     .underlined {
+        width: fit-content;
         position: relative;
+        margin-bottom: 2px;
     }
 
     .underlined::after {
