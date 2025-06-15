@@ -40,7 +40,7 @@ section:first-child {
 }
 
 h1 {
-    font-size: clamp(64px, 20vw, 360px);
+    font-size: clamp(64px, 22vw, 360px);
     letter-spacing: -0.025em;
     line-height: 1;
     white-space: nowrap;
