@@ -30,15 +30,15 @@
                         <span class="-ml-2 text-nowrap">{{ service.title }}</span>
                     </h2>
                     <p class="md:ml-auto md:w-1/2 md:pr-[10%] pr-0 md:pb-8 pb-4 md:text-xl">{{ service.description }}</p>
-                    <div class="md:ml-auto md:w-1/2 md:flex md:flex-col grid grid-cols-2 md:gap-4 gap-8 md:pr-[10%] pr-0 md:text-xl">
+                    <div class="md:ml-auto md:w-1/2 md:flex md:flex-col grid grid-cols-2 md:gap-4 gap-8 md:text-xl">
                         <span class="md:hidden inline">(01)</span>
-                        <ul class="flex md:flex-row flex-col md:justify-between gap-2">
+                        <ul class="grid md:grid-cols-3 grid-cols-1">
                             <li>{{ service.items[0] }}</li>
                             <li>{{ service.items[1] }}</li>
                             <li>{{ service.items[2] }}</li>
                         </ul>
                         <span class="md:hidden inline">(02)</span>
-                        <ul class="flex md:flex-row flex-col md:justify-between gap-2">
+                        <ul class="grid md:grid-cols-3 grid-cols-1">
                             <li>{{ service.items[3] }}</li>
                             <li>{{ service.items[4] }}</li>
                             <li>{{ service.items[5] }}</li>
