@@ -62,7 +62,7 @@
                         </div>
                         <p class="text-animate">{{ item.description }}</p>
                     </div>
-                    <NuxtImg v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }" class="absolute right-0 top-0 lg:w-20 w-10 lg:h-20 h-10" :src="item.imageUrl" width="80" height="80" :alt="item.title"/>
+                    <NuxtImg v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }" class="md:hidden absolute right-0 top-0 lg:w-20 w-10 lg:h-20 h-10" :src="item.imageUrl" width="80" height="80" :alt="item.title"/>
                 </div>
             </div>
         </section>
