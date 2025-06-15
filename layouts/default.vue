@@ -65,11 +65,11 @@
             <slot/>
             <section id="contact" class="mt-[calc(var(--section-gap)+32px)] md:min-h-dvh flex flex-col justify-between gap-[var(--section-gap)] bg-(--color-black) text-(--color-white)">
                 <div class="flex md:flex-row flex-col-reverse justify-between md:gap-[20%] gap-4">
-                    <p class="text-animate md:text-5xl text-3xl">Visual narratives meant to evoke feeling. our work spans disciplines, unified by the spans disciplines,</p>
-                    <span class="text-animate text-sm text-nowrap">(5 VOĽNÝCH MIEST V 2025)</span>
+                    <p class="md:text-5xl text-3xl">Visual narratives meant to evoke feeling. our work spans disciplines, unified by the spans disciplines,</p>
+                    <span class="text-sm text-nowrap">(5 VOĽNÝCH MIEST V 2025)</span>
                 </div>
-                <NuxtLink to="/" class="text-animate md:text-[62px] text-[32px] leading-none underline">⮡ Zabookuj si call</NuxtLink>
-                <NuxtImg v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }" class="md:inline hidden w-full mx-auto invert" src="/images/efestudio.svg" alt="efestudio"/>
+                <NuxtLink to="/" class="md:text-[62px] text-[32px] leading-none underline">⮡ Zabookuj si call</NuxtLink>
+                <NuxtImg class="md:inline hidden w-full mx-auto invert" src="/images/efestudio.svg" alt="efestudio"/>
             </section>
         </main>
         
@@ -80,23 +80,23 @@
                 <li>SLOVAKIA 052 01</li>
                 <li class="md:inline hidden mt-auto">efestudio 2025&copy;</li>
             </ul>
-            <ul class="md:order-0 order-[-1] underline">
+            <ul class="flex flex-col gap-2 md:order-0 order-[-1] text-sm">
                 <li class="flex flex-wrap items-center md:justify-start justify-between md:gap-8 gap-0">
-                    <NuxtLink to="" target="_blank">Instagram</NuxtLink>
-                    <NuxtLink to="">Vop & GDPR</NuxtLink>
+                    <NuxtLink class="underlined" to="" target="_blank">Instagram</NuxtLink>
+                    <NuxtLink class="underlined" to="">Vop & GDPR</NuxtLink>
                 </li>
                 <li>
-                    <NuxtLink to="" target="_blank">Facebook</NuxtLink>
+                    <NuxtLink class="underlined" to="" target="_blank">Facebook</NuxtLink>
                 </li>
                 <li>
-                    <NuxtLink to="" target="_blank">Béhance</NuxtLink>
+                    <NuxtLink class="underlined" to="" target="_blank">Béhance</NuxtLink>
                 </li>
                 <li class="mt-8 flex md:flex-row flex-col md:justify-around justify-start">
-                    <NuxtLink to="mailto:hello@efestudio.sk">hello@efestudio.sk</NuxtLink>
-                    <NuxtLink class="md:mx-auto mx-0" to="tel:+421918502487">+421 918 502 487</NuxtLink>
+                    <NuxtLink class="underlined" to="mailto:hello@efestudio.sk">hello@efestudio.sk</NuxtLink>
+                    <NuxtLink class="underlined md:mx-auto mx-0" to="tel:+421918502487">+421 918 502 487</NuxtLink>
                 </li>
             </ul>
-            <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-4 text-sm">
                 <p class="mt-auto">Sme marketingové štúdio<br>Budujeme pre klientov marketingové stratégie poctivo — meratelne a bez zbytočných omáčok</p>
                 <span class="md:hidden inline">efestudio 2025 &copy;</span>
             </div>
@@ -231,3 +231,19 @@
         }
     });
 </script>
+
+<style scoped>
+    .underlined {
+        position: relative;
+    }
+
+    .underlined::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: var(--color-white);
+    }
+</style>
