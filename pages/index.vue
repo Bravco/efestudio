@@ -19,7 +19,7 @@
             <NuxtImg v-gsap.entrance.once.from="{ opacity: 0, y: 100 }" class="w-full mx-auto invert" src="/images/efestudio.svg" alt="efestudio"/>
         </section>
 
-        <section class="bg-[var(--color-white)] -mb-[var(--section-gap)] flex flex-col gap-[var(--section-gap)]">
+        <section class="bg-[var(--color-white)] -mb-[var(--section-gap)] flex flex-col gap-[var(--section-gap)] !pt-16 !pb-[var(--section-gap)]">
             <div class="text-animate">
                 <h2 class="md:w-[15vw] w-auto h-8 md:float-left text-sm text-nowrap">(ABOUT US)</h2>
                 <p class="tracking-tight leading-none" style="font-size: clamp(32px, 5vw, 62px);">
@@ -107,6 +107,6 @@
                 pin: true,
                 pinSpacing: false
             }
-        })
+        });
     });
 </script>
