@@ -16,5 +16,7 @@
 <script lang="ts" setup>
     useHead({ title: "efestudio - works" });
 
-    const projects = useState<Project[]>("projects");
+    const { data: projects } = await useAsyncData("projects", () => {
+        return queryCollection("projects").all();
+    });
 </script>

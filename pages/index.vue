@@ -75,13 +75,13 @@
 </template>
 
 <script lang="ts" setup>
-    import ScrollTrigger from "gsap/ScrollTrigger";
-    
     useHead({ title: "efestudio" });
 
     const gsap = useGSAP();
-
-    const projects = useState<Project[]>("projects");
+    
+    const { data: projects } = await useAsyncData("projects", () => {
+        return queryCollection("projects").all();
+    });
 
     const process = [
         {

@@ -86,9 +86,11 @@
 <script lang="ts" setup>
     const route = useRoute();
 
-    const projects = useState("projects");
-
-    const project = computed(() => projects.value.find(p => p.slug === route.params.slug) || null);
+    const { data: project } = await useAsyncData(route.params.slug, () => {
+        return queryCollection("projects")
+            .where("slug", "=", route.params.slug)
+            .first()
+    })
 
     if (!project.value) {
         throw createError({

@@ -21,46 +21,6 @@
     const gsap = useGSAP();
 
     const overlay = ref<HTMLDivElement | null>(null);
-    
-    const projects = useState<Project[]>("projects", () => {
-        function createSlug(title: string): string {
-            return title
-                .toLowerCase()
-                .normalize("NFD")                     // Normalize accented characters
-                .replace(/[\u0300-\u036f]/g, "")     // Remove accents
-                .replace(/[^a-z0-9]+/g, "-")         // Replace non-alphanumerics with hyphen
-                .replace(/^-+|-+$/g, "")             // Trim leading/trailing hyphens
-                .replace(/--+/g, "-");               // Collapse multiple hyphens
-        }
-
-        const rawProjects = [
-            {
-                title: "LAVARCH",
-                imageUrl: "/images/lavarch.webp",
-                label: "ARCHITEKTONICKÉ ŠTÚDIO"
-            },
-            {
-                title: "Marmat - SK",
-                imageUrl: "/images/marmat.webp",
-                label: "ČISTENIE POVRCHOV"
-            },
-            {
-                title: "Nario",
-                imageUrl: "/images/nario.webp",
-                label: "INTERIÉROVÉ ŠTÚDIO"
-            },
-            {
-                title: "Bagrespiš",
-                imageUrl: "/images/bagrespis.webp",
-                label: "BAGRE"
-            }
-        ];
-
-        return rawProjects.map(project => ({
-            ...project,
-            slug: createSlug(project.title)
-        }));
-    });
 
     router.beforeEach(async (to, from, next) => {
         if (to.path === from.path) {
