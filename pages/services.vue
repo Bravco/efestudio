@@ -1,6 +1,6 @@
 <template>
     <div>
-        <section class="min-h-dvh flex flex-col justify-end">
+        <section class="flex flex-col justify-end md:gap-8 gap-[var(--section-gap)]">
             <div v-gsap.entrance.once.from="{ opacity: 0, y: 100 }" class="w-fit ml-auto flex flex-col gap-4 mb-auto">
                 <NuxtImg height="240" src="/images/lavarch.webp" alt="lavarch"/>
                 <div class="flex justify-between">

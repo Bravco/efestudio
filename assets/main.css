@@ -20,6 +20,7 @@
     --color-blue: #1722f5;
 
     --section-gap: 104px;
+    --content-padding: 32px;
 }
 
 html {
@@ -38,11 +39,11 @@ main > :first-child {
 }
 
 footer, section {
-    padding: 32px;
+    padding: var(--content-padding);
 }
 
 section:first-child {
-    padding-top: 136px;
+    padding-top: calc(var(--content-padding) + 104px);
 }
 
 h1 {
@@ -55,5 +56,6 @@ h1 {
 @media only screen and (max-width: 768px) {
     :root {
         --section-gap: 64px;
+        --content-padding: 16px;
     }
 }
