@@ -7,7 +7,7 @@
             class="interactable w-full max-h-[56rem] aspect-3/4 object-cover object-center"
         />
         <div v-else class="interactable max-h-[56rem] aspect-3/4 bg-(--color-gray)"></div>
-        <div class="flex justify-between md:text-lg">
+        <div class="flex justify-between lg:text-lg text-sm">
             <span>{{ project.title }}</span>
             <span>({{ project.label }})</span>
         </div>

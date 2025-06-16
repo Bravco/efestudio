@@ -54,7 +54,7 @@
                 </p>
             </div>
             <div class="flex flex-col gap-[var(--section-gap)]">
-                <div v-for="(item, index) in process" :key="index" class="relative md:text-xl">
+                <div v-for="(item, index) in process" :key="index" class="relative lg:text-xl">
                     <div class="lg:max-w-200 lg:w-1/2 mx-auto flex flex-col gap-6 pb-[var(--section-gap)] border-b">
                         <div class="lg:grid lg:grid-cols-[32px_1fr] flex gap-20 lg:-ml-28">
                             <span class="text-animate">(0{{ index+1 }})</span>

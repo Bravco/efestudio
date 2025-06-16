@@ -65,10 +65,10 @@
             <slot/>
             <section id="contact" class="mt-[calc(var(--section-gap)+32px)] md:min-h-dvh flex flex-col justify-between gap-[var(--section-gap)] bg-(--color-black) text-(--color-white)">
                 <div class="flex md:flex-row flex-col-reverse justify-between md:gap-[20%] gap-4">
-                    <p class="md:text-5xl text-3xl">Visual narratives meant to evoke feeling. our work spans disciplines, unified by the spans disciplines,</p>
+                    <p class="lg:md-text-[50px] md:text-[38px] text-[32px] leading-none">Visual narratives meant to evoke feeling. our work spans disciplines, unified by the spans disciplines,</p>
                     <span class="text-sm text-nowrap">(5 VOĽNÝCH MIEST V 2025)</span>
                 </div>
-                <NuxtLink to="/" class="md:text-[62px] text-[32px] leading-none underline">⮡ Zabookuj si call</NuxtLink>
+                <NuxtLink to="/" class="md:text-[62px] text-[26px] leading-none underline">⮡ Zabookuj si call</NuxtLink>
                 <NuxtImg class="md:inline hidden w-full mx-auto invert" src="/images/efestudio.svg" alt="efestudio"/>
             </section>
         </main>

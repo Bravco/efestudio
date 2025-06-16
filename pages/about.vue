@@ -4,7 +4,7 @@
             <h1 v-gsap.entrance.once.from="{ opacity: 0, y: 100 }">O NÁS</h1>
         </section>
 
-        <section id="splash" class="max-h-dvh h-200 relative my-8">
+        <section id="splash" class="max-h-dvh lg:h-[741px] md:h-[558px] h-[331px] relative my-8">
             <NuxtImg class="h-full w-full absolute inset-0 object-cover object-center" src="/images/about.webp" alt="about"/>
         </section>
 
@@ -13,7 +13,7 @@
                 <div class="md:ml-26">
                     <div class="md:w-[10vw] w-auto h-8 md:float-left"></div>
                     <p class="text-animate tracking-tight leading-none" style="font-size: clamp(32px, 5vw, 62px);">
-                        Sme efestudio — váš strategický partner v podnikaní. Našim klientom pomáhame vybudovať zrozumiteľnú značku s definovanou pozíciou na trhu
+                        Sme — váš strategický partner v podnikaní. Našim klientom pomáhame vybudovať zrozumiteľnú značku s definovanou pozíciou na trhu
                     </p>
                 </div>
                 <div class="grid md:grid-cols-[var(--section-gap)_1fr] grid-cols-1 md:gap-0 gap-4">
@@ -32,7 +32,7 @@
                     class="w-full max-h-[734px] aspect-3/4 object-cover object-center"
                 />
                 <div v-else class="max-h-[734px] aspect-3/4 bg-(--color-gray)"></div>
-                <div class="flex justify-between md:text-lg">
+                <div class="flex justify-between lg:text-lg text-sm">
                     <span>Patrik Vojtuš</span>
                     <span>(COFOUNDER)</span>
                 </div>
@@ -45,7 +45,7 @@
                     class="w-full max-h-[734px] aspect-3/4 object-cover object-center"
                 />
                 <div v-else class="max-h-[734px] aspect-3/4 bg-(--color-gray)"></div>
-                <div class="flex justify-between md:text-lg">
+                <div class="flex justify-between lg:text-lg text-sm">
                     <span>Juraj Goldberger</span>
                     <span>(COFOUNDER)</span>
                 </div>
@@ -56,25 +56,25 @@
             <h2 v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }" class="text-sm text-nowrap">(EFE V ČÍSLACH)</h2>
             <div class="grid lg:grid-cols-4 grid-cols-2 gap-y-14 md:gap-x-14 gap-x-4">
                 <div v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }">
-                    <span class="md:text-[78px] text-[32px]">(120+)</span>
-                    <p>Leadov vygenerovaných pre našich klientov.</p>
+                    <span class="lg:text-[78px] md:text-[62px] text-[32px]">(120+)</span>
+                    <p class="md:text-lg text-sm">Leadov vygenerovaných pre našich klientov.</p>
                 </div>
                 <div v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }">
-                    <span class="md:text-[78px] text-[32px]">(32)</span>
-                    <p>Leadov vygenerovaných pre našich klientov.</p>
+                    <span class="md:text-[78px] md:text-[62px] text-[32px]">(32)</span>
+                    <p class="md:text-lg text-sm">Leadov vygenerovaných pre našich klientov.</p>
                 </div>
                 <div v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }">
-                    <span class="md:text-[78px] text-[32px]">(1/2)</span>
-                    <p>Leadov vygenerovaných pre našich klientov.</p>
+                    <span class="md:text-[78px] md:text-[62px] text-[32px]">(1/2)</span>
+                    <p class="md:text-lg text-sm">Leadov vygenerovaných pre našich klientov.</p>
                 </div>
                 <div v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }">
-                    <span class="md:text-[78px] text-[32px]">(13)</span>
-                    <p>Leadov vygenerovaných pre našich klientov.</p>
+                    <span class="md:text-[78px] md:text-[62px] text-[32px]">(13)</span>
+                    <p class="md:text-lg text-sm">Leadov vygenerovaných pre našich klientov.</p>
                 </div>
             </div>
         </section>
 
-        <NuxtImg class="lg:my-[240px] my-[120px] mx-auto" width="64" src="/images/logo.svg" alt="logo"/>
+        <NuxtImg class="lg:my-12 md:my-6 my-0 mx-auto" width="64" src="/images/logo.svg" alt="logo"/>
 
         <section class="flex flex-col gap-4">
             <h2 class="text-animate text-sm text-nowrap">(NÁŠ PRÍSTUP)</h2>
@@ -82,9 +82,9 @@
                 <div class="max-w-160 flex flex-col gap-8 mx-auto pt-4 md:pb-[168px] pb-[128px]">
                     <div class="grid grid-cols-[var(--section-gap)_1fr] md:gap-0 gap-4">
                         <h2 class="text-animate text-sm text-nowrap">(0{{ index+1 }})</h2>
-                        <h3 class="text-animate md:text-[62px] text-[32px]">{{ approach.title }}</h3>
+                        <h3 class="text-animate lg:text-[62px] md:text-[48px] text-[32px]">{{ approach.title }}</h3>
                     </div>
-                    <p class="text-animate w-auto md:ml-26 md:text-xl text-base">{{ approach.description }}</p>
+                    <p class="text-animate w-auto md:ml-26 md:text-lg text-sm">{{ approach.description }}</p>
                 </div>
             </div>
         </section>
