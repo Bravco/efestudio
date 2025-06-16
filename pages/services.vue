@@ -30,20 +30,9 @@
                         <span class="-ml-2 text-nowrap">{{ service.title }}</span>
                     </h2>
                     <p class="md:ml-auto md:w-1/2 md:pr-[10%] pr-0 md:pb-8 pb-4 md:text-xl">{{ service.description }}</p>
-                    <div class="md:ml-auto md:w-1/2 md:flex md:flex-col grid grid-cols-2 md:gap-4 gap-8 md:text-xl">
-                        <span class="md:hidden inline">(01)</span>
-                        <ul class="grid md:grid-cols-3 grid-cols-1">
-                            <li>{{ service.items[0] }}</li>
-                            <li>{{ service.items[1] }}</li>
-                            <li>{{ service.items[2] }}</li>
-                        </ul>
-                        <span class="md:hidden inline">(02)</span>
-                        <ul class="grid md:grid-cols-3 grid-cols-1">
-                            <li>{{ service.items[3] }}</li>
-                            <li>{{ service.items[4] }}</li>
-                            <li>{{ service.items[5] }}</li>
-                        </ul>
-                    </div>
+                    <ul class="md:ml-auto md:w-1/2 grid md:grid-cols-3 grid-cols-2 md:gap-4 gap-2 md:text-xl md:text-black text-[var(--color-dark-gray)]">
+                        <li v-for="(item, index) in service.items" :key="index">{{ item }}</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -71,50 +60,50 @@
     const services = [
         {
             title: "Web design",
-            description: "Pred tvorbou vizuálnej identity musíme v prvom rade obrátiť na vás. Prečo podnikáte? Čo vás odlišuje oproti konkurencii? Definujeme zrozumiteľnosť vašej značky s jasne nastavenou pozíciou na trhu oproti vašej konkurencii. Tento postup nám zaručí konkurenčnú výhodu a udržateľný rast.",
+            description: "V efestudio navrhujeme weby, ktoré sú prehľadné, zrozumiteľné a s vizuálne príťažlivou identitou. Celý proces uchopíme komplexne, od analýzy a návrhu štruktúry až po dizajn, identitu a vývoj.",
             items: [
-                "Development",
-                "Analytics",
+                "Design UI / UX",
+                "Web stratégia",
                 "Prototyping",
-                "User experience",
-                "Design",
+                "Development",
+                "SEO Optimalizácia",
                 "Správa webu"
             ]
         },
         {
             title: "Branding",
-            description: "Pred tvorbou vizuálnej identity musíme v prvom rade obrátiť na vás. Prečo podnikáte? Čo vás odlišuje? Prečo sa k vám klienti vracajú a čo im naozaj viete ponúknuť? Definujeme zrozumiteľnosť vašej značky s jasne nastavenou pozíciou na trhu oproti vašej konkurencii. Tento postup nám zaručí konkurenčnú výhodu a udržateľný rast.",
+            description: "Prečo sa k vám klienti vracajú a čo im naozaj viete ponúknuť? Definujeme zrozumiteľnosť vašej značky s jasne nastavenou pozíciou na trhu oproti vašej konkurencii. Tento postup nám zaručí konkurenčnú výhodu a udržateľný rast.",
             items: [
+                "Logo design",
+                "Naming",
+                "Brand stratégia",
                 "Development",
-                "Analytics",
-                "Prototyping",
-                "User experience",
-                "Design",
-                "Správa webu"
+                "Messaging and voice",
+                "Brand guidelines"
             ]
         },
         {
             title: "Obsah",
             description: "Obsah tvoríme obsah strategicky. V efestudio pripravujeme vizuály, videá a príspevky, ktoré kričia originalitou, jasne pomenúvajú podstatu a bez mihnutia oka posúvajú zákazníka k akcii. Zameriavame sa na kvalitu, silný nápad.",
             items: [
-                "Development",
-                "Analytics",
-                "Prototyping",
-                "User experience",
-                "Design",
-                "Správa webu"
+                "Video obsah",
+                "Idea making",
+                "Social media obsah",
+                "Copywriting a scripting",
+                "Kreativa a posty",
+                "Content stratégia"
             ]
         },
         {
             title: "Propagácia",
-            description: "Vytvoriť peknú reklamu dnes nestačí. Všetko začína a končí pri ponuke. V rámci propagácie zastrešujeme celý proces  od návrhu ponuky - offer creation, cez realizáciu jednotlivých kanálov, až po médiá a reporting.",
+            description: "Vytvoriť peknú reklamu dnes nestačí. Všetko začína a končí pri ponuke. V rámci propagácie zastrešujeme celý proces  od návrhu ponuky offer creation, cez realizáciu jednotlivých kanálov, až po médiá a reporting.",
             items: [
-                "Development",
-                "Analytics",
-                "Prototyping",
-                "User experience",
-                "Design",
-                "Správa webu"
+                "Offer creation",
+                "Affiliate marketing",
+                "Brand kampane",
+                "Email marketing",
+                "Výkonnostné kampane",
+                "Reporting a optimalizácia"
             ]
         }
     ];
