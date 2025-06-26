@@ -16,7 +16,7 @@
                 <span>2025/</span>
                 <span>(SCROLL)</span>
             </div>
-            <NuxtImg v-gsap.entrance.once.from="{ opacity: 0, y: 100 }" class="w-full mx-auto invert" src="/images/efestudio.svg" alt="efestudio"/>
+            <NuxtImg v-gsap.entrance.once.from="{ opacity: 0, y: 100 }" class="w-full mx-auto" src="/images/efestudio.svg" alt="efestudio"/>
         </section>
 
         <section class="bg-[var(--color-white)] -mb-[var(--section-gap)] flex flex-col gap-[var(--section-gap)] !pt-16 !pb-[var(--section-gap)]">
