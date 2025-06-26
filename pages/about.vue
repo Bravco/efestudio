@@ -12,9 +12,9 @@
             <div class="flex flex-col gap-[var(--section-gap)] md:ml-[10vw]">
                 <div class="md:ml-26">
                     <div class="md:w-[10vw] w-auto h-8 md:float-left"></div>
-                    <p class="text-animate tracking-tight leading-none" style="font-size: clamp(32px, 5vw, 62px);">
+                    <Paragraph>
                         Sme — váš strategický partner v podnikaní. Našim klientom pomáhame vybudovať zrozumiteľnú značku s definovanou pozíciou na trhu
-                    </p>
+                    </Paragraph>
                 </div>
                 <div class="grid md:grid-cols-[var(--section-gap)_1fr] grid-cols-1 md:gap-0 gap-4">
                     <h2 class="text-animate text-sm text-nowrap">(O NÁS)</h2>
@@ -60,15 +60,15 @@
                     <p class="md:text-lg text-sm">Leadov vygenerovaných pre našich klientov.</p>
                 </div>
                 <div v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }">
-                    <span class="md:text-[78px] md:text-[62px] text-[32px]">(32)</span>
+                    <span class="lg:text-[78px] md:text-[62px] text-[32px]">(32)</span>
                     <p class="md:text-lg text-sm">Leadov vygenerovaných pre našich klientov.</p>
                 </div>
                 <div v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }">
-                    <span class="md:text-[78px] md:text-[62px] text-[32px]">(1/2)</span>
+                    <span class="lg:text-[78px] md:text-[62px] text-[32px]">(1/2)</span>
                     <p class="md:text-lg text-sm">Leadov vygenerovaných pre našich klientov.</p>
                 </div>
                 <div v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }">
-                    <span class="md:text-[78px] md:text-[62px] text-[32px]">(13)</span>
+                    <span class="lg:text-[78px] md:text-[62px] text-[32px]">(13)</span>
                     <p class="md:text-lg text-sm">Leadov vygenerovaných pre našich klientov.</p>
                 </div>
             </div>

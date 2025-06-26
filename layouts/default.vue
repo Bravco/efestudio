@@ -1,7 +1,7 @@
 <template>
     <div>
         <header>
-            <nav class="fixed w-full p-8 flex justify-between items-center z-50">
+            <nav class="fixed w-full px-[var(--content-padding)] py-8 flex justify-between items-center z-50">
                 <NuxtLink 
                     @click="closeMenu" :class="{ invert: (navInvert && !isMenuOpen) || isMenuOpen }" 
                     class="min-w-18 transition-all z-10" 
@@ -17,7 +17,7 @@
                             ? 'bg-(--color-white) text-(--color-black)'
                             : 'bg-(--color-black) text-(--color-white)'
                     ]"
-                    class="md:hidden block py-2 px-6 rounded-full z-10 pointer transition-all text-sm"
+                    class="md:hidden block py-2 px-6 rounded-full z-10 pointer transition-all md:text-sm text-xs"
                 >{{ isMenuOpen ? 'CLOSE' : 'MENU' }}</button>
 
                 <div
@@ -26,36 +26,38 @@
                         clipPath: clipPath ? 'circle(150% at 100% 0%)' : 'circle(0% at 100% 0%)',
                         transition: 'clip-path 500ms ease-in-out'
                     }"
-                    class="md:hidden absolute inset-0 h-dvh bg-(--color-black) text-(--color-white) flex flex-col items-start justify-end p-8"
+                    class="md:hidden absolute inset-0 h-dvh bg-(--color-black) text-(--color-white) flex flex-col items-start justify-between p-[var(--content-padding)] pt-32"
                 >
-                    <ul class="flex flex-col gap-6 text-4xl my-auto">
+                    <ul class="flex flex-col gap-6 underlined">
                         <li><NuxtLink @click="closeMenu" to="/works" class="nav-link">WORKS</NuxtLink></li>
                         <li> <NuxtLink @click="closeMenu" to="/about" class="nav-link">O NÁS</NuxtLink></li>
                         <li><NuxtLink @click="closeMenu" to="/services" class="nav-link">SLUŽBY</NuxtLink></li>
                         <li><NuxtLink @click="closeMenu" :to="{ name: router.hasRoute(route.name) ? '' : 'index', hash: '#contact' }" class="nav-link">KONTAKT</NuxtLink></li>
+                        <li><NuxtLink @click="closeMenu" to="/services" class="nav-link">INSTAGRAM</NuxtLink></li>
                     </ul>
-                    <ul class="flex flex-col gap-2 underline text-xl">
-                        <li><NuxtLink @click="closeMenu" to="/">Instagram</NuxtLink></li>
-                        <li><NuxtLink @click="closeMenu" :to="{ name: router.hasRoute(route.name) ? '' : 'index', hash: '#contact' }">Contact us</NuxtLink></li>
-                    </ul>
+                    <div class="flex flex-col">
+                        <span>efestudio.sk</span>
+                        <span>2025&copy;</span>
+                        <p class="mt-2">Sme marketingové štúdio<br>Budujeme pre klientov marketingové stratégie poctivo — meratelne a bez zbytočných omáčok</p>
+                    </div>
                 </div>
 
-                <ul class="md:flex hidden gap-2 text-(--color-white)">
+                <ul class="md:flex hidden gap-2 text-(--color-white) text-sm">
                     <li
                         :class="[ navInvert ? 'bg-(--color-white) text-(--color-black)' : 'bg-(--color-black) text-(--color-white)' ]"
-                        class="py-2 px-6 rounded-full transition-all text-sm"
+                        class="py-2 px-6 rounded-full transition-all"
                     ><NuxtLink to="/works" class="nav-link">WORKS</NuxtLink></li>
                     <li
                         :class="[ navInvert ? 'bg-(--color-white) text-(--color-black)' : 'bg-(--color-black) text-(--color-white)' ]"
-                        class="py-2 px-6 rounded-full transition-all text-sm"
+                        class="py-2 px-6 rounded-full transition-all"
                     ><NuxtLink to="/about" class="nav-link">O NÁS</NuxtLink></li>
                     <li
                         :class="[ navInvert ? 'bg-(--color-white) text-(--color-black)' : 'bg-(--color-black) text-(--color-white)' ]"
-                        class="py-2 px-6 rounded-full transition-all text-sm"
+                        class="py-2 px-6 rounded-full transition-all"
                     ><NuxtLink to="/services" class="nav-link">SLUŽBY</NuxtLink></li>
                     <li
                         :class="[ navInvert ? 'bg-(--color-white) text-(--color-black)' : 'bg-(--color-black) text-(--color-white)' ]"
-                        class="py-2 px-6 rounded-full transition-all text-sm"
+                        class="py-2 px-6 rounded-full transition-all"
                     ><NuxtLink :to="{ name: router.hasRoute(route.name) ? '' : 'index', hash: '#contact' }" class="nav-link">KONTAKT</NuxtLink></li>
                 </ul>
             </nav>
@@ -65,10 +67,12 @@
             <slot/>
             <section id="contact" class="mt-[calc(var(--section-gap)+32px)] md:min-h-dvh flex flex-col justify-between gap-[var(--section-gap)] bg-(--color-black) text-(--color-white)">
                 <div class="flex md:flex-row flex-col-reverse justify-between md:gap-[20%] gap-4">
-                    <p class="lg:md-text-[50px] md:text-[38px] text-[32px] leading-none">Visual narratives meant to evoke feeling. our work spans disciplines, unified by the spans disciplines,</p>
+                    <p class="lg:md-text-[50px] md:text-[38px] text-[28px] leading-none">Vytvorme spolu zrozumiteľnú značku. Výziev sa nebojíme — či už veľkých, alebo malých. Poďme sa porozprávať o tej vašej.</p>
                     <span class="text-sm text-nowrap">(5 VOĽNÝCH MIEST V 2025)</span>
                 </div>
-                <NuxtLink to="/" class="md:text-[62px] text-[26px] leading-none underline">⮡ Zabookuj si call</NuxtLink>
+                <NuxtLink to="/" class="md:text-[62px] text-[26px] leading-none cta-underlined">
+                    ⮡ Zabookuj si call
+                </NuxtLink>
                 <NuxtImg class="md:inline hidden w-full mx-auto invert" src="/images/efestudio.svg" alt="efestudio"/>
             </section>
         </main>
@@ -81,7 +85,7 @@
                 <li class="md:inline hidden mt-auto">efestudio 2025&copy;</li>
             </ul>
             <ul class="flex flex-col gap-2 md:order-0 order-[-1] text-sm">
-                <li class="flex flex-wrap items-center md:justify-start justify-between md:gap-8 gap-0">
+                <li class="flex flex-wrap items-center justify-start md:gap-8 gap-[33%]">
                     <NuxtLink class="underlined" to="" target="_blank">Instagram</NuxtLink>
                     <NuxtLink class="underlined" to="">Vop & GDPR</NuxtLink>
                 </li>
@@ -98,7 +102,7 @@
             </ul>
             <div class="flex flex-col gap-4 text-sm">
                 <p class="mt-auto">Sme marketingové štúdio<br>Budujeme pre klientov marketingové stratégie poctivo — meratelne a bez zbytočných omáčok</p>
-                <span class="md:hidden inline">efestudio 2025 &copy;</span>
+                <span class="md:hidden inline">efestudio 2025&copy;</span>
             </div>
         </footer>
     </div>
@@ -231,21 +235,3 @@
         }
     });
 </script>
-
-<style scoped>
-    .underlined {
-        width: fit-content;
-        position: relative;
-        margin-bottom: 2px;
-    }
-
-    .underlined::after {
-        content: "";
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background-color: var(--color-white);
-    }
-</style>

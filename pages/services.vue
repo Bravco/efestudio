@@ -25,7 +25,7 @@
         <section class="service-list h-dvh relative">
             <div v-for="(service, index) in services" :key="index" class="service-item absolute inset-0 mx-8 border-t bg-[var(--color-white)]">
                 <div class="flex flex-col gap-8 pt-8">
-                    <h2 class="w-full md:grid md:grid-cols-2 flex justify-between gap-4 md:text-[62px] text-[32px] leading-none tracking-tight">
+                    <h2 class="w-full md:grid md:grid-cols-2 flex md:gap-0 gap-8 md:text-[62px] text-[32px] leading-none tracking-tight">
                         <span>(0{{ index + 1 }})</span>
                         <span class="-ml-2 text-nowrap">{{ service.title }}</span>
                     </h2>
@@ -49,8 +49,6 @@
 </template>
 
 <script lang="ts" setup>
-    import ScrollTrigger from "gsap/ScrollTrigger";
-
     useHead({ title: "efestudio - služby" });
 
     const gsap = useGSAP();

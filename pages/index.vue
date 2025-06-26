@@ -20,15 +20,15 @@
         </section>
 
         <section class="bg-[var(--color-white)] -mb-[var(--section-gap)] flex flex-col gap-[var(--section-gap)] !pt-16 !pb-[var(--section-gap)]">
-            <div class="text-animate">
+            <div>
                 <h2 class="md:w-[15vw] w-auto h-8 md:float-left text-sm text-nowrap">(ABOUT US)</h2>
-                <p class="tracking-tight leading-none" style="font-size: clamp(32px, 5vw, 62px);">
+                <Paragraph>
                     Sme digitálne marketingové štúdio. Klientom prinášame komplexné riešenia v oblasti značky obsahu a webov. Každý projekt staviame na jasnej stratégii a cieľoch.
-                </p>
+                </Paragraph>
             </div>
             <div class="ml-auto md:w-2/5 w-full flex flex-col gap-8">
                 <p class="text-animate md:text-xl">Sme iniciatívni, každý projekt má jasný cieľ, na ktorom spoločne pryacujeme ako tím. Marketing realizujeme rozvažne ss dôrazom na výsledky, rozpočet a očakávanú návratnosť.</p>
-                <Button  v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }" to="/about" text="ZOBRAZIŤ VIAC O NÁS" arrow/>
+                <Button v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }" to="/about" text="ZOBRAZIŤ VIAC O NÁS" arrow/>
             </div>
         </section>
 
@@ -47,29 +47,31 @@
         </section>
 
         <section class="flex flex-col gap-[var(--section-gap)]">
-            <div class="text-animate">
-                <h2 class="md:w-[15vw] w-auto h-8 md:float-left text-sm text-nowrap">(NÁŠ PROCES)</h2>
-                <p class="tracking-tight leading-none" style="font-size: clamp(32px, 5vw, 62px);">
+            <div class="grid md:grid-cols-[384px_1fr] grid-cols-1">
+                <h2 class="text-sm text-nowrap">(NÁŠ PROCES)</h2>
+                <Paragraph>
                     Ako dokážeme doručiť výsledky, na ktorých sme sa dohodli?
-                </p>
+                </Paragraph>
             </div>
             <div class="flex flex-col gap-[var(--section-gap)]">
-                <div v-for="(item, index) in process" :key="index" class="relative lg:text-xl">
-                    <div class="lg:max-w-200 lg:w-1/2 mx-auto flex flex-col gap-6 pb-[var(--section-gap)] border-b">
-                        <div class="lg:grid lg:grid-cols-[32px_1fr] flex gap-20 lg:-ml-28">
-                            <span class="text-animate">(0{{ index+1 }})</span>
-                            <h3 class="text-animate"v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }">{{ item.title }}</h3>
-                        </div>
-                        <p class="text-animate">{{ item.description }}</p>
+                <div
+                    v-for="(process, index) in processes"
+                    :key="index"
+                    class="grid md:grid-cols-[384px_1fr_1fr] md:gap-0 gap-6 place-items-start border-t pt-[var(--content-padding)]"
+                >
+                    <div class="w-full flex md:flex-row flex-col justify-between gap-6 pr-[30%]">
+                        <NuxtImg class="aspect-square lg:w-[100px] md:w-[80px] w-[71px]" :src="process.imageUrl" width="100" height="100" :alt="process.title"/>
+                        <span class="md:text-sm text-xs">(0{{ index+1 }})</span>
                     </div>
-                    <NuxtImg v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }" class="md:hidden absolute right-0 top-0 lg:w-20 w-10 lg:h-20 h-10" :src="item.imageUrl" width="80" height="80" :alt="item.title"/>
+                    <h3 class="lg:text-[62px] text-[32px] whitespace-pre">{{ process.title }}</h3>
+                    <p>{{ process.description }}</p>
                 </div>
             </div>
         </section>
 
         <section class="flex flex-col gap-8">
-            <h2 class="text-animate xl:ml-[60%] text-sm text-nowrap">(NAŠI KLIENTI)</h2>
-            <Partners v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }"/>
+            <h2 class="xl:ml-[60%] text-sm text-nowrap">(NAŠI KLIENTI)</h2>
+            <Partners/>
         </section>
     </div>
 </template>
@@ -83,20 +85,20 @@
         return queryCollection("projects").all();
     });
 
-    const process = [
+    const processes = [
         {
-            title: "Explore",
-            description: "Kto ste, čo robíte a prečo na tom záleží? V tomto prvom kroku je dôležité identifikovať piliere, na ktorých bude naša spolupráca stáť. Preto detailne zanalyzujeme minulosť, súčasný stav a príležitosti, ktoré nám ležia pri nohách. Po identifikovaní kľúčových elementov vám objektívne vykreslíme realitu a nastavíme jasný obraz spolupráce ako takej.",
+            title: "Explore\nideas",
+            description: "V prvom kroku je dôležité identifikovať piliere, na ktorých bude naša spolupráca stáť.  Preto detailne zanalyzujeme minulosť, súčasný stav a príležitosti, ktoré nám ležia pri nohách. Po identifikovaní kľúčových elementov vám  vykreslíme realitu a nastavíme jasný obraz spolupráce ako takej.",
             imageUrl: "/images/circle1.svg"
         },
         {
-            title: "Form",
-            description: "Po hĺbkovej analýze dát a vašich konkurentov prichádza čas na strategické plánovanie. Ako každý úspešný veliteľ pripravíme plán ešte pred samotnou „vojnou“. Odpovieme si na dôležité otázky ako: – Čo od nás klient skutočne chce?  Proti komu súťažíme?  Čo jedinečné vieme doručiť? Tým zasadíme víťaznú vlajku do zeme a na jej základe si stanovíme objektívne, merateľné ciele, ktoré sa stanú našou svätyňou.",
+            title: "Form\nideas",
+            description: "V prvom kroku je dôležité identifikovať piliere, na ktorých bude naša spolupráca stáť.  Preto detailne zanalyzujeme minulosť, súčasný stav a príležitosti, ktoré nám ležia pri nohách. Po identifikovaní kľúčových elementov vám  vykreslíme realitu a nastavíme jasný obraz spolupráce ako takej.",
             imageUrl: "/images/circle2.svg"
         },
         {
-            title: "Experience",
-            description: "Po jasne stanovených cieľoch prichádza na rad kreatíva. Nie však hocijaká – u nás sa veci robia inak. Našu kreatívu staviame na tvrdých faktoch, nie na domnienkach ani na „pekných trendoch“. V tejto fáze zvolíme konkrétne taktiky, ktoré čo najlepšie naplnia ciele, prinesú vysokú návratnosť a budú v súlade so stanovenou stratégiou a rozpočtom.",
+            title: "Experience\nthe moment",
+            description: "Po jasne stanovených cieľoch prichádza na rad kreatíva. Nie však hocijaká u nás sa veci robia inak. Našu kreatívu staviame na tvrdých faktoch, nie na domnienkach ani na „pekných trendoch“. V tejto fáze zvolíme konkrétne taktiky, ktoré naplnia ciele, prinesú vysokú návratnosť a budú v súlade so stanovenou stratégiou a rozpočtom.",
             imageUrl: "/images/circle3.svg"
         }
     ];

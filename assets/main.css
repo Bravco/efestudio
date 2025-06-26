@@ -23,6 +23,10 @@
     --content-padding: 32px;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 html {
     scroll-padding-top: 104px;
 }
@@ -53,9 +57,58 @@ h1 {
     white-space: nowrap;
 }
 
+.underlined,
+.cta-underlined {
+    width: fit-content;
+    position: relative;
+    margin-bottom: 2px;
+}
+
+.underlined::after,
+.cta-underlined::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-white);
+}
+
+.underlined::after {
+    bottom: -2px;
+}
+
+.cta-underlined::after {
+    bottom: -40%;
+}
+
+.underlined:hover::after,
+.cta-underlined:hover::after {
+    animation: underline-reverse 500ms ease forwards;
+}
+
 @media only screen and (max-width: 768px) {
     :root {
         --section-gap: 64px;
         --content-padding: 16px;
+    }
+}
+
+@keyframes underline-reverse {
+    0% {
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+    49% {
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+    50% {
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+    100% {
+        transform: scaleX(1);
+        transform-origin: left;
     }
 }

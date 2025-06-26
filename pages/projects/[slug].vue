@@ -35,9 +35,9 @@
         <section>
             <div class="text-animate">
                 <span class="md:w-[15vw] w-auto h-8 md:float-left"></span>
-                <p class="tracking-tight leading-none" style="font-size: clamp(32px, 5vw, 62px);">
+                <Paragraph>
                     V spolupráci s architektonickým ateliérom LAVARCH sme vytvorili strategický digitálny základ pre ich novú online identitu. Projekt zahŕňal detailný
-                </p>
+                </Paragraph>
             </div>
         </section>
 
@@ -84,6 +84,8 @@
 </template>
 
 <script lang="ts" setup>
+import Paragraph from '../../components/Paragraph.vue';
+
     const route = useRoute();
 
     const { data: project } = await useAsyncData(route.params.slug, () => {
