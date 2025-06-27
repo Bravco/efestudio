@@ -17,7 +17,7 @@
             </div>
         </section>
 
-        <section v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }" class="flex md:flex-row flex-col gap-4 justify-between items-start">
+        <section class="flex md:flex-row flex-col gap-4 justify-between items-start">
             <span class="text-sm">(ZRUČNOSTI)</span>
                 <p class="md:max-w-[30%] md:text-xl">Naším klientom pomáhame vybudovať zrozumiteľnú značku s jasne definovanou pozíciou na trhu. S akým zadaním sa na nás môžete obrátiť?</p>
         </section>
@@ -41,7 +41,7 @@
             <NuxtImg class="h-full w-full absolute inset-0 object-cover object-center" src="/images/services.webp" alt="services"/>
         </section>
 
-        <section v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }" class="flex flex-col gap-4">
+        <section class="flex flex-col gap-4">
             <h2 class="xl:ml-[60%] text-sm text-nowrap">(NAŠI KLIENTI)</h2>
             <Partners/>
         </section>
@@ -107,36 +107,41 @@
     ];
 
     onMounted(() => {
-        serviceItems.value = document.querySelectorAll(".service-item");
+        nextTick(() => {
+            requestAnimationFrame(() => {
+                serviceItems.value = document.querySelectorAll(".service-item");
 
-        setTitleOffset();
+                setTitleOffset();
 
-        if (serviceItems.value) {     
-            serviceItems.value.forEach((item, index) => {
-                if (index !== 0) {
-                    gsap.set(item, { yPercent: 100 });
+                if (serviceItems.value) {     
+                    serviceItems.value.forEach((item, index) => {
+                        if (index !== 0) {
+                            gsap.set(item, { yPercent: 100 });
+                        }
+                    });
+
+                    if (serviceItems.value) {
+                        const timeline = gsap.timeline({
+                            scrollTrigger: {
+                                trigger: ".service-list",
+                                start: "top 104px",
+                                end: "bottom top",
+                                //end: () => `+=${serviceItems.value.length*100}%`,
+                                pin: true,
+                                pinSpacing: true,
+                                scrub: true
+                            }
+                        });
+
+                        serviceItems.value.forEach((item, index) => {
+                            if (index !== 0) {
+                                timeline.to(item, { yPercent: 0, }, ">");
+                            }
+                        });
+                    }
                 }
             });
-
-            if (serviceItems.value) {
-                const timeline = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: ".service-list",
-                        start: "top 104px",
-                        //end: () => `+=${serviceItems.value.length*100}%`,
-                        pin: true,
-                        pinSpacing: true,
-                        scrub: true
-                    }
-                });
-
-                serviceItems.value.forEach((item, index) => {
-                    if (index !== 0) {
-                        timeline.to(item, { yPercent: 0, }, ">");
-                    }
-                });
-            }
-        }
+        });
         
         window.addEventListener("resize", setTitleOffset);
 
