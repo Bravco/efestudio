@@ -1,7 +1,7 @@
 <template>
     <div>
         <section class="flex flex-col justify-end md:gap-8 gap-[var(--section-gap)]">
-            <div v-gsap.entrance.once.from="{ opacity: 0, y: 100 }" class="w-fit ml-auto flex flex-col gap-4 mb-auto">
+            <div class="w-fit ml-auto flex flex-col gap-4 mb-auto">
                 <NuxtImg height="240" src="/images/lavarch.webp" alt="lavarch"/>
                 <div class="flex justify-between">
                     <span>(01)</span>
@@ -11,15 +11,15 @@
                     </NuxtLink>
                 </div>
             </div>
-            <div v-gsap.entrance.once.from="{ opacity: 0, y: 100 }" class="flex gap-2">
+            <div class="flex gap-2">
                 <h1>SLUŽBY</h1>
                 <span class="md:text-xl">(04)</span>
             </div>
         </section>
 
-        <section class="flex md:flex-row flex-col gap-4 justify-between items-start">
+        <section class="grid md:grid-cols-[2fr_1fr] grid-cols-1 gap-4 place-items-start">
             <span class="text-sm">(ZRUČNOSTI)</span>
-                <p class="md:max-w-[30%] md:text-xl">Naším klientom pomáhame vybudovať zrozumiteľnú značku s jasne definovanou pozíciou na trhu. S akým zadaním sa na nás môžete obrátiť?</p>
+            <p class="text-animate md:text-xl">Naším klientom pomáhame vybudovať zrozumiteľnú značku s jasne definovanou pozíciou na trhu. S akým zadaním sa na nás môžete obrátiť?</p>
         </section>
 
         <section class="service-list h-dvh relative">
@@ -107,50 +107,43 @@
     ];
 
     onMounted(() => {
-        nextTick(() => {
-            requestAnimationFrame(() => {
-                serviceItems.value = document.querySelectorAll(".service-item");
+        serviceItems.value = document.querySelectorAll(".service-item");
 
-                setTitleOffset();
+        setTitleOffset();
 
-                if (serviceItems.value) {     
-                    serviceItems.value.forEach((item, index) => {
-                        if (index !== 0) {
-                            gsap.set(item, { yPercent: 100 });
-                        }
-                    });
-
-                    if (serviceItems.value) {
-                        const timeline = gsap.timeline({
-                            scrollTrigger: {
-                                trigger: ".service-list",
-                                start: "top 104px",
-                                end: "bottom top",
-                                //end: () => `+=${serviceItems.value.length*100}%`,
-                                pin: true,
-                                pinSpacing: true,
-                                scrub: true
-                            }
-                        });
-
-                        serviceItems.value.forEach((item, index) => {
-                            if (index !== 0) {
-                                timeline.to(item, { yPercent: 0, }, ">");
-                            }
-                        });
+        if (serviceItems.value?.length) {
+            setTimeout(() => {
+                serviceItems.value.forEach((item, index) => {
+                    if (index !== 0) {
+                        gsap.set(item, { yPercent: 100 });
                     }
-                }
-            });
-        });
+                });
+
+                const timeline = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: ".service-list",
+                        start: "top 104px",
+                        //end: () => `+=${serviceItems.value.length*100}%`,
+                        pin: true,
+                        pinSpacing: true,
+                        scrub: true
+                    }
+                });
+
+                serviceItems.value.forEach((item, index) => {
+                    if (index !== 0) {
+                        timeline.to(item, { yPercent: 0, }, ">");
+                    }
+                });
+            }, 300);
+        }
         
         window.addEventListener("resize", setTitleOffset);
-
-        onUnmounted(() => {
-            window.removeEventListener("resize", setTitleOffset);
-        });
     });
 
-    
+    onUnmounted(() => {
+        window.removeEventListener("resize", setTitleOffset);
+    });
 
     function setTitleOffset() {
         if (!serviceItems.value) return;

@@ -1,7 +1,7 @@
 <template>
     <div>
         <section class="min-h-[90dvh] flex items-end -mb-[calc(var(--section-gap)+64px)]">
-            <h1 v-gsap.entrance.once.from="{ opacity: 0, y: 100 }">O NÁS</h1>
+            <h1>O NÁS</h1>
         </section>
 
         <section id="splash" class="max-h-dvh lg:h-[741px] md:h-[558px] h-[331px] relative my-8">
@@ -17,14 +17,14 @@
                     </Paragraph>
                 </div>
                 <div class="grid md:grid-cols-[var(--section-gap)_1fr] grid-cols-1 md:gap-0 gap-4">
-                    <h2 class="text-animate text-sm text-nowrap">(O NÁS)</h2>
+                    <h2 class="text-sm text-nowrap">(O NÁS)</h2>
                     <p class="text-animate max-w-169 md:text-xl text-base">Nie sme externá agentúra, sme váš strategický partner v podnikaní. Nečakáme so založenými rukami. Sme iniciatívni, každý projekt má jasný cieľ, na ktorom spoločne pracujeme ako tím. Marketing realizujeme rozvažne s dôrazom na výsledky, rozpočet a očakávanú návratnosť.</p>
                 </div>
             </div>
         </section>
 
         <section class="grid md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-12">
-            <div v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }" class="flex flex-col gap-4">
+            <div class="flex flex-col gap-4">
                 <NuxtImg 
                     v-if="false"
                     src="/images/patrikvojtus.webp"
@@ -37,7 +37,7 @@
                     <span>(COFOUNDER)</span>
                 </div>
             </div>
-            <div v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }" class="flex flex-col gap-4">
+            <div class="flex flex-col gap-4">
                 <NuxtImg 
                     v-if="false"
                     src="/images/jurajgoldberger.webp"
@@ -53,22 +53,22 @@
         </section>
         
         <section class="flex flex-col md:gap-8 gap-4">
-            <h2 v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }" class="text-sm text-nowrap">(EFE V ČÍSLACH)</h2>
+            <h2 class="text-sm text-nowrap">(EFE V ČÍSLACH)</h2>
             <div class="grid lg:grid-cols-4 grid-cols-2 gap-y-14 md:gap-x-14 gap-x-4">
-                <div v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }">
-                    <span class="lg:text-[78px] md:text-[62px] text-[32px]">(120+)</span>
+                <div>
+                    <span class="text-animate lg:text-[78px] md:text-[62px] text-[32px]">(120+)</span>
                     <p class="md:text-lg text-sm">Leadov vygenerovaných pre našich klientov.</p>
                 </div>
-                <div v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }">
-                    <span class="lg:text-[78px] md:text-[62px] text-[32px]">(32)</span>
+                <div>
+                    <span class="text-animate lg:text-[78px] md:text-[62px] text-[32px]">(32)</span>
                     <p class="md:text-lg text-sm">Leadov vygenerovaných pre našich klientov.</p>
                 </div>
-                <div v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }">
-                    <span class="lg:text-[78px] md:text-[62px] text-[32px]">(1/2)</span>
+                <div>
+                    <span class="text-animate lg:text-[78px] md:text-[62px] text-[32px]">(1/2)</span>
                     <p class="md:text-lg text-sm">Leadov vygenerovaných pre našich klientov.</p>
                 </div>
-                <div v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }">
-                    <span class="lg:text-[78px] md:text-[62px] text-[32px]">(13)</span>
+                <div>
+                    <span class="text-animate lg:text-[78px] md:text-[62px] text-[32px]">(13)</span>
                     <p class="md:text-lg text-sm">Leadov vygenerovaných pre našich klientov.</p>
                 </div>
             </div>
@@ -77,11 +77,11 @@
         <NuxtImg class="lg:my-12 md:my-6 my-0 mx-auto" width="64" src="/images/logo.svg" alt="logo"/>
 
         <section class="flex flex-col gap-4">
-            <h2 class="text-animate text-sm text-nowrap">(NÁŠ PRÍSTUP)</h2>
+            <h2 class="text-sm text-nowrap">(NÁŠ PRÍSTUP)</h2>
             <div v-for="(approach, index) in approaches" :key="index" class="border-t">
                 <div class="max-w-160 flex flex-col gap-8 mx-auto pt-4 md:pb-[168px] pb-[128px]">
                     <div class="grid grid-cols-[var(--section-gap)_1fr] md:gap-0 gap-4">
-                        <h2 class="text-animate text-sm text-nowrap">(0{{ index+1 }})</h2>
+                        <span class="text-sm text-nowrap">(0{{ index+1 }})</span>
                         <h3 class="text-animate lg:text-[62px] md:text-[48px] text-[32px]">{{ approach.title }}</h3>
                     </div>
                     <p class="text-animate w-auto md:ml-26 md:text-lg text-sm">{{ approach.description }}</p>

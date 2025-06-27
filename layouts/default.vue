@@ -28,12 +28,12 @@
                     }"
                     class="md:hidden absolute inset-0 h-dvh bg-(--color-black) text-(--color-white) flex flex-col items-start justify-between p-[var(--content-padding)] pt-32"
                 >
-                    <ul class="flex flex-col gap-6 underlined">
-                        <li><NuxtLink @click="closeMenu" to="/works" class="nav-link">WORKS</NuxtLink></li>
-                        <li> <NuxtLink @click="closeMenu" to="/about" class="nav-link">O NÁS</NuxtLink></li>
-                        <li><NuxtLink @click="closeMenu" to="/services" class="nav-link">SLUŽBY</NuxtLink></li>
-                        <li><NuxtLink @click="closeMenu" :to="{ name: router.hasRoute(route.name) ? '' : 'index', hash: '#contact' }" class="nav-link">KONTAKT</NuxtLink></li>
-                        <li><NuxtLink @click="closeMenu" to="/services" class="nav-link">INSTAGRAM</NuxtLink></li>
+                    <ul class="flex flex-col gap-6">
+                        <li><NuxtLink @click="closeMenu" to="/works" class="underlined">WORKS</NuxtLink></li>
+                        <li> <NuxtLink @click="closeMenu" to="/about" class="underlined">O NÁS</NuxtLink></li>
+                        <li><NuxtLink @click="closeMenu" to="/services" class="underlined">SLUŽBY</NuxtLink></li>
+                        <li><NuxtLink @click="closeMenu" :to="{ name: router.hasRoute(route.name) ? '' : 'index', hash: '#contact' }" class="underlined">KONTAKT</NuxtLink></li>
+                        <li><NuxtLink @click="closeMenu" to="/services" class="underlined">INSTAGRAM</NuxtLink></li>
                     </ul>
                     <div class="flex flex-col">
                         <span>efestudio.sk</span>
@@ -46,19 +46,19 @@
                     <li
                         :class="[ navInvert ? 'bg-(--color-white) text-(--color-black)' : 'bg-(--color-black) text-(--color-white)' ]"
                         class="py-2 px-6 rounded-full transition-all"
-                    ><NuxtLink to="/works" class="nav-link">WORKS</NuxtLink></li>
+                    ><NuxtLink to="/works">WORKS</NuxtLink></li>
                     <li
                         :class="[ navInvert ? 'bg-(--color-white) text-(--color-black)' : 'bg-(--color-black) text-(--color-white)' ]"
                         class="py-2 px-6 rounded-full transition-all"
-                    ><NuxtLink to="/about" class="nav-link">O NÁS</NuxtLink></li>
+                    ><NuxtLink to="/about">O NÁS</NuxtLink></li>
                     <li
                         :class="[ navInvert ? 'bg-(--color-white) text-(--color-black)' : 'bg-(--color-black) text-(--color-white)' ]"
                         class="py-2 px-6 rounded-full transition-all"
-                    ><NuxtLink to="/services" class="nav-link">SLUŽBY</NuxtLink></li>
+                    ><NuxtLink to="/services">SLUŽBY</NuxtLink></li>
                     <li
                         :class="[ navInvert ? 'bg-(--color-white) text-(--color-black)' : 'bg-(--color-black) text-(--color-white)' ]"
                         class="py-2 px-6 rounded-full transition-all"
-                    ><NuxtLink :to="{ name: router.hasRoute(route.name) ? '' : 'index', hash: '#contact' }" class="nav-link">KONTAKT</NuxtLink></li>
+                    ><NuxtLink :to="{ name: router.hasRoute(route.name) ? '' : 'index', hash: '#contact' }">KONTAKT</NuxtLink></li>
                 </ul>
             </nav>
         </header>
@@ -73,7 +73,7 @@
                 <NuxtLink to="/" class="md:text-[62px] text-[26px] leading-none cta-underlined">
                     ⮡ Zabookuj si call
                 </NuxtLink>
-                <NuxtImg class="md:inline hidden w-full mx-auto invert" src="/images/efestudio.svg" alt="efestudio"/>
+                <NuxtImg class="md:inline hidden w-full mx-auto" src="/images/efestudio.svg" alt="efestudio"/>
             </section>
         </main>
         

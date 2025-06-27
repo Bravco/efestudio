@@ -12,9 +12,9 @@
                 <br class="hidden md:inline">
                 poctivo — meratelne a bez zbytočných omáčok
             </p>
-            <div v-gsap.entrance.once.from="{ opacity: 0, y: 100 }" class="flex justify-between text-sm">
-                <span>2025/</span>
-                <span>(SCROLL)</span>
+            <div class="flex justify-between text-sm">
+                <span class="text-animate">2025/</span>
+                <span class="text-animate">(SCROLL)</span>
             </div>
             <NuxtImg v-gsap.entrance.once.from="{ opacity: 0, y: 100 }" class="w-full mx-auto" src="/images/efestudio.svg" alt="efestudio"/>
         </section>
@@ -28,20 +28,20 @@
             </div>
             <div class="ml-auto md:w-2/5 w-full flex flex-col gap-8">
                 <p class="text-animate md:text-xl">Sme iniciatívni, každý projekt má jasný cieľ, na ktorom spoločne pryacujeme ako tím. Marketing realizujeme rozvažne ss dôrazom na výsledky, rozpočet a očakávanú návratnosť.</p>
-                <Button v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }" to="/about" text="ZOBRAZIŤ VIAC O NÁS" arrow/>
+                <Button to="/about" text="ZOBRAZIŤ VIAC O NÁS" arrow/>
             </div>
         </section>
 
         <section class="bg-[var(--color-white)] flex flex-col gap-4">
             <div class="grid grid-cols-2 gap-6">
-                <NuxtLink v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }" class="flex items-center gap-2" to="/works">
+                <NuxtLink class="flex items-center gap-2" to="/works">
                     Viac projektov
                     <NuxtImg src="/images/arrow.svg" height="16" width="16" alt="more projects"/>
                 </NuxtLink>
-                <h2 v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }" class="text-sm text-nowrap">(VYBRANÉ PROJEKTY)</h2>
+                <h2 class="text-sm text-nowrap">(VYBRANÉ PROJEKTY)</h2>
             </div>
             <div class="grid md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-12">
-                <ProjectCard v-gsap.whenVisible.once.from="{ opacity: 0, y: 100 }" v-for="project in projects" :key="project.title" :project="project"/>
+                <ProjectCard v-for="project in projects" :key="project.title" :project="project"/>
             </div>
             <Button class="md:hidden flex mx-auto mt-12" to="/works" text="VIAC PROJEKTOV" arrow/>
         </section>
@@ -63,8 +63,10 @@
                         <NuxtImg class="aspect-square lg:w-[100px] md:w-[80px] w-[71px]" :src="process.imageUrl" width="100" height="100" :alt="process.title"/>
                         <span class="md:text-sm text-xs">(0{{ index+1 }})</span>
                     </div>
-                    <h3 class="lg:text-[62px] text-[32px] whitespace-pre">{{ process.title }}</h3>
-                    <p>{{ process.description }}</p>
+                    <h3 class="text-animate lg:text-[62px] text-[32px]">
+                        <span v-for="line in process.title.split('\n')">{{ line }}<br></span>
+                    </h3>
+                    <p class="text-animate">{{ process.description }}</p>
                 </div>
             </div>
         </section>
