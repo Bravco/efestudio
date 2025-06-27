@@ -109,10 +109,10 @@
     onMounted(() => {
         serviceItems.value = document.querySelectorAll(".service-item");
 
-        setTitleOffset();
+        setTimeout(() => {
+            setTitleOffset();
 
-        if (serviceItems.value?.length) {
-            setTimeout(() => {
+            if (serviceItems.value?.length) {
                 serviceItems.value.forEach((item, index) => {
                     if (index !== 0) {
                         gsap.set(item, { yPercent: 100 });
@@ -135,8 +135,8 @@
                         timeline.to(item, { yPercent: 0, }, ">");
                     }
                 });
-            }, 300);
-        }
+            }
+        }, 1000);
         
         window.addEventListener("resize", setTitleOffset);
     });
