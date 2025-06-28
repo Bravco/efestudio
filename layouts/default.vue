@@ -87,7 +87,7 @@
             <ul class="flex flex-col gap-2 md:order-0 order-[-1] text-sm">
                 <li class="flex flex-wrap items-center justify-start md:gap-8 gap-[33%]">
                     <NuxtLink class="underlined" to="" target="_blank">Instagram</NuxtLink>
-                    <NuxtLink class="underlined" to="">Vop & GDPR</NuxtLink>
+                    <NuxtLink class="underlined" to="/vop">Vop & GDPR</NuxtLink>
                 </li>
                 <li>
                     <NuxtLink class="underlined" to="" target="_blank">Facebook</NuxtLink>
