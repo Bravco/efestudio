@@ -78,7 +78,8 @@
 
         <section class="flex flex-col gap-4">
             <h2 class="text-sm text-nowrap">(NÁŠ PRÍSTUP)</h2>
-            <div v-for="(approach, index) in approaches" :key="index" class="border-t">
+            <div v-for="(approach, index) in approaches" :key="index" class="relative">
+                <div v-gsap.whenVisible.once.from="{ scaleX: 0 }"  class="absolute inset-0 h-px bg-[var(--color-black)] origin-left"></div>
                 <div class="max-w-160 flex flex-col gap-8 mx-auto pt-4 md:pb-[168px] pb-[128px]">
                     <div class="grid grid-cols-[var(--section-gap)_1fr] md:gap-0 gap-4">
                         <span class="text-sm text-nowrap">(0{{ index+1 }})</span>

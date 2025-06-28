@@ -58,8 +58,9 @@
                 <div
                     v-for="(process, index) in processes"
                     :key="index"
-                    class="grid md:grid-cols-[384px_1fr_1fr] md:gap-0 gap-6 place-items-start border-t pt-[var(--content-padding)]"
+                    class="relative grid md:grid-cols-[384px_1fr_1fr] md:gap-0 gap-6 place-items-start pt-[var(--content-padding)]"
                 >
+                    <div v-gsap.whenVisible.once.from="{ scaleX: 0 }" class="absolute inset-0 h-px bg-[var(--color-black)] origin-left"></div>
                     <div class="w-full flex md:flex-row flex-col justify-between gap-6 pr-[30%]">
                         <NuxtImg class="aspect-square lg:w-[100px] md:w-[80px] w-[71px]" :src="process.imageUrl" width="100" height="100" :alt="process.title"/>
                         <span class="md:text-sm text-xs">(0{{ index+1 }})</span>
