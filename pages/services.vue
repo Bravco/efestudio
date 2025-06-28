@@ -27,12 +27,29 @@
                 <div class="flex flex-col gap-8 pt-8">
                     <h2 class="w-full md:grid md:grid-cols-2 flex md:gap-0 gap-8 lg:text-[62px] md:text-[48px] text-[32px] leading-none tracking-tight">
                         <span>(0{{ index + 1 }})</span>
-                        <span class="-ml-2 text-nowrap">{{ service.title }}</span>
+                        <span class="text-nowrap">{{ service.title }}</span>
                     </h2>
                     <p class="md:ml-auto md:w-1/2 md:pr-[10%] pr-0 md:pb-8 pb-4 md:text-xl">{{ service.description }}</p>
                     <ul class="md:ml-auto md:w-1/2 grid md:grid-cols-3 grid-cols-2 md:gap-4 gap-2 md:text-xl md:text-black text-[var(--color-dark-gray)]">
                         <li v-for="(item, index) in service.items" :key="index">{{ item }}</li>
                     </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="splash" class="min-h-dvh relative my-8">
+            <NuxtImg class="h-full w-full absolute inset-0 object-cover object-center" src="/images/services.webp" alt="services"/>
+        </section>
+
+        <section class="flex flex-col gap-4">
+            <span class="text-sm">(NÁŠ PRÍSTUP)</span>
+            <div v-for="(access, index) in accesses" :key="index" class="border-t">
+                <div class="flex flex-col gap-8 pt-8 pb-32">
+                    <h2 class="w-full md:grid md:grid-cols-2 flex md:gap-0 gap-8">
+                        <span class="text-end md:mr-[20%] mr-0">(0{{ index + 1 }})</span>
+                        <span class="text-nowrap lg:text-[62px] md:text-[48px] text-[32px] leading-none tracking-tight">{{ access.title }}</span>
+                    </h2>
+                    <p class="md:ml-auto md:w-1/2 md:pr-[10%] pr-0 md:pb-8 pb-4 md:text-xl">{{ access.description }}</p>
                 </div>
             </div>
         </section>
@@ -52,6 +69,12 @@
         <section class="flex flex-col gap-4">
             <h2 class="xl:ml-[60%] text-sm text-nowrap">(NAŠI KLIENTI)</h2>
             <Partners/>
+        </section>
+
+        <section class="grid place-items-center">
+            <NuxtLink :to="{ hash: '#contact' }" class="md:text-[62px] text-[32px] leading-none cta-underlined">
+                ⮡ Kontaktujte nás
+            </NuxtLink>
         </section>
     </div>
 </template>
@@ -111,6 +134,25 @@
                 "Výkonnostné kampane",
                 "Reporting a optimalizácia"
             ]
+        }
+    ];
+
+    const accesses = [
+        {
+            title: "Interný tím",
+            description: "Nie sme externá agentúra, sme váš partner, ktorého máte vždy po ruke, keď to najviac potrebujete."
+        },
+        {
+            title: "Férová komunikácia",
+            description: "Veci rozprávame na rovinu, dôvera je základným pilierom našej filozofie."
+        },
+        {
+            title: "Dôraz na detaily",
+            description: "Záleží nám na každej vete, písmenku aj bodke. Dáme si potrpieť na dôslednosť."
+        },
+        {
+            title: "Ťah na bránu",
+            description: "Záleží nám na každej vete, písmenku aj bodke. Dáme si potrpieť na dôslednosť."
         }
     ];
 
