@@ -43,13 +43,15 @@
 
         <section class="flex flex-col gap-4">
             <span class="text-sm">(NÁŠ PRÍSTUP)</span>
-            <div v-for="(access, index) in accesses" :key="index" class="border-t">
-                <div class="flex flex-col gap-8 pt-8 pb-32">
-                    <h2 class="w-full md:grid md:grid-cols-2 flex md:gap-0 gap-8">
-                        <span class="text-end md:mr-[20%] mr-0">(0{{ index + 1 }})</span>
-                        <span class="text-nowrap lg:text-[62px] md:text-[48px] text-[32px] leading-none tracking-tight">{{ access.title }}</span>
-                    </h2>
-                    <p class="md:ml-auto md:w-1/2 md:pr-[10%] pr-0 md:pb-8 pb-4 md:text-xl">{{ access.description }}</p>
+            <div class="access-list h-dvh relative">
+                <div v-for="(access, index) in accesses" :key="index" class="access-item absolute inset-0 border-t bg-[var(--color-white)]">
+                    <div class="flex flex-col gap-8 pt-8">
+                        <h2 class="w-full md:grid md:grid-cols-2 flex md:gap-0 gap-8">
+                            <span class="text-end md:mr-[20%] mr-0">(0{{ index + 1 }})</span>
+                            <span class="text-nowrap lg:text-[62px] md:text-[48px] text-[32px] leading-none tracking-tight">{{ access.title }}</span>
+                        </h2>
+                        <p class="md:ml-auto md:w-1/2 md:pr-[10%] pr-0 md:pb-8 pb-4 md:text-xl">{{ access.description }}</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -83,8 +85,6 @@
     useHead({ title: "efestudio - služby" });
 
     const gsap = useGSAP();
-
-    const serviceItems = ref(null);
 
     const services = [
         {
@@ -156,55 +156,72 @@
         }
     ];
 
+    let cleanupFns: (() => void)[] = [];
+
     onMounted(() => {
-        serviceItems.value = document.querySelectorAll(".service-item");
-
         setTimeout(() => {
-            setTitleOffset();
+            const cleanupService = setupScrollListAnimation(
+                ".service-list",
+                ".service-item",
+            );
 
-            if (serviceItems.value?.length) {
-                serviceItems.value.forEach((item, index) => {
-                    if (index !== 0) {
-                        gsap.set(item, { yPercent: 100 });
-                    }
-                });
+            const cleanupAccess = setupScrollListAnimation(
+                ".access-list",
+                ".access-item"
+            );
 
-                const timeline = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: ".service-list",
-                        start: "top 104px",
-                        //end: () => `+=${serviceItems.value.length*100}%`,
-                        pin: true,
-                        pinSpacing: true,
-                        scrub: true
-                    }
-                });
-
-                serviceItems.value.forEach((item, index) => {
-                    if (index !== 0) {
-                        timeline.to(item, { yPercent: 0, }, ">");
-                    }
-                });
-            }
+            if (cleanupService) cleanupFns.push(cleanupService);
+            if (cleanupAccess) cleanupFns.push(cleanupAccess);
         }, 1000);
-        
-        window.addEventListener("resize", setTitleOffset);
     });
 
     onUnmounted(() => {
-        window.removeEventListener("resize", setTitleOffset);
+        cleanupFns.forEach((fn) => fn());
     });
 
-    function setTitleOffset() {
-        if (!serviceItems.value) return;
-    
-        const isMobile = window.innerWidth <= 768;
-        const titleHeight = isMobile ? 96 : 126;
+    function setupScrollListAnimation(listSelector: string, itemSelector: string) {
+        const items = document.querySelectorAll<HTMLElement>(itemSelector);
 
-        serviceItems.value.forEach((item, index) => {
+        if (!items.length) return;
+
+        items.forEach((item, index) => {
             if (index !== 0) {
-                gsap.set(item, { top: `${titleHeight*index}px` });
+                gsap.set(item, { yPercent: 100 });
             }
         });
+
+        const timeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: listSelector,
+                start: "top 104px",
+                pin: true,
+                pinSpacing: true,
+                scrub: true
+            }
+        });
+
+        items.forEach((item, index) => {
+            if (index !== 0) {
+                timeline.to(item, { yPercent: 0 }, ">");
+            }
+        });
+
+        function setOffset() {
+            const isMobile = window.innerWidth <= 768;
+            const titleHeight = isMobile ? 96 : 126;
+
+            items.forEach((item, index) => {
+                if (index !== 0) {
+                    gsap.set(item, { top: `${titleHeight * index}px` });
+                }
+            });
+        }
+
+        setOffset();
+        window.addEventListener("resize", setOffset);
+
+        return () => {
+            window.removeEventListener("resize", setOffset);
+        };
     }
 </script>
