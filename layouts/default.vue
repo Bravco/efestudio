@@ -189,8 +189,10 @@
         });
     };
 
-    watch(route, (to, from) => {
-        handleSroll();
+    watch(route, (to, from) => handleSroll());
+
+    watch(() => route.fullPath, () => {
+        nextTick(() => animateTextElements());
     });
 
     onMounted(() => {
@@ -200,32 +202,7 @@
         updateTime();
         timer = setInterval(updateTime, 1000);
 
-        document.fonts.ready.then(() => {
-            const splitElements = document.querySelectorAll(".text-animate");
-
-            splitElements.forEach(element => {
-                const split = SplitText.create(element, {
-                    type: "lines",
-                    mask: "lines",
-                    autoSplit: true
-                });
-
-                gsap.from(split.lines, {
-                    delay: 0.3,
-                    duration: 0.5,
-                    yPercent: 100,
-                    stagger: 0.15,
-                    ease: "power1.out",
-                    scrollTrigger: {
-                        trigger: element,
-                        start: "top 80%"
-                    },
-                    onComplete: () => {
-                        split.revert();
-                    }
-                });
-            });
-        });
+        document.fonts.ready.then(() => animateTextElements());
     });
 
     onUnmounted(() => {
@@ -235,4 +212,31 @@
             clearInterval(timer);
         }
     });
+
+    function animateTextElements() {
+        const splitElements = document.querySelectorAll(".text-animate");
+
+        splitElements.forEach(element => {
+            const split = SplitText.create(element, {
+                type: "lines",
+                mask: "lines",
+                autoSplit: true
+            });
+
+            gsap.from(split.lines, {
+                delay: 0.3,
+                duration: 0.5,
+                yPercent: 100,
+                stagger: 0.15,
+                ease: "power1.out",
+                scrollTrigger: {
+                    trigger: element,
+                    start: "top 80%"
+                },
+                onComplete: () => {
+                    split.revert();
+                }
+            });
+        });
+    }
 </script>
