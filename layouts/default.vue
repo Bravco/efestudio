@@ -33,7 +33,7 @@
                         <li> <NuxtLink @click="closeMenu" to="/about" class="underlined">O NÁS</NuxtLink></li>
                         <li><NuxtLink @click="closeMenu" to="/services" class="underlined">SLUŽBY</NuxtLink></li>
                         <li><NuxtLink @click="closeMenu" :to="{ name: router.hasRoute(route.name) ? '' : 'index', hash: '#contact' }" class="underlined">KONTAKT</NuxtLink></li>
-                        <li><NuxtLink @click="closeMenu" to="/services" class="underlined">INSTAGRAM</NuxtLink></li>
+                        <li><NuxtLink @click="closeMenu" to="https://www.instagram.com/efestudio.sk/" class="underlined">INSTAGRAM</NuxtLink></li>
                     </ul>
                     <div class="flex flex-col">
                         <span>efestudio.sk</span>
@@ -86,14 +86,14 @@
             </ul>
             <ul class="flex flex-col gap-2 md:order-0 order-[-1] text-sm">
                 <li class="flex flex-wrap items-center justify-start md:gap-8 gap-[33%]">
-                    <NuxtLink class="underlined" to="" target="_blank">Instagram</NuxtLink>
+                    <NuxtLink class="underlined" to="https://www.instagram.com/efestudio.sk/" target="_blank">Instagram</NuxtLink>
                     <NuxtLink class="underlined" to="/vop">Vop & GDPR</NuxtLink>
                 </li>
                 <li>
-                    <NuxtLink class="underlined" to="" target="_blank">Facebook</NuxtLink>
+                    <NuxtLink class="underlined" to="https://www.facebook.com/efectivask/" target="_blank">Facebook</NuxtLink>
                 </li>
                 <li>
-                    <NuxtLink class="underlined" to="" target="_blank">Béhance</NuxtLink>
+                    <NuxtLink class="underlined" to="https://dribbble.com/efestudio--" target="_blank">Dribbble</NuxtLink>
                 </li>
                 <li class="mt-8 flex md:flex-row flex-col md:justify-around justify-start gap-2">
                     <NuxtLink class="underlined" to="mailto:hello@efestudio.sk">hello@efestudio.sk</NuxtLink>

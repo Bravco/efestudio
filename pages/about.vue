@@ -1,10 +1,10 @@
 <template>
     <div>
-        <section class="min-h-[90dvh] flex items-end -mb-[calc(var(--section-gap)+64px)]">
+        <section class="h-[80dvh] flex items-end !pb-0 -mb-[var(--section-gap)]">
             <h1>O NÁS</h1>
         </section>
 
-        <section id="splash" class="max-h-dvh lg:h-[741px] md:h-[558px] h-[331px] relative my-8">
+        <section id="splash" class="max-h-dvh lg:h-[741px] md:h-[558px] h-[331px] relative my-8 !pt-0">
             <NuxtImg class="h-full w-full absolute inset-0 object-cover object-center" src="/images/about.webp" alt="about"/>
         </section>
 
