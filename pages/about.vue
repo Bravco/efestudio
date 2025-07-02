@@ -1,6 +1,6 @@
 <template>
     <div>
-        <section class="h-[80dvh] flex items-end !pb-0 -mb-[var(--section-gap)]">
+        <section class="min-h-[80dvh] flex items-end !pb-0 -mb-[var(--section-gap)]">
             <h1>O NÁS</h1>
         </section>
 

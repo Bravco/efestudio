@@ -1,6 +1,6 @@
 <template>
     <div v-if="project">
-        <section class="h-[80dvh] flex flex-col gap-[var(--section-gap)] !pb-0 -mb-[var(--section-gap)]">
+        <section class="min-h-[80dvh] flex flex-col gap-[var(--section-gap)] !pb-0 -mb-[var(--section-gap)]">
             <div class="max-w-[1480px] grid md:grid-cols-4 grid-cols-1 md:gap-16 gap-12 text-sm">
                 <ul class="grid grid-cols-1 gap-[38px]">
                     <li>LAVARCH</li>
