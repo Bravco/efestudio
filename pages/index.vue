@@ -6,7 +6,7 @@
             class="min-h-dvh flex flex-col justify-between text-[var(--color-white)] -z-1"
             style="background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url('/images/hero.webp') center/cover no-repeat;"
         >
-            <p v-gsap.add.from="{ opacity: 0, y: 100 }" class="text-animate md:text-[40px] md:leading-none text-xl">
+            <p class="text-animate md:text-[40px] md:leading-none text-xl">
                 Sme marketingové štúdio
                 <br>
                 Budujeme pre klientov marketingové stratégie
