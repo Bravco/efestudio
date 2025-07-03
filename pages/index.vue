@@ -50,7 +50,7 @@
         <section class="flex flex-col gap-[var(--section-gap)]">
             <div class="grid md:grid-cols-[384px_1fr] grid-cols-1">
                 <h2 class="text-sm text-nowrap">(NÁŠ PROCES)</h2>
-                <Paragraph>
+                <Paragraph style="font-size: clamp(32px, 5vw, 50px);">
                     Ako dokážeme doručiť výsledky, na ktorých sme sa dohodli?
                 </Paragraph>
             </div>
@@ -65,10 +65,10 @@
                         <NuxtImg class="aspect-square lg:w-[100px] md:w-[80px] w-[71px]" :src="process.imageUrl" width="100" height="100" :alt="process.title"/>
                         <span class="md:text-sm text-xs">(0{{ index+1 }})</span>
                     </div>
-                    <h3 class="text-animate lg:text-[62px] text-[32px]">
+                    <h3 class="text-animate lg:text-[62px] text-[32px] leading-[115%]">
                         <span v-for="line in process.title.split('\n')">{{ line }}<br></span>
                     </h3>
-                    <p class="text-animate">{{ process.description }}</p>
+                    <p class="text-animate lg:text-lg md:text-base text-sm">{{ process.description }}</p>
                 </div>
             </div>
         </section>

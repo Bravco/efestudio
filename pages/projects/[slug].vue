@@ -82,11 +82,7 @@
             <NuxtImg class="h-full w-full object-cover object-center" src="/images/lavarch.webp" alt="lavarch"/>
         </section>
 
-        <section class="grid place-items-center">
-            <NuxtLink :to="{ hash: '#contact' }" class="md:text-[62px] text-[32px] leading-none cta-underlined">
-                ⮡ Kontaktujte nás
-            </NuxtLink>
-        </section>
+        <ContactUs/>
     </div>
 </template>
 
