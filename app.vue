@@ -5,7 +5,7 @@
         <NuxtLayout>
             <NuxtPage/>
         </NuxtLayout>
-        <div ref="overlay" class="transition-overlay"></div>
+        <div ref="overlay" class="transition-overlay overlay-slide-up"></div>
         <div id="trailer" class="fixed inset-0 z-10000 flex w-32 h-32 bg-[var(--color-black)] rounded-full pointer-events-none opacity-0 transition-all duration-200 ease-out">
             <NuxtImg class="m-auto invert rotate-45" width="32" src="/images/arrow.svg" alt="arrow"/>
         </div>
@@ -21,6 +21,7 @@
     const gsap = useGSAP();
 
     const overlay = ref<HTMLDivElement | null>(null);
+    const lenisRef = ref();
 
     router.beforeEach(async (to, from, next) => {
         if (to.path === from.path) {
@@ -41,8 +42,6 @@
             overlay.value?.classList.remove("overlay-slide-up");
         }
     });
-
-    const lenisRef = ref();
 
     watchEffect((onInvalidate) => {
         if (!lenisRef.value?.lenis) return;
@@ -97,6 +96,11 @@
 
             animateTrailer(e, interacting);
         };
+
+        if (overlay.value) {
+            overlay.value.offsetHeight;
+            overlay.value?.classList.remove("overlay-slide-up");
+        }
 
         window.addEventListener("mousemove", handleMouseMove);
 
