@@ -34,7 +34,7 @@ h1 {
 }
 
 .index-process-paragraph {
-    font-size: clamp(2rem, 3vw + 1rem, 12.5rem) !important;
+    font-size: clamp(2rem, 2vw + 1rem, 12.5rem) !important;
     letter-spacing: -2%;
     line-height: 115%;
 }
