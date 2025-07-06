@@ -19,7 +19,7 @@ h1 {
 }
 
 .paragraph {
-    font-size: clamp(2rem, 4vw + 1rem, 16rem);
+    font-size: clamp(2rem, 3vw + 1rem, 16rem);
     letter-spacing: -2%;
     line-height: 115%;
 }
