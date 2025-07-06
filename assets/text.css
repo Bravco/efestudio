@@ -1,0 +1,45 @@
+@font-face {
+    font-family: "PPNeueMontreal";
+    src: url("/fonts/PPNeueMontreal-Regular.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    font-family: "PPNeueMontreal", sans-serif;
+    font-weight: 450;
+}
+
+h1 {
+    font-size: clamp(4rem, 21vw + 1rem, 48rem);
+    letter-spacing: -0.025em;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.paragraph {
+    font-size: clamp(2rem, 4vw + 1rem, 16rem);
+    letter-spacing: -2%;
+    line-height: 115%;
+}
+
+.small-paragraph {
+    font-size: clamp(0.875rem, 1vw + 0.25rem, 4.5rem);
+}
+
+.index-hero-paragraph {
+    font-size: clamp(1.25rem, 2vw + 1rem, 10rem);
+    line-height: 1;
+}
+
+.index-process-paragraph {
+    font-size: clamp(2rem, 3vw + 1rem, 12.5rem) !important;
+    letter-spacing: -2%;
+    line-height: 115%;
+}
+
+.footer-paragraph {
+    font-size: clamp(1.75rem, 2vw + 1rem, 12.5rem);
+    line-height: 1;
+}

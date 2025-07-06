@@ -67,10 +67,10 @@
             <slot/>
             <section id="contact" class="mt-[calc(var(--section-gap)+32px)] md:min-h-dvh flex flex-col justify-between gap-[var(--section-gap)] bg-(--color-black) text-(--color-white)">
                 <div class="flex md:flex-row flex-col-reverse justify-between md:gap-[20%] gap-4">
-                    <p class="lg:md-text-[50px] md:text-[40px] text-[28px] leading-none">Vytvorme spolu zrozumiteľnú značku. Výziev sa nebojíme — či už veľkých, alebo malých. Poďme sa porozprávať o tej vašej.</p>
+                    <p class="footer-paragraph">Vytvorme spolu zrozumiteľnú značku. Výziev sa nebojíme — či už veľkých, alebo malých. Poďme sa porozprávať o tej vašej.</p>
                     <span class="text-sm text-nowrap">(5 VOĽNÝCH MIEST V 2025)</span>
                 </div>
-                <NuxtLink to="/" class="md:text-[62px] text-[32px] leading-none cta-underlined">
+                <NuxtLink to="/" class="paragraph !leading-none cta-underlined">
                     ⮡ Zabookuj si call
                 </NuxtLink>
                 <NuxtImg class="md:inline hidden w-full mx-auto" src="/images/efestudio.svg" alt="efestudio"/>

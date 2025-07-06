@@ -1,16 +1,3 @@
-@font-face {
-    font-family: "PPNeueMontreal";
-    src: url("/fonts/PPNeueMontreal-Regular.ttf") format("truetype");
-    font-weight: 100 900;
-    font-style: normal;
-    font-display: swap;
-}
-
-* {
-    font-family: "PPNeueMontreal", sans-serif;
-    font-weight: 450;
-}
-
 :root {
     --color-white: #f3f3f1;
     --color-light-gray: #f0f0f0;
@@ -48,13 +35,6 @@ footer, section {
 
 section:first-child {
     padding-top: calc(var(--content-padding) + 104px);
-}
-
-h1 {
-    font-size: clamp(64px, 22vw, 360px);
-    letter-spacing: -0.025em;
-    line-height: 1;
-    white-space: nowrap;
 }
 
 .underlined,

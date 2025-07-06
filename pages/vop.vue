@@ -18,11 +18,15 @@
 
 <style scoped>
     h1 {
-        font-size: 62px;
+        font-size: clamp(4rem, 4vw + 1rem, 15.5rem);
     }
 
     h2 {
-        font-size: 24px;
+        font-size: clamp(1.5rem, 1vw + 1rem, 6rem);
+    }
+
+    p, ul, li {
+        font-size: clamp(0.875rem, 1vw + 0.125rem, 4.5rem);
     }
 
     ul, li {

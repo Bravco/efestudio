@@ -18,7 +18,7 @@
                 </div>
                 <div class="grid md:grid-cols-[var(--section-gap)_1fr] grid-cols-1 md:gap-0 gap-4">
                     <h2 class="text-sm text-nowrap">(O NÁS)</h2>
-                    <p class="text-animate max-w-169 md:text-xl text-base">Nie sme externá agentúra, sme váš strategický partner v podnikaní. Nečakáme so založenými rukami. Sme iniciatívni, každý projekt má jasný cieľ, na ktorom spoločne pracujeme ako tím. Marketing realizujeme rozvažne s dôrazom na výsledky, rozpočet a očakávanú návratnosť.</p>
+                    <p class="text-animate max-w-1/2 small-paragraph">Nie sme externá agentúra, sme váš strategický partner v podnikaní. Nečakáme so založenými rukami. Sme iniciatívni, každý projekt má jasný cieľ, na ktorom spoločne pracujeme ako tím. Marketing realizujeme rozvažne s dôrazom na výsledky, rozpočet a očakávanú návratnosť.</p>
                 </div>
             </div>
         </section>
@@ -29,9 +29,9 @@
                     v-if="false"
                     src="/images/patrikvojtus.webp"
                     alt="Patrik Vojtuš"
-                    class="w-full max-h-[734px] aspect-3/4 object-cover object-center"
+                    class="w-full max-h-[80vh] aspect-3/4 object-cover object-center"
                 />
-                <div v-else class="max-h-[734px] aspect-3/4 bg-(--color-gray)"></div>
+                <div v-else class="max-h-[80vh] aspect-3/4 bg-(--color-gray)"></div>
                 <div class="flex justify-between lg:text-lg text-sm">
                     <span>Patrik Vojtuš</span>
                     <span>(COFOUNDER)</span>
@@ -42,9 +42,9 @@
                     v-if="false"
                     src="/images/jurajgoldberger.webp"
                     alt="Juraj Goldberger"
-                    class="w-full max-h-[734px] aspect-3/4 object-cover object-center"
+                    class="w-full max-h-[80vh] aspect-3/4 object-cover object-center"
                 />
-                <div v-else class="max-h-[734px] aspect-3/4 bg-(--color-gray)"></div>
+                <div v-else class="max-h-[80vh] aspect-3/4 bg-(--color-gray)"></div>
                 <div class="flex justify-between lg:text-lg text-sm">
                     <span>Juraj Goldberger</span>
                     <span>(COFOUNDER)</span>
@@ -56,20 +56,20 @@
             <h2 class="text-sm text-nowrap">(EFE V ČÍSLACH)</h2>
             <div class="grid lg:grid-cols-4 grid-cols-2 gap-y-14 md:gap-x-14 gap-x-4">
                 <div>
-                    <span class="text-animate lg:text-[78px] md:text-[62px] text-[32px]">(120+)</span>
-                    <p class="md:text-lg text-sm">Leadov vygenerovaných pre našich klientov.</p>
+                    <span class="text-animate paragraph">(120+)</span>
+                    <p class="md:text-lg small-paragraph">Leadov vygenerovaných pre našich klientov.</p>
                 </div>
                 <div>
-                    <span class="text-animate lg:text-[78px] md:text-[62px] text-[32px]">(32)</span>
-                    <p class="md:text-lg text-sm">Leadov vygenerovaných pre našich klientov.</p>
+                    <span class="text-animate paragraph">(32)</span>
+                    <p class="md:text-lg small-paragraph">Leadov vygenerovaných pre našich klientov.</p>
                 </div>
                 <div>
-                    <span class="text-animate lg:text-[78px] md:text-[62px] text-[32px]">(1/2)</span>
-                    <p class="md:text-lg text-sm">Leadov vygenerovaných pre našich klientov.</p>
+                    <span class="text-animate paragraph">(1/2)</span>
+                    <p class="md:text-lg small-paragraph">Leadov vygenerovaných pre našich klientov.</p>
                 </div>
                 <div>
-                    <span class="text-animate lg:text-[78px] md:text-[62px] text-[32px]">(13)</span>
-                    <p class="md:text-lg text-sm">Leadov vygenerovaných pre našich klientov.</p>
+                    <span class="text-animate paragraph">(13)</span>
+                    <p class="md:text-lg small-paragraph">Leadov vygenerovaných pre našich klientov.</p>
                 </div>
             </div>
         </section>
@@ -83,9 +83,9 @@
                 <div class="max-w-160 flex flex-col gap-8 mx-auto pt-4 md:pb-[168px] pb-[128px]">
                     <div class="grid grid-cols-[var(--section-gap)_1fr] md:gap-0 gap-4">
                         <span class="text-sm text-nowrap">(0{{ index+1 }})</span>
-                        <h3 class="text-animate lg:text-[62px] md:text-[48px] text-[32px]">{{ approach.title }}</h3>
+                        <h3 class="text-animate paragraph">{{ approach.title }}</h3>
                     </div>
-                    <p class="text-animate w-auto md:ml-26 md:text-lg text-sm">{{ approach.description }}</p>
+                    <p class="text-animate w-auto md:ml-26 small-paragraph">{{ approach.description }}</p>
                 </div>
             </div>
         </section>

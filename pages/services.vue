@@ -19,18 +19,18 @@
 
         <section class="grid md:grid-cols-[2fr_1fr] grid-cols-1 gap-4 place-items-start">
             <span class="text-sm">(ZRUČNOSTI)</span>
-            <p class="text-animate md:text-xl">Naším klientom pomáhame vybudovať zrozumiteľnú značku s jasne definovanou pozíciou na trhu. S akým zadaním sa na nás môžete obrátiť?</p>
+            <p class="text-animate small-paragraph">Naším klientom pomáhame vybudovať zrozumiteľnú značku s jasne definovanou pozíciou na trhu. S akým zadaním sa na nás môžete obrátiť?</p>
         </section>
 
         <section class="service-list h-dvh relative">
             <div v-for="(service, index) in services" :key="index" class="service-item absolute inset-0 mx-8 border-t bg-[var(--color-white)]">
                 <div class="flex flex-col gap-8 pt-8">
-                    <h2 class="w-full md:grid md:grid-cols-2 flex md:gap-0 gap-8 lg:text-[62px] md:text-[48px] text-[32px] leading-none tracking-tight">
+                    <h2 class="paragraph w-full md:grid md:grid-cols-2 flex md:gap-0 gap-8">
                         <span>(0{{ index + 1 }})</span>
                         <span class="text-nowrap">{{ service.title }}</span>
                     </h2>
-                    <p class="md:ml-auto md:w-1/2 md:pr-[10%] pr-0 md:pb-8 pb-4 md:text-xl">{{ service.description }}</p>
-                    <ul class="md:ml-auto md:w-1/2 grid md:grid-cols-3 grid-cols-2 md:gap-4 gap-2 md:text-xl md:text-black text-[var(--color-dark-gray)]">
+                    <p class="small-paragraph md:ml-auto md:w-1/2 md:pr-[10%] pr-0 md:pb-8 pb-4">{{ service.description }}</p>
+                    <ul class="small-paragraph md:ml-auto md:w-1/2 grid md:grid-cols-3 grid-cols-2 md:gap-4 gap-2 md:text-black text-[var(--color-dark-gray)]">
                         <li v-for="(item, index) in service.items" :key="index">{{ item }}</li>
                     </ul>
                 </div>
@@ -48,16 +48,16 @@
                     <div class="flex flex-col gap-8 pt-8">
                         <h2 class="w-full md:grid md:grid-cols-2 flex md:gap-0 gap-8">
                             <span class="text-end md:mr-[20%] mr-0">(0{{ index + 1 }})</span>
-                            <span class="text-nowrap lg:text-[62px] md:text-[48px] text-[32px] leading-none tracking-tight">{{ access.title }}</span>
+                            <span class="paragraph text-nowrap">{{ access.title }}</span>
                         </h2>
-                        <p class="md:ml-auto md:w-1/2 md:pr-[10%] pr-0 md:pb-8 pb-4 md:text-xl">{{ access.description }}</p>
+                        <p class="small-paragraph md:ml-auto md:w-1/2 md:pr-[10%] pr-0 md:pb-8 pb-4">{{ access.description }}</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="flex flex-col items-center md:gap-12 gap-8">
-            <p class="text-animate max-w-[1280px] text-center lg:text-[62px] md:text-[48px] text-[32px] -tracking-[2%] leading-[115%]">"It's not every day you get to work with a team that instantly understands your visual style and motion needs, and foresees crafting a future-proof space. We worked together in a very collaborative way when it came to small interactions and finding ways to integrate my animated type style into the site's structure. "</p>
+            <p class="text-animate paragraph max-w-[80vw] text-center">"It's not every day you get to work with a team that instantly understands your visual style and motion needs, and foresees crafting a future-proof space. We worked together in a very collaborative way when it came to small interactions and finding ways to integrate my animated type style into the site's structure. "</p>
             <div class="flex flex-col items-center gap-2">
                 <span clas="lg:text-lg">Patrik Vojtuš</span>
                 <span class="lg:text-sm text-xs">(DESIGN LEAD)</span>

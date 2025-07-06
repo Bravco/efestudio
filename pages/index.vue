@@ -6,7 +6,7 @@
             class="min-h-dvh flex flex-col justify-between text-[var(--color-white)] -z-1"
             style="background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url('/images/hero.webp') center/cover no-repeat;"
         >
-            <p class="text-animate md:text-[40px] md:leading-none text-xl">
+            <p class="text-animate index-hero-paragraph">
                 Sme marketingové štúdio
                 <br>
                 Budujeme pre klientov marketingové stratégie
@@ -28,7 +28,7 @@
                 </Paragraph>
             </div>
             <div class="ml-auto md:w-2/5 w-full flex flex-col gap-8">
-                <p class="text-animate md:text-xl">Sme iniciatívni, každý projekt má jasný cieľ, na ktorom spoločne pryacujeme ako tím. Marketing realizujeme rozvažne ss dôrazom na výsledky, rozpočet a očakávanú návratnosť.</p>
+                <p class="text-animate small-paragraph">Sme iniciatívni, každý projekt má jasný cieľ, na ktorom spoločne pryacujeme ako tím. Marketing realizujeme rozvažne ss dôrazom na výsledky, rozpočet a očakávanú návratnosť.</p>
                 <Button to="/about" text="ZOBRAZIŤ VIAC O NÁS" arrow/>
             </div>
         </section>
@@ -50,7 +50,7 @@
         <section class="flex flex-col gap-[var(--section-gap)]">
             <div class="grid md:grid-cols-[384px_1fr] grid-cols-1">
                 <h2 class="text-sm text-nowrap">(NÁŠ PROCES)</h2>
-                <Paragraph style="font-size: clamp(32px, 5vw, 50px);">
+                <Paragraph class="index-process-paragraph">
                     Ako dokážeme doručiť výsledky, na ktorých sme sa dohodli?
                 </Paragraph>
             </div>
@@ -65,10 +65,10 @@
                         <NuxtImg class="aspect-square lg:w-[100px] md:w-[80px] w-[71px]" :src="process.imageUrl" width="100" height="100" :alt="process.title"/>
                         <span class="md:text-sm text-xs">(0{{ index+1 }})</span>
                     </div>
-                    <h3 class="text-animate lg:text-[62px] text-[32px] leading-[115%]">
+                    <h3 class="text-animate paragraph">
                         <span v-for="line in process.title.split('\n')">{{ line }}<br></span>
                     </h3>
-                    <p class="text-animate lg:text-lg md:text-base text-sm">{{ process.description }}</p>
+                    <p class="text-animate small-paragraph">{{ process.description }}</p>
                 </div>
             </div>
         </section>
