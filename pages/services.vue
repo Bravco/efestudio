@@ -5,7 +5,7 @@
                 <NuxtImg height="240" src="/images/lavarch.webp" alt="lavarch"/>
                 <div class="flex justify-between">
                     <span>(01)</span>
-                    <NuxtLink to="" class="flex items-center gap-2">
+                    <NuxtLink to="/projects/lavarch" class="flex items-center gap-2">
                         Vybraný projekt
                         <NuxtImg src="/images/arrow.svg" height="16" width="16" alt="selected project"/>
                     </NuxtLink>
