@@ -17,7 +17,7 @@
                     </Paragraph>
                 </div>
                 <div class="grid md:grid-cols-[var(--section-gap)_1fr] grid-cols-1 md:gap-0 gap-4">
-                    <h2 class="text-sm text-nowrap">(O NÁS)</h2>
+                    <h2 class="small-alt-text">(O NÁS)</h2>
                     <p class="text-animate md:max-w-1/2 small-paragraph">Nie sme externá agentúra, sme váš strategický partner v podnikaní. Nečakáme so založenými rukami. Sme iniciatívni, každý projekt má jasný cieľ, na ktorom spoločne pracujeme ako tím. Marketing realizujeme rozvažne s dôrazom na výsledky, rozpočet a očakávanú návratnosť.</p>
                 </div>
             </div>
@@ -53,7 +53,7 @@
         </section>
         
         <section class="flex flex-col md:gap-8 gap-4">
-            <h2 class="text-sm text-nowrap">(EFE V ČÍSLACH)</h2>
+            <h2 class="small-alt-text">(EFE V ČÍSLACH)</h2>
             <div class="grid lg:grid-cols-4 grid-cols-2 gap-y-14 md:gap-x-14 gap-x-4">
                 <div class="flex flex-col gap-4">
                     <span class="text-animate paragraph">(120+)</span>
@@ -77,18 +77,20 @@
         <NuxtImg class="lg:my-12 md:my-6 my-0 mx-auto" width="64" src="/images/logo.svg" alt="logo"/>
 
         <section class="flex flex-col gap-4">
-            <h2 class="text-sm text-nowrap">(NÁŠ PRÍSTUP)</h2>
+            <h2 class="small-alt-text">(NÁŠ PRÍSTUP)</h2>
             <div v-for="(approach, index) in approaches" :key="index" class="relative">
                 <div v-gsap.whenVisible.once.from="{ scaleX: 0 }"  class="absolute inset-0 h-px bg-[var(--color-black)] origin-left"></div>
                 <div class="max-w-160 flex flex-col gap-8 mx-auto pt-4 md:pb-[168px] pb-[128px]">
                     <div class="grid grid-cols-[var(--section-gap)_1fr] md:gap-0 gap-4">
-                        <span class="text-sm text-nowrap">(0{{ index+1 }})</span>
+                        <span class="small-alt-text">(0{{ index+1 }})</span>
                         <h3 class="text-animate paragraph">{{ approach.title }}</h3>
                     </div>
                     <p class="text-animate w-auto md:ml-26 small-paragraph">{{ approach.description }}</p>
                 </div>
             </div>
         </section>
+
+        <LatestProjects/>
     </div>
 </template>
 

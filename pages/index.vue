@@ -13,7 +13,7 @@
                 <br class="hidden md:inline">
                 poctivo — meratelne a bez zbytočných omáčok
             </p>
-            <div v-gsap.add.from="{ opacity: 0, y: 100 }" class="flex justify-between text-sm">
+            <div v-gsap.add.from="{ opacity: 0, y: 100 }" class="small-alt-text flex justify-between">
                 <span>2025/</span>
                 <span>(SCROLL)</span>
             </div>
@@ -22,7 +22,7 @@
 
         <section class="bg-[var(--color-white)] -mb-[var(--section-gap)] flex flex-col gap-[var(--section-gap)] !pt-16 !pb-[var(--section-gap)]">
             <div>
-                <h2 class="md:w-[15vw] w-auto h-8 md:float-left text-sm text-nowrap">(ABOUT US)</h2>
+                <h2 class="small-alt-text md:w-[15vw] w-auto h-8 md:float-left">(ABOUT US)</h2>
                 <Paragraph>
                     Sme digitálne marketingové štúdio. Klientom prinášame komplexné riešenia v oblasti značky obsahu a webov. Každý projekt staviame na jasnej stratégii a cieľoch.
                 </Paragraph>
@@ -39,7 +39,7 @@
                     Viac projektov
                     <NuxtImg src="/images/arrow.svg" height="16" width="16" alt="more projects"/>
                 </NuxtLink>
-                <h2 class="text-sm text-nowrap">(VYBRANÉ PROJEKTY)</h2>
+                <h2 class="small-alt-text">(VYBRANÉ PROJEKTY)</h2>
             </div>
             <div class="grid md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-12">
                 <ProjectCard v-for="project in projects" :key="project.title" :project="project"/>
@@ -49,7 +49,7 @@
 
         <section class="flex flex-col gap-[var(--section-gap)]">
             <div class="grid md:grid-cols-[384px_1fr] grid-cols-1">
-                <h2 class="text-sm text-nowrap">(NÁŠ PROCES)</h2>
+                <h2 class="small-alt-text">(NÁŠ PROCES)</h2>
                 <Paragraph class="index-process-paragraph">
                     Ako dokážeme doručiť výsledky, na ktorých sme sa dohodli?
                 </Paragraph>
@@ -63,7 +63,7 @@
                     <div v-gsap.whenVisible.once.from="{ scaleX: 0 }" class="absolute inset-0 h-px bg-[var(--color-black)] origin-left"></div>
                     <div class="w-full flex md:flex-row flex-col justify-between gap-6 pr-[30%]">
                         <NuxtImg class="aspect-square lg:w-[100px] md:w-[80px] w-[71px]" :src="process.imageUrl" width="100" height="100" :alt="process.title"/>
-                        <span class="md:text-sm text-xs">(0{{ index+1 }})</span>
+                        <span class="small-alt-text">(0{{ index+1 }})</span>
                     </div>
                     <h3 class="text-animate paragraph">
                         <span v-for="line in process.title.split('\n')">{{ line }}<br></span>
@@ -74,7 +74,7 @@
         </section>
 
         <section class="flex flex-col gap-8">
-            <h2 class="xl:ml-[60%] text-sm text-nowrap">(NAŠI KLIENTI)</h2>
+            <h2 class="small-alt-text xl:ml-[60%]">(NAŠI KLIENTI)</h2>
             <Partners/>
         </section>
     </div>

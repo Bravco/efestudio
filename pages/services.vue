@@ -3,7 +3,7 @@
         <section class="flex flex-col justify-end md:gap-8 gap-[var(--section-gap)]">
             <div class="w-fit ml-auto flex flex-col gap-4 mb-auto">
                 <NuxtImg height="240" src="/images/lavarch.webp" alt="lavarch"/>
-                <div class="flex justify-between">
+                <div class="small-alt-text flex justify-between">
                     <span>(01)</span>
                     <NuxtLink to="/projects/lavarch" class="flex items-center gap-2">
                         Vybraný projekt
@@ -18,7 +18,7 @@
         </section>
 
         <section class="grid md:grid-cols-[2fr_1fr] grid-cols-1 gap-4 place-items-start">
-            <span class="text-sm">(ZRUČNOSTI)</span>
+            <span class="small-alt-text">(ZRUČNOSTI)</span>
             <p class="text-animate small-paragraph">Naším klientom pomáhame vybudovať zrozumiteľnú značku s jasne definovanou pozíciou na trhu. S akým zadaním sa na nás môžete obrátiť?</p>
         </section>
 
@@ -42,12 +42,12 @@
         </section>
 
         <section class="flex flex-col gap-4">
-            <span class="text-sm">(NÁŠ PRÍSTUP)</span>
+            <span class="small-alt-text">(NÁŠ PRÍSTUP)</span>
             <div class="access-list h-dvh relative">
                 <div v-for="(access, index) in accesses" :key="index" class="access-item absolute inset-0 border-t bg-[var(--color-white)]">
                     <div class="flex flex-col gap-8 pt-8">
                         <h2 class="w-full md:grid md:grid-cols-2 flex md:gap-0 gap-8">
-                            <span class="text-end md:mr-[20%] mr-0">(0{{ index + 1 }})</span>
+                            <span class="small-alt-text text-end md:mr-[20%] mr-0">(0{{ index + 1 }})</span>
                             <span class="paragraph text-nowrap">{{ access.title }}</span>
                         </h2>
                         <p class="small-paragraph md:ml-auto md:w-1/2 md:pr-[10%] pr-0 md:pb-8 pb-4">{{ access.description }}</p>
@@ -59,8 +59,8 @@
         <section class="flex flex-col items-center md:gap-12 gap-8">
             <p class="text-animate paragraph max-w-[80vw] text-center">"It's not every day you get to work with a team that instantly understands your visual style and motion needs, and foresees crafting a future-proof space. We worked together in a very collaborative way when it came to small interactions and finding ways to integrate my animated type style into the site's structure. "</p>
             <div class="flex flex-col items-center gap-2">
-                <span clas="lg:text-lg">Patrik Vojtuš</span>
-                <span class="lg:text-sm text-xs">(DESIGN LEAD)</span>
+                <span clas="lg:text-lg md:text-base text-sm">Patrik Vojtuš</span>
+                <span class="small-alt-text">(DESIGN LEAD)</span>
             </div>
         </section>
 
@@ -69,11 +69,13 @@
         </section>
 
         <section class="flex flex-col gap-4">
-            <h2 class="xl:ml-[60%] text-sm text-nowrap">(NAŠI KLIENTI)</h2>
+            <h2 class="xl:ml-[60%] small-alt-text">(NAŠI KLIENTI)</h2>
             <Partners/>
         </section>
 
         <ContactUs/>
+
+        <LatestProjects/>
     </div>
 </template>
 

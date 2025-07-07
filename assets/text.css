@@ -18,6 +18,11 @@ h1 {
     white-space: nowrap;
 }
 
+.small-alt-text {
+    font-size: 0.875rem;
+    white-space: nowrap;
+}
+
 .paragraph {
     font-size: clamp(2rem, 3vw + 1rem, 16rem);
     letter-spacing: -2%;
@@ -42,4 +47,10 @@ h1 {
 .footer-paragraph {
     font-size: clamp(1.75rem, 2vw + 1rem, 12.5rem);
     line-height: 1;
+}
+
+@media only screen and (max-width: 768px) {
+    .small-alt-text {
+        font-size: 0.75rem;
+    }
 }

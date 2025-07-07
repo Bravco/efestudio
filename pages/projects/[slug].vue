@@ -45,7 +45,7 @@
                 <Paragraph>A strategic transformation from note-taking app to digital paper ecosystem.</Paragraph>
             </div>
             <div class="grid md:grid-cols-[304px_1fr] grid-cols-1 md:gap-0 gap-4">
-                <h2 class="text-sm">(VÝZVA)</h2>
+                <h2 class="small-alt-text">(VÝZVA)</h2>
                 <div class="max-w-[794px] md:text-xl text-base">
                     <p class="test-animate">In 2011, Goodnotes started as an improvement to physical paper notes with the ability to take handwritten digital notes, search handwritten text, and organize everything into a digital library. Now, Goodnotes is pioneering generative AI for digital handwriting and its applications in education. The Goodnotes rebrand and release of Goodnotes 6 is the next big step in delivering Goodnotes’ long-term vision of making technology-fueled learning accessible for all.</p>
                 </div>
@@ -71,7 +71,7 @@
                 <Paragraph>A strategic transformation from note-taking app to digital paper ecosystem.</Paragraph>
             </div>
             <div class="grid md:grid-cols-[304px_1fr] grid-cols-1 md:gap-0 gap-4">
-                <h2 class="text-sm">(VÝZVA)</h2>
+                <h2 class="small-alt-text">(VÝZVA)</h2>
                 <div class="max-w-[794px] md:text-xl text-base">
                     <p class="test-animate">In 2011, Goodnotes started as an improvement to physical paper notes with the ability to take handwritten digital notes, search handwritten text, and organize everything into a digital library. Now, Goodnotes is pioneering generative AI for digital handwriting and its applications in education. The Goodnotes rebrand and release of Goodnotes 6 is the next big step in delivering Goodnotes’ long-term vision of making technology-fueled learning accessible for all.</p>
                 </div>
