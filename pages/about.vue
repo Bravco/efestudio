@@ -18,7 +18,7 @@
                 </div>
                 <div class="grid md:grid-cols-[var(--section-gap)_1fr] grid-cols-1 md:gap-0 gap-4">
                     <h2 class="text-sm text-nowrap">(O NÁS)</h2>
-                    <p class="text-animate max-w-1/2 small-paragraph">Nie sme externá agentúra, sme váš strategický partner v podnikaní. Nečakáme so založenými rukami. Sme iniciatívni, každý projekt má jasný cieľ, na ktorom spoločne pracujeme ako tím. Marketing realizujeme rozvažne s dôrazom na výsledky, rozpočet a očakávanú návratnosť.</p>
+                    <p class="text-animate md:max-w-1/2 small-paragraph">Nie sme externá agentúra, sme váš strategický partner v podnikaní. Nečakáme so založenými rukami. Sme iniciatívni, každý projekt má jasný cieľ, na ktorom spoločne pracujeme ako tím. Marketing realizujeme rozvažne s dôrazom na výsledky, rozpočet a očakávanú návratnosť.</p>
                 </div>
             </div>
         </section>
@@ -55,19 +55,19 @@
         <section class="flex flex-col md:gap-8 gap-4">
             <h2 class="text-sm text-nowrap">(EFE V ČÍSLACH)</h2>
             <div class="grid lg:grid-cols-4 grid-cols-2 gap-y-14 md:gap-x-14 gap-x-4">
-                <div>
+                <div class="flex flex-col gap-4">
                     <span class="text-animate paragraph">(120+)</span>
                     <p class="md:text-lg small-paragraph">Leadov vygenerovaných pre našich klientov.</p>
                 </div>
-                <div>
+                <div class="flex flex-col gap-4">
                     <span class="text-animate paragraph">(32)</span>
                     <p class="md:text-lg small-paragraph">Leadov vygenerovaných pre našich klientov.</p>
                 </div>
-                <div>
+                <div class="flex flex-col gap-4">
                     <span class="text-animate paragraph">(1/2)</span>
                     <p class="md:text-lg small-paragraph">Leadov vygenerovaných pre našich klientov.</p>
                 </div>
-                <div>
+                <div class="flex flex-col gap-4">
                     <span class="text-animate paragraph">(13)</span>
                     <p class="md:text-lg small-paragraph">Leadov vygenerovaných pre našich klientov.</p>
                 </div>
