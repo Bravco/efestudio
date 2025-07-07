@@ -205,12 +205,32 @@
         });
 
         function setOffset() {
-            const isMobile = window.innerWidth <= 768;
-            const titleHeight = isMobile ? 96 : 126;
+            const width = window.innerWidth;
+            let titleHeight: number;
+
+            switch (true) {
+                case (width < 1024):
+                    titleHeight = 6;
+                    break;
+                case (width < 1440):
+                    titleHeight = 7;
+                    break;
+                case (width < 1920):
+                    titleHeight = 8;
+                    break;
+                case (width < 2560):
+                    titleHeight = 10;
+                    break;
+                case (width >= 2560):
+                    titleHeight = 12;
+                    break;
+                default:
+                    titleHeight = 6;
+            }
 
             items.forEach((item, index) => {
                 if (index !== 0) {
-                    gsap.set(item, { top: `${titleHeight * index}px` });
+                    gsap.set(item, { top: `${titleHeight * index}rem` });
                 }
             });
         }
