@@ -221,7 +221,10 @@
                 case (width < 2560):
                     titleHeight = 10;
                     break;
-                case (width >= 2560):
+                case (width < 2880):
+                    titleHeight = 11;
+                    break;
+                case (width >= 2880):
                     titleHeight = 12;
                     break;
                 default:

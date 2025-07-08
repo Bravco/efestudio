@@ -8,7 +8,7 @@
             <h2 class="small-alt-text">(NEDÁVNE PROJEKTY)</h2>
         </div>
         <div class="grid md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-12">
-            <ProjectCard v-for="project in projects" :key="project.title" :project="project"/>
+            <ProjectCard v-for="project in projects.slice(0, 2)" :key="project.title" :project="project"/>
         </div>
         <Button class="md:hidden flex mx-auto mt-12" to="/works" text="VIAC PROJEKTOV" arrow/>
     </section>
@@ -16,6 +16,6 @@
 
 <script setup lang="ts">
     const { data: projects } = await useAsyncData("projects", () => {
-        return queryCollection("projects").limit(2).all();
+        return queryCollection("projects").all();
     });
 </script>
