@@ -3,35 +3,35 @@
     <div class="outline outline-black aspect-square grid place-items-center">
       <NuxtImg
         class="w-[14vw] max-w-[560px] min-w-[80px]"
-        src="/images/nario-logo.webp"
+        src="/images/nario-logo.svg"
         alt="nario"
       />
     </div>
     <div class="outline outline-black aspect-square grid place-items-center">
       <NuxtImg
         class="w-[16vw] max-w-[660px] min-w-[90px]"
-        src="/images/lavarch-logo.webp"
+        src="/images/lavarch-logo.svg"
         alt="lavarch"
       />
     </div>
     <div class="outline outline-black aspect-square grid place-items-center">
       <NuxtImg
         class="w-[18vw] max-w-[788px] min-w-[100px]"
-        src="/images/bagrespis-logo.webp"
+        src="/images/bagrespis-logo.svg"
         alt="bagrespis"
       />
     </div>
     <div class="outline outline-black aspect-square grid place-items-center">
       <NuxtImg
         class="w-[17vw] max-w-[724px] min-w-[95px]"
-        src="/images/galikin-logo.webp"
+        src="/images/galikin-logo.svg"
         alt="galikin"
       />
     </div>
     <div class="outline outline-black aspect-square grid place-items-center">
       <NuxtImg
         class="w-[12vw] max-w-[412px] min-w-[75px]"
-        src="/images/marmat-logo.webp"
+        src="/images/marmat-logo.svg"
         alt="marmat"
       />
     </div>
