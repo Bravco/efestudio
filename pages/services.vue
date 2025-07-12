@@ -41,20 +41,7 @@
             <NuxtImg class="h-full w-full absolute inset-0 object-cover object-center" src="/images/services.webp" alt="services"/>
         </section>
 
-        <section class="flex flex-col gap-4">
-            <span class="small-alt-text">(NÁŠ PRÍSTUP)</span>
-            <div class="access-list h-dvh relative">
-                <div v-for="(access, index) in accesses" :key="index" class="access-item absolute inset-0 border-t bg-[var(--color-white)]">
-                    <div class="flex flex-col gap-8 pt-8">
-                        <h2 class="w-full md:grid md:grid-cols-2 flex md:gap-0 gap-8">
-                            <span class="small-alt-text text-end md:mr-[20%] mr-0">(0{{ index + 1 }})</span>
-                            <span class="paragraph text-nowrap">{{ access.title }}</span>
-                        </h2>
-                        <p class="small-paragraph md:ml-auto md:w-1/2 md:pr-[10%] pr-0 md:pb-8 pb-4">{{ access.description }}</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <OurApproach/>
 
         <section class="flex flex-col items-center md:gap-12 gap-8">
             <p class="text-animate paragraph max-w-[80vw] text-center">"It's not every day you get to work with a team that instantly understands your visual style and motion needs, and foresees crafting a future-proof space. We worked together in a very collaborative way when it came to small interactions and finding ways to integrate my animated type style into the site's structure. "</p>
@@ -135,25 +122,6 @@
         }
     ];
 
-    const accesses = [
-        {
-            title: "Interný tím",
-            description: "Nie sme externá agentúra, sme váš partner, ktorého máte vždy po ruke, keď to najviac potrebujete."
-        },
-        {
-            title: "Férová komunikácia",
-            description: "Veci rozprávame na rovinu, dôvera je základným pilierom našej filozofie."
-        },
-        {
-            title: "Dôraz na detaily",
-            description: "Záleží nám na každej vete, písmenku aj bodke. Dáme si potrpieť na dôslednosť."
-        },
-        {
-            title: "Ťah na bránu",
-            description: "Záleží nám na každej vete, písmenku aj bodke. Dáme si potrpieť na dôslednosť."
-        }
-    ];
-
     let cleanupFns: (() => void)[] = [];
 
     onMounted(() => {
@@ -163,13 +131,7 @@
                 ".service-item",
             );
 
-            const cleanupAccess = setupScrollListAnimation(
-                ".access-list",
-                ".access-item"
-            );
-
             if (cleanupService) cleanupFns.push(cleanupService);
-            if (cleanupAccess) cleanupFns.push(cleanupAccess);
         }, 1000);
     });
 

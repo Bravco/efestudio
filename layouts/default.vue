@@ -1,24 +1,34 @@
 <template>
     <div>
         <header>
-            <nav class="fixed w-full px-[var(--content-padding)] py-8 flex justify-between items-center z-50">
+            <nav
+                :class="[ !mixBlend || isMenuOpen ? 'mix-blend-normal' : 'mix-blend-difference' ]"
+                class="fixed w-full px-[var(--content-padding)] py-8 grid grid-cols-2 items-center z-50"
+            >
                 <NuxtLink 
-                    @click="closeMenu" :class="{ invert: (navInvert && !isMenuOpen) || isMenuOpen }" 
-                    class="min-w-18 transition-all z-10" 
+                    @click="closeMenu"
+                    class="w-fit invert z-10" 
                     to="/"
                 >
                     <NuxtImg height="32" width="64" src="images/logo.svg" alt="logo"/>
                 </NuxtLink>
 
-                <button 
-                    @click="toggleMenu" 
-                    :class="[
-                        navInvert && !isMenuOpen
-                            ? 'bg-(--color-white) text-(--color-black)'
-                            : 'bg-(--color-black) text-(--color-white)'
-                    ]"
-                    class="md:hidden block py-2 px-6 rounded-full z-10 pointer transition-all md:text-sm text-xs"
-                >{{ isMenuOpen ? 'CLOSE' : 'MENU' }}</button>
+                <div class="flex md:justify-between justify-end items-center gap-6 text-sm text-nowrap text-white">
+                    <ul class="md:flex hidden gap-6 w-full mix-blend-difference">
+                        <NuxtLink to="/works">WORKS</NuxtLink>
+                        <NuxtLink to="/about">O NÁS</NuxtLink>
+                        <NuxtLink to="/services">SLUŽBY</NuxtLink>
+                        <NuxtLink class="flex items-center gap-2 ml-auto" :to="{ name: router.hasRoute(route.name) ? '' : 'index', hash: '#contact' }">
+                            <span>KONTAKT</span>
+                            <NuxtImg class="invert" src="images/arrow.svg" height="16" width="16" alt="arrow"/>
+                        </NuxtLink>
+                    </ul>
+
+                    <button 
+                        @click="toggleMenu" 
+                        class="md:hidden block z-10 pointer"
+                    >{{ isMenuOpen ? 'CLOSE' : 'MENU' }}</button>
+                </div>
 
                 <div
                     v-if="isMenuOpen"
@@ -41,25 +51,6 @@
                         <p class="mt-2">Sme marketingové štúdio<br>Budujeme pre klientov marketingové stratégie poctivo — meratelne a bez zbytočných omáčok</p>
                     </div>
                 </div>
-
-                <ul class="md:flex hidden gap-2 text-(--color-white) text-sm">
-                    <li
-                        :class="[ navInvert ? 'bg-(--color-white) text-(--color-black)' : 'bg-(--color-black) text-(--color-white)' ]"
-                        class="py-2 px-6 rounded-full transition-all"
-                    ><NuxtLink to="/works">WORKS</NuxtLink></li>
-                    <li
-                        :class="[ navInvert ? 'bg-(--color-white) text-(--color-black)' : 'bg-(--color-black) text-(--color-white)' ]"
-                        class="py-2 px-6 rounded-full transition-all"
-                    ><NuxtLink to="/about">O NÁS</NuxtLink></li>
-                    <li
-                        :class="[ navInvert ? 'bg-(--color-white) text-(--color-black)' : 'bg-(--color-black) text-(--color-white)' ]"
-                        class="py-2 px-6 rounded-full transition-all"
-                    ><NuxtLink to="/services">SLUŽBY</NuxtLink></li>
-                    <li
-                        :class="[ navInvert ? 'bg-(--color-white) text-(--color-black)' : 'bg-(--color-black) text-(--color-white)' ]"
-                        class="py-2 px-6 rounded-full transition-all"
-                    ><NuxtLink :to="{ name: router.hasRoute(route.name) ? '' : 'index', hash: '#contact' }">KONTAKT</NuxtLink></li>
-                </ul>
             </nav>
         </header>
 
@@ -116,7 +107,7 @@
     const gsap = useGSAP();
 
     const isMenuOpen = ref<boolean>(false);
-    const navInvert = ref<boolean>(false);
+    const mixBlend = ref<boolean>(true);
     const clipPath = ref<boolean>(false);
     const time = ref<string>("");
     let timer: ReturnType<typeof setInterval> | null = null;
@@ -151,34 +142,16 @@
 
     const handleSroll = () => {
         const navHeight = 104;
-        let invert = false;
 
         const heroSection = document.querySelector("#hero");
         if (heroSection) {
             const heroRect = heroSection.getBoundingClientRect();
-            if (heroRect.top + navHeight/2 >= 0) {
-                invert = true;
+            if (heroRect.top + navHeight/2 < 0) {
+                mixBlend.value = true;
+            } else {
+                mixBlend.value = false;
             }
         }
-
-        const contactSection = document.querySelector("#contact");
-        if (contactSection) {
-            const contactRect = contactSection.getBoundingClientRect();
-            if (contactRect.top - navHeight/2 <= 0) {
-                invert = true;
-            }
-        }
-
-        const splashSection = document.querySelector("#splash");
-        if (splashSection) {
-            const splashRect = splashSection.getBoundingClientRect();
-            if (splashRect.top - navHeight/2 <= 0 &&
-                splashRect.bottom - navHeight/2 >= 0) {
-                invert = true;
-            }
-        }
-
-        navInvert.value = invert;
     };
 
     const updateTime = () => {

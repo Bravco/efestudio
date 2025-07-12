@@ -6,13 +6,13 @@
             class="relative min-h-dvh flex flex-col justify-between text-[var(--color-white)] -z-1"
             style="background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url('/images/hero.webp') center/cover no-repeat;"
         >
-            <p class="text-animate index-hero-paragraph">
-                Sme marketingové štúdio
-                <br>
-                Budujeme pre klientov marketingové stratégie
-                <br class="hidden md:inline">
-                poctivo — meratelne a bez zbytočných omáčok
-            </p>
+            <div class="grid grid-cols-2">
+                <p class="text-animate index-hero-paragraph md:col-start-2 col-start-1">
+                    <span class="block">Sme marketingové štúdio </span>
+                    <span class="md:block inline">Budujeme pre klientov marketingové stratégie </span>
+                    <span class="md:block inline">poctivo — meratelne a bez zbytočných omáčok</span>
+                </p>
+            </div>
             <div v-gsap.add.from="{ opacity: 0, y: 100 }" class="small-alt-text flex justify-between">
                 <span>2025/</span>
                 <span>(SCROLL)</span>
@@ -41,7 +41,6 @@
             <div class="grid md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-12">
                 <ProjectCard v-for="project in projects" :key="project.title" :project="project"/>
             </div>
-            <Button class="md:hidden flex mx-auto mt-12" to="/works" text="VIAC PROJEKTOV" arrow/>
         </section>
 
         <section class="flex flex-col gap-[var(--section-gap)]">
@@ -51,7 +50,7 @@
                     Ako dokážeme doručiť výsledky, na ktorých sme sa dohodli?
                 </Paragraph>
             </div>
-            <div class="flex flex-col gap-[var(--section-gap)]">
+            <div class="flex flex-col gap-[168px]">
                 <div
                     v-for="(process, index) in processes"
                     :key="index"
@@ -60,11 +59,14 @@
                     <div v-gsap.whenVisible.once.from="{ scaleX: 0 }" class="absolute inset-0 h-px bg-[var(--color-black)] origin-left"></div>
                     <div class="w-full flex md:flex-row flex-col justify-between gap-6 pr-[30%]">
                         <NuxtImg class="aspect-square lg:w-[100px] md:w-[80px] w-[71px]" :src="process.imageUrl" width="100" height="100" :alt="process.title"/>
-                        <span class="small-alt-text">(0{{ index+1 }})</span>
+                        <span class="small-alt-text md:inline hidden">(0{{ index+1 }})</span>
                     </div>
-                    <h3 class="text-animate paragraph">
-                        <span v-for="line in process.title.split('\n')">{{ line }}<br></span>
-                    </h3>
+                    <div class="grid md:grid-cols-1 grid-cols-[100px_1fr]">
+                        <span class="small-alt-text md:hidden inline">(0{{ index+1 }})</span>
+                        <h3 class="text-animate paragraph">
+                            <span v-for="line in process.title.split('\n')">{{ line }}<br></span>
+                        </h3>
+                    </div>
                     <p class="text-animate small-paragraph">{{ process.description }}</p>
                 </div>
             </div>
