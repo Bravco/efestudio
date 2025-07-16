@@ -141,16 +141,16 @@
     };
 
     const handleSroll = () => {
-        const navHeight = 104;
-
         const heroSection = document.querySelector("#hero");
         if (heroSection) {
             const heroRect = heroSection.getBoundingClientRect();
-            if (heroRect.top + navHeight/2 < 0) {
+            if (heroRect.top < 0) {
                 mixBlend.value = true;
             } else {
                 mixBlend.value = false;
             }
+        } else {
+            mixBlend.value = true;
         }
     };
 
