@@ -10,15 +10,15 @@
 
         <section>
             <div class="flex flex-col gap-[var(--section-gap)] md:ml-[10vw]">
-                <div class="md:ml-26">
+                <div>
                     <div class="md:w-[10vw] w-auto h-8 md:float-left"></div>
                     <Paragraph>
-                        Sme — váš strategický partner v podnikaní. Našim klientom pomáhame vybudovať zrozumiteľnú značku s definovanou pozíciou na trhu
+                        Sme efestudio — váš strategický partner v podnikaní. Klientom pomáhame vybudovať zrozumiteľnú značku s jasne definovanou pozíciou na trhu
                     </Paragraph>
                 </div>
-                <div class="grid md:grid-cols-[var(--section-gap)_1fr] grid-cols-1 md:gap-0 gap-4">
-                    <h2 class="small-alt-text">(O NÁS)</h2>
-                    <p class="text-animate md:max-w-1/2 small-paragraph">Nie sme externá agentúra, sme váš strategický partner v podnikaní. Nečakáme so založenými rukami. Sme iniciatívni, každý projekt má jasný cieľ, na ktorom spoločne pracujeme ako tím. Marketing realizujeme rozvažne s dôrazom na výsledky, rozpočet a očakávanú návratnosť.</p>
+                <div class="grid md:grid-cols-[1fr_auto] grid-cols-1 md:gap-0 gap-4">
+                    <p class="text-animate md:max-w-1/2 small-paragraph">Nie sme externá agentúra, sme váš strategický partner v podnikaní. Nečakáme so založenými rukami. Každý projekt má jasný cieľ, na ktorom spoločne pracujeme ako tím. Marketing realizujeme komplexne s dôrazom na výsledky, rozpočet a očakávanú návratnosť.</p>
+                    <h2 class="small-alt-text md:order-1 -order-1">(O NÁS)</h2>
                 </div>
             </div>
         </section>
@@ -26,12 +26,10 @@
         <section class="grid md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-12">
             <div class="flex flex-col gap-4">
                 <NuxtImg 
-                    v-if="false"
-                    src="/images/patrikvojtus.webp"
+                    src="/images/patrik_vojtus.webp"
                     alt="Patrik Vojtuš"
-                    class="w-full max-h-[80vh] aspect-3/4 object-cover object-center"
+                    class="w-full max-h-[80vh] aspect-3/4 object-cover object-top grayscale-100"
                 />
-                <div v-else class="max-h-[80vh] aspect-3/4 bg-(--color-gray)"></div>
                 <div class="flex justify-between lg:text-lg text-sm">
                     <span>Patrik Vojtuš</span>
                     <span>(COFOUNDER)</span>
@@ -39,12 +37,10 @@
             </div>
             <div class="flex flex-col gap-4">
                 <NuxtImg 
-                    v-if="false"
-                    src="/images/jurajgoldberger.webp"
+                    src="/images/juraj_goldberger.webp"
                     alt="Juraj Goldberger"
-                    class="w-full max-h-[80vh] aspect-3/4 object-cover object-center"
+                    class="w-full max-h-[80vh] aspect-3/4 object-cover object-top grayscale-100"
                 />
-                <div v-else class="max-h-[80vh] aspect-3/4 bg-(--color-gray)"></div>
                 <div class="flex justify-between lg:text-lg text-sm">
                     <span>Juraj Goldberger</span>
                     <span>(COFOUNDER)</span>
@@ -56,20 +52,20 @@
             <h2 class="small-alt-text">(EFE V ČÍSLACH)</h2>
             <div class="grid lg:grid-cols-4 grid-cols-2 gap-y-14 md:gap-x-14 gap-x-4">
                 <div class="flex flex-col gap-4">
-                    <span class="text-animate paragraph">(120+)</span>
-                    <p class="md:text-lg small-paragraph">Leadov vygenerovaných pre našich klientov.</p>
+                    <span class="text-animate paragraph">(3.4×)</span>
+                    <p class="md:text-lg small-paragraph">ROI - Návratnosť investície pri našich kampaniach</p>
                 </div>
                 <div class="flex flex-col gap-4">
-                    <span class="text-animate paragraph">(32)</span>
-                    <p class="md:text-lg small-paragraph">Leadov vygenerovaných pre našich klientov.</p>
+                    <span class="text-animate paragraph">(1.2K+)</span>
+                    <p class="md:text-lg small-paragraph">Počet získaných leadov naprieč rôznymi segmentmi.</p>
                 </div>
                 <div class="flex flex-col gap-4">
-                    <span class="text-animate paragraph">(1/2)</span>
-                    <p class="md:text-lg small-paragraph">Leadov vygenerovaných pre našich klientov.</p>
+                    <span class="text-animate paragraph">(5+)</span>
+                    <p class="md:text-lg small-paragraph">Dlhodobé spolupráce Spolupráce trvajúce 2 + rokov</p>
                 </div>
                 <div class="flex flex-col gap-4">
-                    <span class="text-animate paragraph">(13)</span>
-                    <p class="md:text-lg small-paragraph">Leadov vygenerovaných pre našich klientov.</p>
+                    <span class="text-animate paragraph">(4)</span>
+                    <p class="md:text-lg small-paragraph">Členov core tímu, ktorí sú vždy po ruke.</p>
                 </div>
             </div>
         </section>

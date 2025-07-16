@@ -10,7 +10,13 @@
 </template>
 
 <script setup lang="ts">
-    const { data: projects } = await useAsyncData("projects", () => {
+    const { data: allProjects } = await useAsyncData("projects", () => {
         return queryCollection("projects").all();
+    });
+
+    const selectedSlugs = ['lavarch', 'marmat-sk'];
+
+    const projects = computed(() => {
+        return allProjects.value?.filter(project => selectedSlugs.includes(project.slug)) ?? [];
     });
 </script>

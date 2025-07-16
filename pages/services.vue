@@ -37,22 +37,28 @@
             </div>
         </section>
 
-        <section id="splash" class="min-h-dvh relative my-8">
-            <NuxtImg class="h-full w-full absolute inset-0 object-cover object-center" src="/images/services.webp" alt="services"/>
+        <section class="flex flex-col gap-4 md:!py-[168px]">
+            <Video/>
+            <div class="small-alt-text flex items-center justify-between flex-wrap">
+                <div class="flex items-center sm:gap-[10vw] gap-4">
+                    <span>(WEB DESIGN)</span>
+                    <span>(BRANDING)</span>
+                </div>
+                <div class="flex items-center sm:gap-[10vw] gap-4">
+                    <span>(OBSAH)</span>
+                    <span>(PROPAGÁCIA)</span>
+                </div>
+            </div>
         </section>
 
         <OurApproach/>
 
         <section class="flex flex-col items-center md:gap-12 gap-8">
-            <p class="text-animate paragraph max-w-[80vw] text-center">"It's not every day you get to work with a team that instantly understands your visual style and motion needs, and foresees crafting a future-proof space. We worked together in a very collaborative way when it came to small interactions and finding ways to integrate my animated type style into the site's structure. "</p>
+            <p class="text-animate paragraph max-w-[80vw] text-center">"It's not every day you get to work with a team that instantly understands your visual style and motion needs, and foresees crafting a future-proof space. We worked together in a very collaborative way when it came to small interactions and finding ways to integrate my animated type style into the site's structure."</p>
             <div class="flex flex-col items-center gap-2">
                 <span clas="lg:text-lg md:text-base text-sm">Patrik Vojtuš</span>
                 <span class="small-alt-text">(DESIGN LEAD)</span>
             </div>
-        </section>
-
-        <section id="splash" class="min-h-dvh relative my-8">
-            <NuxtImg class="h-full w-full absolute inset-0 object-cover object-center" src="/images/services.webp" alt="services"/>
         </section>
 
         <section class="flex flex-col gap-4">

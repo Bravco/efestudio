@@ -36,7 +36,7 @@
         </section>
         
         <section id="splash" class="max-h-dvh h-256 my-8">
-            <NuxtImg class="h-full w-full object-cover object-center" src="/images/about.webp" alt="about"/>
+            <NuxtImg class="h-full w-full object-cover object-center" src="/images/project.webp" alt="project"/>
         </section>
 
         <section class="flex flex-col gap-[var(--section-gap)]">

@@ -6,7 +6,7 @@
             class="relative min-h-dvh flex flex-col justify-between text-[var(--color-white)] -z-1"
             style="background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url('/images/hero.webp') center/cover no-repeat;"
         >
-            <div class="grid grid-cols-2">
+            <div class="grid sm:grid-cols-2 grid-cols-1">
                 <p class="text-animate index-hero-paragraph md:col-start-2 col-start-1">
                     <span class="block">Sme marketingové štúdio </span>
                     <span class="md:block inline">Budujeme pre klientov marketingové stratégie </span>
@@ -25,11 +25,11 @@
             <div>
                 <h2 class="small-alt-text md:w-[15vw] w-auto h-8 md:float-left">(ABOUT US)</h2>
                 <Paragraph>
-                    Sme digitálne marketingové štúdio. Klientom prinášame komplexné riešenia v oblasti značky obsahu a webov. Každý projekt staviame na jasnej stratégii a cieľoch.
+                    Sme digitálne marketingové štúdio. Klientom pomáhame vybudovať zrozumiteľnú značku s jasne definovanou pozíciou na trhu.
                 </Paragraph>
             </div>
             <div class="ml-auto md:w-2/5 w-full flex flex-col gap-8">
-                <p class="text-animate small-paragraph">Sme iniciatívni, každý projekt má jasný cieľ, na ktorom spoločne pryacujeme ako tím. Marketing realizujeme rozvažne ss dôrazom na výsledky, rozpočet a očakávanú návratnosť.</p>
+                <p class="text-animate small-paragraph">Váš interný tím pre digitálny marketing. Klientom ponúkame komplexné riešenia v oblasti značky obsahu a webov.</p>
                 <Button to="/about" text="ZOBRAZIŤ VIAC O NÁS" arrow/>
             </div>
         </section>
@@ -47,7 +47,7 @@
             <div class="grid md:grid-cols-[384px_1fr] grid-cols-1">
                 <h2 class="small-alt-text">(NÁŠ PROCES)</h2>
                 <Paragraph class="index-process-paragraph">
-                    Ako dokážeme doručiť výsledky, na ktorých sme sa dohodli?
+                    Ako dokážeme doručiť konzistentné výsledky pri našich kampaniach?
                 </Paragraph>
             </div>
             <div class="flex flex-col gap-[168px]">
@@ -90,18 +90,18 @@
 
     const processes = [
         {
-            title: "Explore\nideas",
-            description: "V prvom kroku je dôležité identifikovať piliere, na ktorých bude naša spolupráca stáť.  Preto detailne zanalyzujeme minulosť, súčasný stav a príležitosti, ktoré nám ležia pri nohách. Po identifikovaní kľúčových elementov vám  vykreslíme realitu a nastavíme jasný obraz spolupráce ako takej.",
+            title: "Explore \nideas",
+            description: "V prvom kroku je kľúčové identifikovať piliere, na ktorých bude naša spolupráca stáť.  Preto detailne zanalyzujeme minulosť, súčasný stav a príležitosti, ktoré nám ležia pri nohách. Po identifikovaní kľúčových elementov vám  vykreslíme realitu a nastavíme očakávania spolupráce.",
             imageUrl: "/images/circle1.svg"
         },
         {
-            title: "Form\nideas",
-            description: "V prvom kroku je dôležité identifikovať piliere, na ktorých bude naša spolupráca stáť.  Preto detailne zanalyzujeme minulosť, súčasný stav a príležitosti, ktoré nám ležia pri nohách. Po identifikovaní kľúčových elementov vám  vykreslíme realitu a nastavíme jasný obraz spolupráce ako takej.",
+            title: "Form \noptions",
+            description: "Po hĺbkovej analýze dát a  konkurentov prichádza na rad plánovanie. Odpovieme si na dôležité otázky ako: – Čo od nás klient skutočne chce?  Proti komu súťažíme?  Čo jedinečné vieme doručiť? Tým zasadíme víťaznú vlajku do zeme a na jej základe postavíme budúcu stratégiu.",
             imageUrl: "/images/circle2.svg"
         },
         {
-            title: "Experience\nthe moment",
-            description: "Po jasne stanovených cieľoch prichádza na rad kreatíva. Nie však hocijaká u nás sa veci robia inak. Našu kreatívu staviame na tvrdých faktoch, nie na domnienkach ani na „pekných trendoch“. V tejto fáze zvolíme konkrétne taktiky, ktoré naplnia ciele, prinesú vysokú návratnosť a budú v súlade so stanovenou stratégiou a rozpočtom.",
+            title: "Experience \nthe moment",
+            description: "Po jasne stanovených cieľoch prichádza na rad kreativita. Nie však hocijaká. Kreativitu staviame na tvrdých faktoch, nie na domnienkach ani na „pekných trendoch“. V tejto fáze zvolíme konkrétne taktiky, ktoré naplnia ciele a prinesú vysokú návratnosť v súlade so stanovenou stratégiou.",
             imageUrl: "/images/circle3.svg"
         }
     ];

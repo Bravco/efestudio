@@ -30,7 +30,7 @@
         },
         {
             title: "Ťah na bránu",
-            description: "Záleží nám na každej vete, písmenku aj bodke. Dáme si potrpieť na dôslednosť."
+            description: "Nečakáme so založenými rukami. Sme iniciatívni, každý projekt má jasný cieľ, na ktorom spoločne pracujeme."
         }
     ];
 </script>
