@@ -6,6 +6,7 @@ export default defineContentConfig({
             type: "data",
             source: "projects/**.json",
             schema: z.object({
+                ordering: z.number(),
                 slug: z.string(),
                 title: z.string(),
                 label: z.string(),

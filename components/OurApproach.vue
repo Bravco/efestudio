@@ -6,7 +6,7 @@
             <div class="max-w-160 flex flex-col gap-8 mx-auto pt-4 md:pb-[168px] pb-[128px]">
                 <div class="grid grid-cols-[var(--section-gap)_1fr] gap-4">
                     <span class="small-alt-text">(0{{ index+1 }})</span>
-                    <h3 class="text-animate paragraph">{{ approach.title }}</h3>
+                    <h3 class="text-animate paragraph md:text-nowrap text-wrap">{{ approach.title }}</h3>
                     <p class="text-animate small-paragraph col-start-2">{{ approach.description }}</p>
                 </div>
             </div>

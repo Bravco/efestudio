@@ -52,11 +52,11 @@
             <h2 class="small-alt-text">(EFE V ČÍSLACH)</h2>
             <div class="grid lg:grid-cols-4 grid-cols-2 gap-y-14 md:gap-x-14 gap-x-4">
                 <div class="flex flex-col gap-4">
-                    <span class="text-animate paragraph">(3.4×)</span>
+                    <span class="text-animate paragraph">(8.3×)</span>
                     <p class="md:text-lg small-paragraph">ROI - Návratnosť investície pri našich kampaniach</p>
                 </div>
                 <div class="flex flex-col gap-4">
-                    <span class="text-animate paragraph">(1.2K+)</span>
+                    <span class="text-animate paragraph">(3.2K+)</span>
                     <p class="md:text-lg small-paragraph">Počet získaných leadov naprieč rôznymi segmentmi.</p>
                 </div>
                 <div class="flex flex-col gap-4">

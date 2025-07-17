@@ -6,6 +6,7 @@
             loop
             muted
             playsinline
+            preload="auto"
         />
     </div>
 </template>

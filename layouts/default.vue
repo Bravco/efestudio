@@ -58,7 +58,11 @@
             <slot/>
             <section id="contact" class="mt-[calc(var(--section-gap)+32px)] md:min-h-dvh flex flex-col justify-between md:gap-[168px] gap-[var(--section-gap)] bg-(--color-black) text-(--color-white)">
                 <div class="flex lg:flex-row flex-col-reverse justify-between md:gap-[20%] gap-4">
-                    <p class="footer-paragraph 2xl:max-w-1/2">Vytvorme spolu zrozumiteľnú značku. Výziev sa nebojíme — či už veľkých, alebo malých. Poďme sa porozprávať o tej vašej.</p>
+                    <p class="footer-paragraph 2xl:max-w-1/2">
+                        <span class="md:block inline">Vytvorme spolu zrozumiteľnú značku. </span>
+                        <span class="md:block inline">Výziev sa nebojíme — či už veľkých, alebo malých. </span>
+                        <span class="md:block inline">Poďme sa porozprávať o tej vašej.</span>
+                    </p>
                     <span class="small-alt-text">(5 VOĽNÝCH MIEST V 2025)</span>
                 </div>
                 <NuxtLink to="/" class="paragraph !leading-none cta-underlined">
@@ -72,6 +76,7 @@
             <NuxtImg class="md:hidden inline w-full invert" src="/images/logo.svg" alt="logo"/>
             <ul class="flex flex-col">
                 <li>{{ time }} SNV</li>
+                <li>KOLLÁROVA 3</li>
                 <li>SLOVAKIA 052 01</li>
                 <li class="md:inline hidden mt-auto">efestudio 2025&copy;</li>
             </ul>
@@ -92,7 +97,7 @@
                 </li>
             </ul>
             <div class="flex flex-col gap-4 text-sm">
-                <p class="mt-auto">Sme marketingové štúdio<br>Budujeme pre klientov marketingové stratégie poctivo — meratelne a bez zbytočných omáčok</p>
+                <p class="mt-auto">Sme marketingové štúdio<br>Budujeme pre klientov marketingové stratégie poctivo — merateľne a bez zbytočných omáčok</p>
                 <span class="md:hidden inline">efestudio 2025&copy;</span>
             </div>
         </footer>

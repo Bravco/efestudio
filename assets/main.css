@@ -1,9 +1,9 @@
 :root {
     --color-white: #f3f3f1;
-    --color-light-gray: #f0f0f0;
+    --color-light-gray: #E8E8E8;
     --color-dark-gray: #524e49;
     --color-gray: #a19d9a;
-    --color-black: #080807;
+    --color-black: #000000;
     --color-blue: #1722f5;
 
     --section-gap: 104px;

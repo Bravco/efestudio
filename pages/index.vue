@@ -10,7 +10,7 @@
                 <p class="text-animate index-hero-paragraph md:col-start-2 col-start-1">
                     <span class="block">Sme marketingové štúdio </span>
                     <span class="md:block inline">Budujeme pre klientov marketingové stratégie </span>
-                    <span class="md:block inline">poctivo — meratelne a bez zbytočných omáčok</span>
+                    <span class="md:block inline">poctivo — merateľne a bez zbytočných omáčok</span>
                 </p>
             </div>
             <div v-gsap.add.from="{ opacity: 0, y: 100 }" class="small-alt-text flex justify-between">
@@ -25,11 +25,11 @@
             <div>
                 <h2 class="small-alt-text md:w-[15vw] w-auto h-8 md:float-left">(ABOUT US)</h2>
                 <Paragraph>
-                    Sme digitálne marketingové štúdio. Klientom pomáhame vybudovať zrozumiteľnú značku s jasne definovanou pozíciou na trhu.
+                    Sme digitálne marketingové štúdio. Klientom pomáhame vybudovať zrozumiteľnú značku s jasne definovanou pozíciou na trhu
                 </Paragraph>
             </div>
             <div class="ml-auto md:w-2/5 w-full flex flex-col gap-8">
-                <p class="text-animate small-paragraph">Váš interný tím pre digitálny marketing. Klientom ponúkame komplexné riešenia v oblasti značky obsahu a webov.</p>
+                <p class="text-animate small-paragraph">Váš interný tím pre digitálny marketing. Klientom ponúkame komplexné riešenia v oblasti značky, obsahu a webov.</p>
                 <Button to="/about" text="ZOBRAZIŤ VIAC O NÁS" arrow/>
             </div>
         </section>
@@ -39,7 +39,7 @@
                 <h2 class="small-alt-text col-start-2">(VYBRANÉ PROJEKTY)</h2>
             </div>
             <div class="grid md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-12">
-                <ProjectCard v-for="project in projects" :key="project.title" :project="project"/>
+                <ProjectCard v-for="project in projects" :key="project.slug" :project="project"/>
             </div>
         </section>
 
@@ -47,7 +47,7 @@
             <div class="grid md:grid-cols-[384px_1fr] grid-cols-1">
                 <h2 class="small-alt-text">(NÁŠ PROCES)</h2>
                 <Paragraph class="index-process-paragraph">
-                    Ako dokážeme doručiť konzistentné výsledky pri našich kampaniach?
+                    Ako si môžeme byť istí, že vám doručíme očakávané výsledky?
                 </Paragraph>
             </div>
             <div class="flex flex-col gap-[168px]">
@@ -72,6 +72,20 @@
             </div>
         </section>
 
+        <section class="flex flex-col gap-4 md:!py-[168px]">
+            <Video/>
+            <div class="small-alt-text flex items-center justify-between flex-wrap">
+                <div class="flex items-center sm:gap-[10vw] gap-4">
+                    <span>(WEB DESIGN)</span>
+                    <span>(BRANDING)</span>
+                </div>
+                <div class="flex items-center sm:gap-[10vw] gap-4">
+                    <span>(OBSAH)</span>
+                    <span>(PROPAGÁCIA)</span>
+                </div>
+            </div>
+        </section>
+
         <section class="flex flex-col gap-8">
             <h2 class="small-alt-text xl:ml-[60%]">(NAŠI KLIENTI)</h2>
             <Partners/>
@@ -85,23 +99,23 @@
     const gsap = useGSAP();
     
     const { data: projects } = await useAsyncData("projects", () => {
-        return queryCollection("projects").all();
+        return queryCollection("projects").order("ordering", "ASC").all();
     });
 
     const processes = [
         {
             title: "Explore \nideas",
-            description: "V prvom kroku je kľúčové identifikovať piliere, na ktorých bude naša spolupráca stáť.  Preto detailne zanalyzujeme minulosť, súčasný stav a príležitosti, ktoré nám ležia pri nohách. Po identifikovaní kľúčových elementov vám  vykreslíme realitu a nastavíme očakávania spolupráce.",
+            description: "V prvom kroku je kľúčové identifikovať piliere, na ktorých bude naša spolupráca stáť. Preto detailne zanalyzujeme minulosť, súčasný stav a príležitosti, ktoré máme k dispozícii. Po identifikovaní kľúčových elementov vám vykreslíme realitu a nastavíme očakávania ďalšej spolupráce.",
             imageUrl: "/images/circle1.svg"
         },
         {
             title: "Form \noptions",
-            description: "Po hĺbkovej analýze dát a  konkurentov prichádza na rad plánovanie. Odpovieme si na dôležité otázky ako: – Čo od nás klient skutočne chce?  Proti komu súťažíme?  Čo jedinečné vieme doručiť? Tým zasadíme víťaznú vlajku do zeme a na jej základe postavíme budúcu stratégiu.",
+            description: "Po hĺbkovej analýze dát a konkurentov prichádza na rad plánovanie. Odpovieme si na dôležité otázky, ako napríklad: Čo od nás klient skutočne chce? Proti komu súťažíme? Čo jedinečné vieme doručiť? Tým zasadíme víťaznú vlajku do zeme a na jej základe postavíme budúcu stratégiu.",
             imageUrl: "/images/circle2.svg"
         },
         {
             title: "Experience \nthe moment",
-            description: "Po jasne stanovených cieľoch prichádza na rad kreativita. Nie však hocijaká. Kreativitu staviame na tvrdých faktoch, nie na domnienkach ani na „pekných trendoch“. V tejto fáze zvolíme konkrétne taktiky, ktoré naplnia ciele a prinesú vysokú návratnosť v súlade so stanovenou stratégiou.",
+            description: "Po jasne stanovených cieľoch prichádza na rad kreativita. Nie však hocijaká, kreativitu staviame na tvrdých faktoch, nie na domnienkach ani na „pekných trendoch“. V tejto fáze zvolíme konkrétne taktiky, ktoré naplnia ciele a prinesú vysokú návratnosť v súlade so stanovenou stratégiou.",
             imageUrl: "/images/circle3.svg"
         }
     ];

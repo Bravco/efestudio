@@ -25,12 +25,9 @@
     const lenisRef = ref();
 
     router.beforeEach(async (to, from, next) => {
-        if (to.path === from.path) {
-            next();
-            return;
-        }
+        if (to.path === from.path) return next();
 
-        if (overlay.value) {
+        if (import.meta.client && overlay.value) {
             overlay.value.classList.add("overlay-slide-up");
             await new Promise(resolve => setTimeout(resolve, 600));
         }

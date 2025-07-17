@@ -4,19 +4,15 @@
             <h2 class="small-alt-text col-start-2">(NEDÁVNE PROJEKTY)</h2>
         </div>
         <div class="grid md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-12">
-            <ProjectCard v-for="project in projects.slice(0, 2)" :key="project.title" :project="project"/>
+            <ProjectCard v-for="project in projects" :key="project.slug" :project="project"/>
         </div>
     </section>
 </template>
 
 <script setup lang="ts">
-    const { data: allProjects } = await useAsyncData("projects", () => {
-        return queryCollection("projects").all();
-    });
-
-    const selectedSlugs = ['lavarch', 'marmat-sk'];
-
-    const projects = computed(() => {
-        return allProjects.value?.filter(project => selectedSlugs.includes(project.slug)) ?? [];
+    const { data: projects } = await useAsyncData("latestProjects", () => {
+        return queryCollection("projects")
+            .orWhere(query => query.where("slug", "=", "lavarch").where("slug", "=", "marmat-sk"))
+            .all();
     });
 </script>

@@ -8,7 +8,7 @@
         </section>
 
         <section class="grid md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-12 !pt-0">
-            <ProjectCard v-for="project in projects" :key="project.title" :project="project"/>
+            <ProjectCard v-for="project in projects" :key="project.slug" :project="project"/>
         </section>
     </div>
 </template>
@@ -17,6 +17,6 @@
     useHead({ title: "efestudio - works" });
 
     const { data: projects } = await useAsyncData("projects", () => {
-        return queryCollection("projects").all();
+        return queryCollection("projects").order("ordering", "ASC").all();
     });
 </script>

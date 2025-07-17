@@ -80,7 +80,7 @@
     const services = [
         {
             title: "Web design",
-            description: "V efestudio navrhujeme weby, ktoré sú prehľadné, zrozumiteľné a s vizuálne príťažlivou identitou. Celý proces uchopíme komplexne, od analýzy a návrhu štruktúry až po dizajn, identitu a vývoj.",
+            description: "V efestudio navrhujeme weby, ktoré sú prehľadné, zrozumiteľné s vizuálne príťažlivou identitou. Celý proces realizujeme komplexne, od analýzy a návrhu štruktúry až po dizajn, identitu a vývoj.",
             items: [
                 "Design UI / UX",
                 "Web stratégia",
@@ -104,19 +104,19 @@
         },
         {
             title: "Obsah",
-            description: "Obsah tvoríme obsah strategicky. V efestudio pripravujeme vizuály, videá a príspevky, ktoré kričia originalitou, jasne pomenúvajú podstatu a bez mihnutia oka posúvajú zákazníka k akcii. Zameriavame sa na kvalitu, silný nápad.",
+            description: "Obsah tvoríme strategicky. V efestudio pripravujeme vizuály, videá a príspevky, ktoré kričia originalitou, jasne pomenúvajú podstatu a bez mihnutia oka posúvajú zákazníka k akcii. Zameriavame sa na kvalitu a silný nápad.",
             items: [
                 "Video obsah",
                 "Idea making",
                 "Social media obsah",
                 "Copywriting a scripting",
-                "Kreativa a posty",
+                "Kreatíva a posty",
                 "Content stratégia"
             ]
         },
         {
             title: "Propagácia",
-            description: "Vytvoriť peknú reklamu dnes nestačí. Všetko začína a končí pri ponuke. V rámci propagácie zastrešujeme celý proces  od návrhu ponuky offer creation, cez realizáciu jednotlivých kanálov, až po médiá a reporting.",
+            description: "Vytvoriť peknú reklamu dnes nestačí. Všetko sa začína a končí pri ponuke. V rámci propagácie zastrešujeme celý proces  od návrhu ponuky “offer creation”, cez realizáciu jednotlivých kanálov, až po médiá a reporting.",
             items: [
                 "Offer creation",
                 "Affiliate marketing",
