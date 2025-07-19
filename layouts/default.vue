@@ -57,8 +57,8 @@
         <main>
             <slot/>
             <section id="contact" class="mt-[calc(var(--section-gap)+32px)] md:min-h-dvh flex flex-col justify-between md:gap-[168px] gap-[var(--section-gap)] bg-(--color-black) text-(--color-white)">
-                <div class="flex lg:flex-row flex-col-reverse justify-between md:gap-[20%] gap-4">
-                    <p class="footer-paragraph 2xl:max-w-1/2">
+                <div class="flex lg:flex-row flex-col-reverse justify-between gap-4">
+                    <p class="footer-paragraph">
                         <span class="md:block inline">Vytvorme spolu zrozumiteľnú značku. </span>
                         <span class="md:block inline">Výziev sa nebojíme — či už veľkých, alebo malých. </span>
                         <span class="md:block inline">Poďme sa porozprávať o tej vašej.</span>
