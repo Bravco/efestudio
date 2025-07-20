@@ -167,10 +167,9 @@
         });
     };
 
-    watch(route, (to, from) => handleSroll());
-
-    watch(() => route.fullPath, () => {
-        nextTick(() => animateTextElements());
+    watch(() => route.path, () => {
+        handleSroll();
+        animateTextElements();
     });
 
     onMounted(() => {

@@ -1,7 +1,7 @@
 <template>
     <div>
         <NuxtRouteAnnouncer/>
-        <VueLenis root ref="lenisRef" :options="{ autoRaf: false }"/>
+        <VueLenis root :options="{ autoRaf: false }"/>
         <NuxtLayout>
             <NuxtPage/>
         </NuxtLayout>
@@ -13,16 +13,15 @@
 </template>
 
 <script lang="ts" setup>
-    import { VueLenis } from "lenis/vue";
+    import { VueLenis, useLenis } from "lenis/vue";
     import ScrollTrigger from "gsap/ScrollTrigger";
-    import SplitText from "gsap/SplitText";
 
     const router = useRouter();
     const gsap = useGSAP();
+    const lenis = useLenis();
 
     const trailer = ref<HTMLDivElement | null>(null);
     const overlay = ref<HTMLDivElement | null>(null);
-    const lenisRef = ref();
 
     router.beforeEach(async (to, from, next) => {
         if (to.path === from.path) return next();
@@ -46,12 +45,12 @@
     });
 
     watchEffect((onInvalidate) => {
-        if (!lenisRef.value?.lenis) return;
+        if (!lenis.value) return;
 
-        lenisRef.value.lenis.on("scroll", ScrollTrigger.update);
+        lenis.value.on("scroll", ScrollTrigger.update);
 
         function update(time: number) {
-            lenisRef.value.lenis.raf(time * 1000);
+            lenis.value.raf(time * 1000);
         }
         
         gsap.ticker.add(update);
@@ -61,10 +60,6 @@
         onInvalidate(() => {
             gsap.ticker.remove(update);
         });
-    });
-
-    onBeforeMount(() => {
-        gsap.registerPlugin(ScrollTrigger, SplitText);
     });
 
     onMounted(() => {
