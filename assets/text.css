@@ -11,6 +11,12 @@
     font-weight: 450;
 }
 
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
 h1 {
     font-size: clamp(4rem, 19vw + 1rem, 48rem);
     letter-spacing: -0.025em;
