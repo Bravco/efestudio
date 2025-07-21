@@ -3,7 +3,7 @@
         <section 
             v-gsap.timeline
             id="hero" 
-            class="relative min-h-dvh flex flex-col justify-between text-[var(--color-white)] -z-1"
+            class="relative min-h-dvh flex flex-col justify-between text-white -z-1"
             style="background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url('/images/hero.webp') center/cover no-repeat;"
         >
             <div class="grid sm:grid-cols-2 grid-cols-1">
@@ -21,7 +21,7 @@
             <div class="hero-overlay absolute inset-0 bg-black opacity-0 pointer-events-none z-10"></div>
         </section>
 
-        <section class="bg-[var(--color-white)] -mb-[var(--section-gap)] flex flex-col gap-[var(--section-gap)] !pt-16 !pb-[var(--section-gap)]">
+        <section class="bg-[var(--color-light-gray)] -mb-[var(--section-gap)] flex flex-col gap-[var(--section-gap)] !pt-16 !pb-[var(--section-gap)]">
             <div>
                 <h2 class="small-alt-text md:w-[15vw] w-auto h-8 md:float-left">(ABOUT US)</h2>
                 <Paragraph>
@@ -34,7 +34,7 @@
             </div>
         </section>
 
-        <section class="bg-[var(--color-white)] flex flex-col gap-4">
+        <section class="bg-[var(--color-light-gray)] flex flex-col gap-4">
             <div class="grid grid-cols-2 gap-6">
                 <h2 class="small-alt-text col-start-2">(VYBRANÉ PROJEKTY)</h2>
             </div>

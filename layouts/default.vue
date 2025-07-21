@@ -36,7 +36,7 @@
                         clipPath: clipPath ? 'circle(150% at 100% 0%)' : 'circle(0% at 100% 0%)',
                         transition: 'clip-path 500ms ease-in-out'
                     }"
-                    class="md:hidden absolute inset-0 h-dvh bg-(--color-black) text-(--color-white) flex flex-col items-start justify-between p-[var(--content-padding)] pt-32"
+                    class="md:hidden absolute inset-0 h-dvh bg-black text-white flex flex-col items-start justify-between p-[var(--content-padding)] pt-32"
                 >
                     <ul class="flex flex-col gap-6">
                         <li><NuxtLink @click="closeMenu" to="/works" class="underlined">WORKS</NuxtLink></li>
@@ -56,7 +56,7 @@
 
         <main>
             <slot/>
-            <section id="contact" class="mt-[calc(var(--section-gap)+32px)] md:min-h-dvh flex flex-col justify-between md:gap-[168px] gap-[var(--section-gap)] bg-(--color-black) text-(--color-white)">
+            <section id="contact" class="mt-[calc(var(--section-gap)+32px)] md:min-h-dvh flex flex-col justify-between md:gap-[168px] gap-[var(--section-gap)] bg-black text-white">
                 <div class="flex lg:flex-row flex-col-reverse justify-between gap-4">
                     <p class="footer-paragraph">
                         <span class="md:block inline">Vytvorme spolu zrozumiteľnú značku. </span>
@@ -72,7 +72,7 @@
             </section>
         </main>
         
-        <footer class="grid md:grid-cols-3 grid-cols-1 gap-12 bg-(--color-black) text-(--color-white) !pt-[var(--section-gap)]">
+        <footer class="grid md:grid-cols-3 grid-cols-1 gap-12 bg-black text-white !pt-[var(--section-gap)]">
             <NuxtImg class="md:hidden inline w-full invert" src="/images/logo.svg" alt="logo"/>
             <ul class="flex flex-col">
                 <li>{{ time }} SNV</li>

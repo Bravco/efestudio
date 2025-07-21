@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-[var(--color-white)] flex flex-col gap-4">
+    <section class="flex flex-col gap-4">
         <div class="grid grid-cols-2 gap-6">
             <h2 class="small-alt-text col-start-2">(NEDÁVNE PROJEKTY)</h2>
         </div>

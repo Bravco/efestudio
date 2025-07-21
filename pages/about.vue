@@ -25,9 +25,7 @@
 
         <section class="grid md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-12">
             <div class="flex flex-col gap-4">
-                <div 
-                    class="w-full max-h-[95vh] aspect-3/4 object-cover object-top grayscale-100 grid place-items-center bg-white text-3xl"
-                >
+                <div class="w-full max-h-[95vh] aspect-3/4 object-cover object-top grayscale-100 grid place-items-center bg-white text-3xl">
                     COMING SOON
                 </div>
                 <div class="flex justify-between lg:text-lg text-sm">
