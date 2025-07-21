@@ -22,7 +22,7 @@
             <p class="text-animate small-paragraph">Naším klientom pomáhame vybudovať zrozumiteľnú značku s jasne definovanou pozíciou na trhu. S akým zadaním sa na nás môžete obrátiť?</p>
         </section>
 
-        <section class="service-list h-dvh relative">
+        <section class="service-list h-dvh relative mb-[100dvh] -z-1">
             <div v-for="(service, index) in services" :key="index" class="service-item absolute inset-0 mx-[var(--content-padding)] border-t bg-[var(--color-light-gray)]">
                 <div class="flex flex-col gap-8 pt-8">
                     <h2 class="paragraph w-full md:grid md:grid-cols-2 flex md:gap-0 gap-8">
@@ -131,14 +131,14 @@
     let cleanupFns: (() => void)[] = [];
 
     onMounted(() => {
-        setTimeout(() => {
+        nextTick(() => {
             const cleanupService = setupScrollListAnimation(
                 ".service-list",
                 ".service-item",
             );
 
             if (cleanupService) cleanupFns.push(cleanupService);
-        }, 1000);
+        });
     });
 
     onUnmounted(() => {
@@ -160,9 +160,9 @@
             scrollTrigger: {
                 trigger: listSelector,
                 start: "top 96px",
+                scrub: true,
                 pin: true,
-                pinSpacing: true,
-                scrub: true
+                pinSpacing: false
             }
         });
 
@@ -201,7 +201,7 @@
 
             items.forEach((item, index) => {
                 if (index !== 0) {
-                    gsap.set(item, { top: `${titleHeight * index}rem` });
+                    gsap.set(item, { y: `${titleHeight * index}rem` });
                 }
             });
         }
