@@ -56,8 +56,8 @@
         <section class="flex flex-col items-center md:gap-12 gap-8">
             <p class="text-animate paragraph max-w-[80vw] text-center">„Nie každý deň natrafíte na agentúru, ktorá okamžite pochopí podstatu vašej firmy a dokáže z nej vyťažiť to najdôležitejšie. Vďaka chalanom z efestudio máme konečne komunikáciu od webu, cez vizuál až po obsah, ktorá presne odráža to, o čom značka LAVARCH je.“</p>
             <div class="flex flex-col items-center gap-2">
-                <span clas="lg:text-lg md:text-base text-sm">Patrik Vojtuš</span>
-                <span class="small-alt-text">(DESIGN LEAD)</span>
+                <span clas="lg:text-lg md:text-base text-sm">Martin Jurčo</span>
+                <span class="small-alt-text">(Konateľ)</span>
             </div>
         </section>
 
