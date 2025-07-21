@@ -65,7 +65,7 @@
                     </p>
                     <span class="small-alt-text">(5 VOĽNÝCH MIEST V 2025)</span>
                 </div>
-                <NuxtLink to="/" class="paragraph !leading-none cta-underlined">
+                <NuxtLink to="https://p7l04e24.forms.app/efe-web" target="_blank" class="paragraph !leading-none cta-underlined cursor-pointer">
                     ⮡ Zabookuj si call
                 </NuxtLink>
                 <NuxtImg class="md:inline hidden w-full mx-auto" src="/images/efestudio.svg" alt="efestudio"/>
