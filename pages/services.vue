@@ -23,7 +23,7 @@
         </section>
 
         <section class="service-list h-dvh relative">
-            <div v-for="(service, index) in services" :key="index" class="service-item absolute inset-0 mx-[var(--content-padding)] border-t bg-[var(--color-white)]">
+            <div v-for="(service, index) in services" :key="index" class="service-item absolute inset-0 mx-[var(--content-padding)] border-t bg-[var(--color-light-gray)]">
                 <div class="flex flex-col gap-8 pt-8">
                     <h2 class="paragraph w-full md:grid md:grid-cols-2 flex md:gap-0 gap-8">
                         <span>(0{{ index + 1 }})</span>
@@ -159,7 +159,7 @@
         const timeline = gsap.timeline({
             scrollTrigger: {
                 trigger: listSelector,
-                start: "top 104px",
+                start: "top 96px",
                 pin: true,
                 pinSpacing: true,
                 scrub: true

@@ -25,11 +25,11 @@
 
         <section class="grid md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-12">
             <div class="flex flex-col gap-4">
-                <NuxtImg 
-                    src="/images/patrik_vojtus.webp"
-                    alt="Patrik Vojtuš"
-                    class="w-full max-h-[80vh] aspect-3/4 object-cover object-top grayscale-100"
-                />
+                <div 
+                    class="w-full max-h-[95vh] aspect-3/4 object-cover object-top grayscale-100 grid place-items-center bg-white text-3xl"
+                >
+                    COMING SOON
+                </div>
                 <div class="flex justify-between lg:text-lg text-sm">
                     <span>Patrik Vojtuš</span>
                     <span>(COFOUNDER)</span>
@@ -39,7 +39,7 @@
                 <NuxtImg 
                     src="/images/juraj_goldberger.webp"
                     alt="Juraj Goldberger"
-                    class="w-full max-h-[80vh] aspect-3/4 object-cover object-top grayscale-100"
+                    class="w-full max-h-[95vh] aspect-3/4 object-cover object-top grayscale-100"
                 />
                 <div class="flex justify-between lg:text-lg text-sm">
                     <span>Juraj Goldberger</span>
