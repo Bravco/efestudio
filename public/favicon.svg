@@ -1,12 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="65" height="33"><svg width="65" height="33" viewBox="0 0 65 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M31.3281 14.2393H-6.10352e-05V18.7608H31.3281V14.2393Z" fill="black"></path>
-<path d="M17.9246 0.836182H13.403V32.1639H17.9246V0.836182Z" fill="black"></path>
-<path d="M25.1617 3.80487L2.97057 25.9957L6.16782 29.1929L28.359 7.00207L25.1617 3.80487Z" fill="black"></path>
-<path d="M6.16782 3.80707L2.97057 7.00427L25.1617 29.1951L28.359 25.9979L6.16782 3.80707Z" fill="black"></path>
-<path d="M64.5156 14.2393H27.5678V18.7608H64.5156V14.2393Z" fill="black"></path>
-<path d="M51.1162 0.836182H46.5946V32.1639H51.1162V0.836182Z" fill="black"></path>
-<path d="M58.3503 3.8056L36.1591 25.9965L39.3564 29.1937L61.5475 7.0028L58.3503 3.8056Z" fill="black"></path>
-<path d="M39.3582 3.80561L36.1609 7.00281L58.3521 29.1937L61.5493 25.9965L39.3582 3.80561Z" fill="black"></path>
-</svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
-@media (prefers-color-scheme: dark) { :root { filter: none; } }
-</style></svg>
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_58_12)">
+<g clip-path="url(#clip1_58_12)">
+<path d="M30.8462 29.2393H0V33.7608H30.8462V29.2393Z" fill="black"/>
+<path d="M17.6493 15.8364H13.1973V47.1641H17.6493V15.8364Z" fill="black"/>
+<path d="M24.7745 18.8047L2.9248 40.9955L6.07287 44.1927L27.9226 22.0019L24.7745 18.8047Z" fill="black"/>
+<path d="M6.07287 18.8071L2.9248 22.0043L24.7745 44.1952L27.9226 40.998L6.07287 18.8071Z" fill="black"/>
+<path d="M63.5229 29.2393H27.1436V33.7608H63.5229V29.2393Z" fill="black"/>
+<path d="M50.33 15.8364H45.8779V47.1641H50.33V15.8364Z" fill="black"/>
+<path d="M57.4523 18.8057L35.6025 40.9966L38.7506 44.1938L60.6003 22.0029L57.4523 18.8057Z" fill="black"/>
+<path d="M38.7526 18.8057L35.6045 22.0029L57.4543 44.1938L60.6023 40.9966L38.7526 18.8057Z" fill="black"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_58_12">
+<rect width="64" height="33" fill="white" transform="translate(0 15)"/>
+</clipPath>
+<clipPath id="clip1_58_12">
+<rect width="64" height="33" fill="white" transform="translate(0 15)"/>
+</clipPath>
+</defs>
+</svg>
