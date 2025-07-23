@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
   compatibilityDate: "2025-05-15",
   devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "@nuxt/content", "lenis/nuxt", "v-gsap-nuxt", "@nuxtjs/robots"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "@nuxt/content", "lenis/nuxt", "v-gsap-nuxt", "@nuxtjs/robots", "@zadigetvoltaire/nuxt-gtm"],
   css: [ "~/assets/main.css", "~/assets/text.css" ],
   app: {
     head: {
@@ -31,5 +31,10 @@ export default defineNuxtConfig({
         }
       ]
     }
+  },
+  gtm: {
+    id: process.env.GTM_ID,
+    enabled: true,
+    debug: false
   }
 })

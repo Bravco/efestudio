@@ -36,6 +36,7 @@
   },
   "homepage": "https://github.com/Bravco/efestudio#readme",
   "devDependencies": {
-    "@nuxt/schema": "^3.17.4"
+    "@nuxt/schema": "^3.17.4",
+    "@zadigetvoltaire/nuxt-gtm": "^0.0.13"
   }
 }
