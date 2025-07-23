@@ -33,8 +33,6 @@ export default defineNuxtConfig({
     }
   },
   gtm: {
-    id: process.env.GTM_ID,
-    enabled: true,
-    debug: false
+    id: process.env.GTM_ID
   }
 })
