@@ -34,16 +34,20 @@
         next();
     });
 
-    router.afterEach(async () => {
-        await nextTick();
-        
+    router.afterEach(() => {
         if (trailer.value) {
             trailer.value.style.opacity = "0";
         }
 
-        if (overlay.value) {
-            overlay.value.classList.remove("overlay-slide-up");
-        }
+        nextTick(() => {
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    if (overlay.value) {
+                        overlay.value.classList.remove("overlay-slide-up");
+                    }
+                }, 100);
+            });
+        });
     });
 
     watchEffect((onInvalidate) => {
