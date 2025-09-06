@@ -34,7 +34,9 @@
         next();
     });
 
-    router.afterEach(() => {
+    router.afterEach(async () => {
+        await nextTick();
+        
         if (trailer.value) {
             trailer.value.style.opacity = "0";
         }
@@ -50,7 +52,7 @@
         lenis.value.on("scroll", ScrollTrigger.update);
 
         function update(time: number) {
-            lenis.value.raf(time * 1000);
+            lenis.value!.raf(time * 1000);
         }
         
         gsap.ticker.add(update);
@@ -76,8 +78,8 @@
             if (!isAnimating) {
                 isAnimating = true;
                 requestAnimationFrame(() => {
-                    trailer.value.style.transform = `translate(${x}px, ${y}px)`;
-                    trailer.value.style.opacity = `${interacting ? "1" : "0"}`;
+                    trailer.value!.style.transform = `translate(${x}px, ${y}px)`;
+                    trailer.value!.style.opacity = `${interacting ? "1" : "0"}`;
                     isAnimating = false;
                 });
             }
