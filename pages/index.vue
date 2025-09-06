@@ -34,7 +34,7 @@
             </div>
         </section>
 
-        <section class="bg-[var(--color-light-gray)] flex flex-col gap-4">
+        <section v-if="projects" class="bg-[var(--color-light-gray)] flex flex-col gap-4">
             <div class="grid grid-cols-2 gap-6">
                 <h2 class="small-alt-text col-start-2">(VYBRANÉ PROJEKTY)</h2>
             </div>
@@ -100,7 +100,7 @@
     
     const { data: projects } = await useAsyncData("projects", () => {
         return queryCollection("projects").order("ordering", "ASC").all();
-    });
+    }, { lazy: true });
 
     const processes = [
         {

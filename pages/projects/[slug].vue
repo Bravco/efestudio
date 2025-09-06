@@ -93,7 +93,7 @@
         return queryCollection("projects")
             .where("slug", "=", route.params.slug)
             .first()
-    })
+    });
 
     if (!project.value) {
         throw createError({

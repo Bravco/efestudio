@@ -3,7 +3,7 @@
         <section class="min-h-[80dvh] flex items-end !pb-0 -mb-[var(--section-gap)]">
             <div class="flex gap-2">
                 <h1>WORK</h1>
-                <span class="md:text-xl">(0{{ projects.length }})</span>
+                <span class="md:text-xl">(0{{ projects?.length ?? 0 }})</span>
             </div>
         </section>
 
@@ -18,5 +18,5 @@
 
     const { data: projects } = await useAsyncData("projects", () => {
         return queryCollection("projects").order("ordering", "ASC").all();
-    });
+    }, { lazy: true });
 </script>
