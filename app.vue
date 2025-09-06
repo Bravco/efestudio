@@ -5,7 +5,7 @@
         <NuxtLayout>
             <NuxtPage/>
         </NuxtLayout>
-        <div ref="overlay" class="transition-overlay overlay-slide-up"></div>
+        <div class="transition-overlay" :class="{ 'overlay-slide-up': isTransitioning }"></div>
         <div ref="trailer" class="fixed inset-0 z-10000 flex w-32 h-32 bg-[var(--color-black)] rounded-full pointer-events-none opacity-0 transition-all duration-200 ease-out">
             <NuxtImg class="m-auto invert rotate-45" width="32" src="/images/arrow.svg" alt="arrow"/>
         </div>
@@ -20,17 +20,14 @@
     const gsap = useGSAP();
     const lenis = useLenis();
 
+    const isTransitioning = ref<boolean>(false);
     const trailer = ref<HTMLDivElement | null>(null);
-    const overlay = ref<HTMLDivElement | null>(null);
 
     router.beforeEach(async (to, from, next) => {
         if (to.path === from.path) return next();
 
-        if (import.meta.client && overlay.value) {
-            overlay.value.classList.add("overlay-slide-up");
-            await new Promise(resolve => setTimeout(resolve, 600));
-        }
-
+        isTransitioning.value = true;
+        await new Promise(resolve => setTimeout(resolve, 600));
         next();
     });
 
@@ -39,15 +36,7 @@
             trailer.value.style.opacity = "0";
         }
 
-        nextTick(() => {
-            requestAnimationFrame(() => {
-                setTimeout(() => {
-                    if (overlay.value) {
-                        overlay.value.classList.remove("overlay-slide-up");
-                    }
-                }, 100);
-            });
-        });
+        isTransitioning.value = false;
     });
 
     watchEffect((onInvalidate) => {
@@ -97,11 +86,6 @@
 
             animateTrailer(e, interacting);
         };
-
-        if (overlay.value) {
-            overlay.value.offsetHeight;
-            overlay.value?.classList.remove("overlay-slide-up");
-        }
 
         window.addEventListener("mousemove", handleMouseMove);
 

@@ -123,7 +123,7 @@
         isMenuOpen.value = true;
         nextTick(() => {
             requestAnimationFrame(() => {
-            clipPath.value = true;
+                clipPath.value = true;
             });
         });
     };
