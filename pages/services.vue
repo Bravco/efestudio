@@ -1,7 +1,7 @@
 <template>
     <div>
-        <section class="flex flex-col justify-end md:gap-8 gap-[var(--section-gap)]">
-            <div class="w-fit ml-auto flex flex-col gap-4 mb-auto">
+        <section class="min-h-dvh flex flex-col justify-end md:gap-8 gap-[var(--section-gap)]">
+            <!--<div class="w-fit ml-auto flex flex-col gap-4 mb-auto">
                 <NuxtImg height="240" src="/images/lavarch.webp" alt="lavarch"/>
                 <div class="small-alt-text flex justify-between">
                     <span>(01)</span>
@@ -10,16 +10,15 @@
                         <NuxtImg src="/images/arrow.svg" height="16" width="16" alt="selected project"/>
                     </NuxtLink>
                 </div>
-            </div>
+            </div>-->
             <div class="flex gap-2">
                 <h1>SLUŽBY</h1>
                 <span class="md:text-xl">(04)</span>
             </div>
-        </section>
-
-        <section class="grid md:grid-cols-[2fr_1fr] grid-cols-1 gap-4 place-items-start">
-            <span class="small-alt-text">(ZRUČNOSTI)</span>
-            <p class="text-animate small-paragraph">Naším klientom pomáhame vybudovať zrozumiteľnú značku s jasne definovanou pozíciou na trhu. S akým zadaním sa na nás môžete obrátiť?</p>
+            <div class="grid md:grid-cols-[2fr_1fr] grid-cols-1 gap-4 place-items-start">
+                <span class="small-alt-text">(ZRUČNOSTI)</span>
+                <p class="text-animate small-paragraph">Naším klientom pomáhame vybudovať zrozumiteľnú značku s jasne definovanou pozíciou na trhu. S akým zadaním sa na nás môžete obrátiť?</p>
+            </div>
         </section>
 
         <section class="service-list h-dvh relative mb-[100dvh] -z-1">
