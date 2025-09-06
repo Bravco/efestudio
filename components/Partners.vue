@@ -5,6 +5,7 @@
         class="w-[10vw] max-w-[560px] min-w-[80px]"
         src="/images/nario-logo.svg"
         alt="nario"
+        loading="lazy"
       />
     </div>
     <div class="outline outline-black aspect-square grid place-items-center">
@@ -12,6 +13,7 @@
         class="w-[14vw] max-w-[660px] min-w-[90px]"
         src="/images/lavarch-logo.svg"
         alt="lavarch"
+        loading="lazy"
       />
     </div>
     <div class="outline outline-black aspect-square grid place-items-center">
@@ -19,6 +21,7 @@
         class="w-[15vw] max-w-[788px] min-w-[100px]"
         src="/images/bagrespis-logo.svg"
         alt="bagrespis"
+        loading="lazy"
       />
     </div>
     <div class="outline outline-black aspect-square grid place-items-center">
@@ -26,6 +29,7 @@
         class="w-[14vw] max-w-[724px] min-w-[95px]"
         src="/images/galikin-logo.svg"
         alt="galikin"
+        loading="lazy"
       />
     </div>
     <div class="outline outline-black aspect-square grid place-items-center">
@@ -33,6 +37,7 @@
         class="w-[9vw] max-w-[412px] min-w-[75px]"
         src="/images/marmat-logo.svg"
         alt="marmat"
+        loading="lazy"
       />
     </div>
   </div>

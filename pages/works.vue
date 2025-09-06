@@ -8,7 +8,7 @@
         </section>
 
         <section class="grid md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-12 !pt-0">
-            <ProjectCard v-for="project in projects" :key="project.slug" :project="project"/>
+            <LazyProjectCard v-for="project in projects" :key="project.slug" :project="project"/>
         </section>
     </div>
 </template>

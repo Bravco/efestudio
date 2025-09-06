@@ -39,7 +39,7 @@
                 <h2 class="small-alt-text col-start-2">(VYBRANÉ PROJEKTY)</h2>
             </div>
             <div class="grid md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-12">
-                <ProjectCard v-for="project in projects" :key="project.slug" :project="project"/>
+                <LazyProjectCard v-for="project in projects" :key="project.slug" :project="project"/>
             </div>
         </section>
 

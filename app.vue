@@ -32,11 +32,11 @@
     });
 
     router.afterEach(() => {
+        isTransitioning.value = false;
+        
         if (trailer.value) {
             trailer.value.style.opacity = "0";
         }
-
-        isTransitioning.value = false;
     });
 
     watchEffect((onInvalidate) => {

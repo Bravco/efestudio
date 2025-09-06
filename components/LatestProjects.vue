@@ -4,7 +4,7 @@
             <h2 class="small-alt-text col-start-2">(NEDÁVNE PROJEKTY)</h2>
         </div>
         <div class="grid md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-12">
-            <ProjectCard v-for="project in projects" :key="project.slug" :project="project"/>
+            <LazyProjectCard v-for="project in projects" :key="project.slug" :project="project"/>
         </div>
     </section>
 </template>
@@ -14,5 +14,5 @@
         return queryCollection("projects")
             .orWhere(query => query.where("slug", "=", "lavarch").where("slug", "=", "marmat-sk"))
             .all();
-    });
+    }, { lazy: true });
 </script>
