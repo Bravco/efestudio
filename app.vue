@@ -42,7 +42,7 @@
         }
 
         if (overlay.value) {
-            overlay.value?.classList.remove("overlay-slide-up");
+            overlay.value.classList.remove("overlay-slide-up");
         }
     });
 
