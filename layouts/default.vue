@@ -106,6 +106,7 @@
 
 <script lang="ts" setup>
     import SplitText from "gsap/SplitText";
+    import ScrollTrigger from "gsap/ScrollTrigger";
 
     const route = useRoute();
     const router = useRouter();
@@ -167,7 +168,8 @@
         });
     };
 
-    watch(() => route.path, () => {
+    watch(() => route.path, async () => {
+        await nextTick();
         handleSroll();
         animateTextElements();
     });
@@ -175,19 +177,14 @@
     onMounted(() => {
         window.addEventListener("scroll", handleSroll);
         handleSroll();
-
+        animateTextElements();
         updateTime();
         timer = setInterval(updateTime, 1000);
-
-        document.fonts.ready.then(() => animateTextElements());
     });
 
     onUnmounted(() => {
         window.removeEventListener("scroll", handleSroll);
-        
-        if (timer) {
-            clearInterval(timer);
-        }
+        if (timer) clearInterval(timer);
     });
 
     function animateTextElements() {
@@ -208,12 +205,14 @@
                 ease: "power1.out",
                 scrollTrigger: {
                     trigger: element,
-                    start: "top 80%"
+                    start: "top 90%"
                 },
                 onComplete: () => {
                     split.revert();
                 }
             });
         });
+
+        ScrollTrigger.refresh();
     }
 </script>

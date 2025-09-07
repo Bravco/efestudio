@@ -17,7 +17,7 @@
                 <span>2025/</span>
                 <span>(SCROLL)</span>
             </div>
-            <NuxtImg v-gsap.add.from="{ opacity: 0, y: 100 }" class="w-full mx-auto" src="/images/efestudio.svg" alt="efestudio"/>
+            <NuxtImg v-gsap.add.withPrevious.from="{ opacity: 0, y: 100 }" class="w-full mx-auto" src="/images/efestudio.svg" alt="efestudio"/>
             <div class="hero-overlay absolute inset-0 bg-black opacity-0 pointer-events-none z-10"></div>
         </section>
 
