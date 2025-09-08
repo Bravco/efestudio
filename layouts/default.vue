@@ -201,7 +201,7 @@
                 duration: 0.5,
                 yPercent: 100,
                 stagger: 0.15,
-                ease: "power1.out",
+                ease: "expo1.out",
                 scrollTrigger: {
                     trigger: element,
                     start: "top 90%",
