@@ -20,7 +20,7 @@
     const gsap = useGSAP();
     const lenis = useLenis();
 
-    const isTransitioning = ref<boolean>(false);
+    const isTransitioning = ref<boolean>(true);
     const trailer = ref<HTMLDivElement | null>(null);
 
     router.beforeEach(async (to, from, next) => {
@@ -58,6 +58,8 @@
     });
 
     onMounted(() => {
+        isTransitioning.value = false; // show the animation on initial page load
+
         let x = 0;
         let y = 0;
         let isAnimating = false;

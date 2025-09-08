@@ -187,14 +187,13 @@
         if (timer) clearInterval(timer);
     });
 
-    function animateTextElements() {
+    const animateTextElements = () => {
         const splitElements = document.querySelectorAll(".text-animate");
 
         splitElements.forEach(element => {
             const split = SplitText.create(element, {
                 type: "lines",
-                mask: "lines",
-                autoSplit: true
+                mask: "lines"
             });
 
             gsap.from(split.lines, {
@@ -205,10 +204,8 @@
                 ease: "power1.out",
                 scrollTrigger: {
                     trigger: element,
-                    start: "top 90%"
-                },
-                onComplete: () => {
-                    split.revert();
+                    start: "top 90%",
+                    onLeave: () => split.revert()
                 }
             });
         });
