@@ -175,11 +175,15 @@
     });
 
     onMounted(() => {
-        window.addEventListener("scroll", handleSroll);
-        handleSroll();
-        animateTextElements();
         updateTime();
         timer = setInterval(updateTime, 1000);
+
+        window.addEventListener("scroll", handleSroll);
+        handleSroll();
+        
+        document.fonts.ready.then(() => {
+            animateTextElements();
+        });
     });
 
     onUnmounted(() => {

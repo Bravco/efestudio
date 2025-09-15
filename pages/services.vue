@@ -35,10 +35,10 @@
                 <div class="flex flex-col gap-8 pt-8">
                     <h2 class="paragraph w-full md:grid md:grid-cols-2 flex md:gap-0 gap-8">
                         <span>(0{{ index + 1 }})</span>
-                        <span class="text-nowrap">{{ service.title }}</span>
+                        <span :class="!isDesktop ? 'text-animate' : ''" class="text-nowrap">{{ service.title }}</span>
                     </h2>
-                    <p class="small-paragraph md:ml-auto md:w-1/2 md:pr-[10%] pr-0 md:pb-8 pb-4">{{ service.description }}</p>
-                    <ul class="small-paragraph md:ml-auto md:w-1/2 grid md:grid-cols-3 grid-cols-2 md:gap-4 gap-2 md:text-black text-[var(--color-dark-gray)">
+                    <p :class="!isDesktop ? 'text-animate' : ''" class="small-paragraph md:ml-auto md:w-1/2 md:pr-[10%] pr-0 md:pb-8 pb-4">{{ service.description }}</p>
+                    <ul :class="!isDesktop ? 'text-animate' : ''" class="small-paragraph md:ml-auto md:w-1/2 grid md:grid-cols-3 grid-cols-2 md:gap-4 gap-2 md:text-black text-[var(--color-dark-gray)">
                         <li v-for="(item, index) in service.items" :key="index">{{ item }}</li>
                     </ul>
                 </div>
