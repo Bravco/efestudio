@@ -21,15 +21,24 @@
             </div>
         </section>
 
-        <section class="service-list h-dvh relative mb-[100dvh] -z-1">
-            <div v-for="(service, index) in services" :key="index" class="service-item absolute inset-0 mx-[var(--content-padding)] border-t bg-[var(--color-light-gray)]">
+        <section
+            class="service-list relative"
+            :class="isDesktop ? 'h-dvh mb-[100dvh] -z-1' : ''"
+        >
+            <div
+                v-for="(service, index) in services"
+                :key="index"
+                class="service-item mx-[var(--content-padding)] bg-[var(--color-light-gray)]"
+                :class="isDesktop ? 'absolute inset-0' : 'relative pb-[var(--section-gap)]'"
+            >
+                <div v-gsap.mobile.whenVisible.once.from="{ scaleX: 0 }" class="absolute inset-0 h-px bg-[var(--color-black)] origin-left"></div>
                 <div class="flex flex-col gap-8 pt-8">
                     <h2 class="paragraph w-full md:grid md:grid-cols-2 flex md:gap-0 gap-8">
                         <span>(0{{ index + 1 }})</span>
                         <span class="text-nowrap">{{ service.title }}</span>
                     </h2>
                     <p class="small-paragraph md:ml-auto md:w-1/2 md:pr-[10%] pr-0 md:pb-8 pb-4">{{ service.description }}</p>
-                    <ul class="small-paragraph md:ml-auto md:w-1/2 grid md:grid-cols-3 grid-cols-2 md:gap-4 gap-2 md:text-black text-[var(--color-dark-gray)]">
+                    <ul class="small-paragraph md:ml-auto md:w-1/2 grid md:grid-cols-3 grid-cols-2 md:gap-4 gap-2 md:text-black text-[var(--color-dark-gray)">
                         <li v-for="(item, index) in service.items" :key="index">{{ item }}</li>
                     </ul>
                 </div>
@@ -75,6 +84,9 @@
     useHead({ title: "efestudio - služby" });
 
     const gsap = useGSAP();
+
+    const isDesktop = ref<boolean>(false);
+    let cleanupFns: (() => void)[] = [];
 
     const services = [
         {
@@ -127,26 +139,41 @@
         }
     ];
 
-    let cleanupFns: (() => void)[] = [];
-
     onMounted(() => {
-        nextTick(() => {
-            const cleanupService = setupScrollListAnimation(
-                ".service-list",
-                ".service-item",
-            );
-
-            if (cleanupService) cleanupFns.push(cleanupService);
-        });
+        updateIsDesktop();
+        window.addEventListener("resize", updateIsDesktop);
     });
 
     onUnmounted(() => {
         cleanupFns.forEach((fn) => fn());
+        window.removeEventListener("resize", updateIsDesktop);
     });
+
+    function updateIsDesktop() {
+        const wasDesktop: boolean = isDesktop.value;
+        isDesktop.value = window.innerWidth >= 768;
+
+        if (wasDesktop !== isDesktop.value) {
+            cleanupFns.forEach((fn) => fn());
+            cleanupFns = [];
+
+            if (isDesktop.value) {
+                const cleanupService = setupScrollListAnimation(
+                    ".service-list",
+                    ".service-item",
+                );
+                if (cleanupService) cleanupFns.push(cleanupService);
+            } else {
+                const items = document.querySelectorAll<HTMLElement>(".service-item");
+                items.forEach((item) => {
+                    gsap.set(item, { clearProps: "all" });
+                });
+            }
+        }
+    }
 
     function setupScrollListAnimation(listSelector: string, itemSelector: string) {
         const items = document.querySelectorAll<HTMLElement>(itemSelector);
-
         if (!items.length) return;
 
         items.forEach((item, index) => {
@@ -209,6 +236,9 @@
         window.addEventListener("resize", setOffset);
 
         return () => {
+            if (timeline.scrollTrigger) timeline.scrollTrigger.kill(true);
+            timeline.kill();
+
             window.removeEventListener("resize", setOffset);
         };
     }
